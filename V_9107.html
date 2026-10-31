@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLIM SSOK(スリムソック) PLUS_7Box</title>
+<style>
+    body {
+        font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+
+    /* Header Section */
+    .header-banner {
+        background: linear-gradient(135deg, #481b6d, #6a1b9a);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+        color: #d8b4e2;
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+    .header-banner h1 {
+        font-size: 2.8rem;
+        margin: 0 0 15px 0;
+        color: #ffffff;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+    .product-info {
+        font-size: 1.1rem;
+        color: #f3e5f5;
+        margin-bottom: 25px;
+    }
+    .badges {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .badge {
+        background: #ffffff;
+        color: #481b6d;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    /* Content Area */
+    .content-area {
+        padding: 40px 30px;
+    }
+
+    /* Intro Section */
+    .intro {
+        text-align: center;
+        margin: 0 auto 40px auto;
+        padding: 30px;
+        background-color: #fbf9fc;
+        border-radius: 12px;
+        border: 1px solid #e1bee7;
+    }
+    .intro h2 {
+        color: #481b6d;
+        font-size: 1.5rem;
+        margin: 0 0 20px 0;
+    }
+    .intro p {
+        font-size: 1.1rem;
+        color: #444;
+        margin: 0;
+        line-height: 1.8;
+        word-break: keep-all;
+    }
+
+    /* Section Headings */
+    .section-title {
+        font-size: 1.5rem;
+        color: #481b6d;
+        border-bottom: 3px solid #481b6d;
+        padding-bottom: 10px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* Ingredients Grid */
+    .ingredients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    .ing-card {
+        padding: 25px 20px;
+        background-color: #ffffff;
+        border: 1px solid #d1c4e9;
+        border-radius: 12px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+    .ing-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(106, 27, 154, 0.1);
+    }
+    .ing-title {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #6a1b9a;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+    .ing-desc {
+        font-size: 0.95rem;
+        color: #555;
+        text-align: left;
+    }
+
+    /* Certifications */
+    .cert-box {
+        border: 2px solid #481b6d;
+        background-color: #ffffff;
+        padding: 30px;
+        margin-bottom: 40px;
+        border-radius: 12px;
+    }
+    .cert-header {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #481b6d;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .cert-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .cert-item {
+        text-align: left;
+    }
+    .cert-title-item {
+        font-weight: bold;
+        color: #481b6d;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        display: inline-block;
+        border-bottom: 2px solid #e1bee7;
+        padding-bottom: 5px;
+    }
+    .cert-desc {
+        font-size: 1rem;
+        color: #444;
+    }
+
+    /* Recommendations Grid */
+    .rec-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+    .rec-card {
+        padding: 25px 15px;
+        text-align: center;
+        border: 1px dashed #b39ddb;
+        background-color: #fbf9fc;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #444;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        word-break: keep-all;
+    }
+
+    /* Q&A Section */
+    .qa-container {
+        margin-bottom: 30px;
+    }
+    .qa-box {
+        background: #ffffff;
+        padding: 25px;
+        margin-bottom: 20px;
+        border-left: 5px solid #481b6d;
+        border-radius: 0 12px 12px 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .qa-q {
+        font-weight: bold;
+        color: #481b6d;
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+    }
+    .qa-a {
+        font-size: 1.05rem;
+        color: #333;
+        padding-left: 25px;
+    }
+    .small-text {
+        display: block;
+        font-size: 0.85rem;
+        color: #777;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .cert-grid {
+            grid-template-columns: 1fr;
+        }
+        .header-banner h1 {
+            font-size: 2.2rem;
+        }
+        .content-area {
+            padding: 20px 15px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-banner">
+        <div class="subtitle">Plus! THE 美味しく楽しむ</div>
+        <h1>スリムソック プラス</h1>
+        <div class="product-info">内容量：40g × 30包（1,200g）</div>
+        <div class="badges">
+            <span class="badge">健康機能食品（韓国）</span>
+            <span class="badge">GMP認定工場製造</span>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <div class="intro">
+            <h2>「体の変化を感じる、軽やかで爽やかな一日の始まり！」</h2>
+            <p>
+                <b>スリムソック プラス</b>は、健康的なダイエットのサポートと、<br> 
+                食後の血糖値上昇を抑える機能が報告されている成分を配合。<br>
+                爽やかなトロピカル味で、老若男女問わず、いつでもどこでも手軽にお召し上がりいただけます。
+            </p>
+        </div>
+
+        <div class="section-title">昨日よりスリムな今日、今日より健康的な明日のために</div>
+        
+        <div class="ingredients-grid">
+            <div class="ing-card">
+                <span class="ing-title">ガルシニアカンボジア抽出物<br>炭水化物サポート</span>
+                <div class="ing-desc">
+                    炭水化物が脂肪に合成されるのを抑え、体脂肪の減少をサポートすることが報告されています。世界中でダイエットサポート成分として知られており、韓国の食品医薬品安全処でもその機能性が認められています。
+                </div>
+            </div>
+            <div class="ing-card">
+                <span class="ing-title">コレウスフォルスコリ抽出物<br>体脂肪サポート</span>
+                <div class="ing-desc">
+                    コレウスフォルスコリから抽出された成分で、体脂肪の減少や除脂肪体重の維持をサポートすることが報告されています。
+                    <span class="small-text">* 除脂肪体重とは、体重から脂肪量を除いた水分、筋肉のタンパク質、糖質、骨などを測定した量です。</span>
+                </div>
+            </div>
+            <div class="ing-card">
+                <span class="ing-title">難消化性デキストリン<br>食後の血糖値サポート</span>
+                <div class="ing-desc">
+                    水溶性食物繊維の一種で、食後の血糖値の上昇を抑える機能や、おなかの調子を整える（便通を改善する）機能があることが報告されています。
+                </div>
+            </div>
+        </div>
+
+        <div class="cert-box">
+            <div class="cert-header">☑️ 安心して召し上がっていただけるよう、機能性が認められた成分を配合</div>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-title-item">健康機能食品（韓国基準）</div>
+                    <div class="cert-desc">韓国の食品医薬品安全処が告示した基準と規格に適合した機能性原料で作られた製品です。</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title-item">GMP認定工場製造</div>
+                    <div class="cert-desc">優秀健康機能食品製造基準に適合したGMP認定工場で製造されています。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">☑️ こんな方におすすめです！</div>
+        <div class="rec-grid">
+            <div class="rec-card">味と栄養を兼ね備えた、手軽なダイエットサポート食品をお探しの方</div>
+            <div class="rec-card">普段あまり運動をせず、スッキリしない毎日を送っている方</div>
+            <div class="rec-card">食生活が不規則で、炭水化物をよく摂る方</div>
+            <div class="rec-card">体脂肪が気になる方</div>
+            <div class="rec-card">無理なくボディラインを維持したい方</div>
+            <div class="rec-card">食後の血糖値が気になる方</div>
+        </div>
+
+        <div class="section-title">☑️ スリムソック プラス Q&A</div>
+        <div class="qa-container">
+            <div class="qa-box">
+                <div class="qa-q">Q. いつ、どのように飲むのが良いですか？</div>
+                <div class="qa-a">
+                    1日1回、1包を食事の前に召し上がることをおすすめします。お召し上がり前に中身をよく振ってください。
+                    <span class="small-text">* 「スリムソック ティー」と一緒に召し上がるとさらに効果的です。</span>
+                </div>
+            </div>
+            <div class="qa-box">
+                <div class="qa-q">Q. どのように保管すれば良いですか？</div>
+                <div class="qa-a">
+                    直射日光や高温多湿を避け、涼しく乾燥した室温で保管することをおすすめします。
+                </div>
+            </div>
+            <div class="qa-box">
+                <div class="qa-q">Q. 本当に体脂肪の減少に役立ちますか？</div>
+                <div class="qa-a">
+                    主成分であるHCAは、炭水化物が脂肪に変換されるのを抑えることで、体脂肪の減少をサポートすることが報告されています。（適度な運動とバランスの良い食事と併用することをおすすめします。）
+                    <span class="small-text">*HCA（ヒドロキシクエン酸）：ガルシニアカンボジアの主要成分です。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

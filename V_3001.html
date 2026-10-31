@@ -1,0 +1,292 @@
+<!-- STREAMING_CHUNK:Head and Setup -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイムレス ダーマ クリーム</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cellvia-dark': '#121212',
+                        'cellvia-gray': '#2d2d2d',
+                        'cellvia-pink': '#d998a0',
+                        'cellvia-darkpink': '#b8737b',
+                        'cellvia-gold': '#c5a059',
+                        'cellvia-bg-light': '#faf9f8',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for specific subtle effects -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-stone-800 flex justify-center w-full min-h-screen sm:p-4 md:p-8">
+
+<!-- STREAMING_CHUNK:Main Container -->
+<main class="w-full max-w-4xl bg-white sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+    
+    <!-- STREAMING_CHUNK:Hero Section -->
+    <header class="bg-gradient-to-br from-cellvia-dark via-cellvia-gray to-black text-center px-6 pt-24 pb-20 relative overflow-hidden">
+        <!-- Background subtle glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cellvia-pink/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+        <div class="relative z-10 fade-in-up">
+            <p class="text-stone-300 text-sm tracking-widest mb-8 font-light">
+                ハリ不足の悩みに、まっすぐ届く。
+            </p>
+            <p class="font-serif text-lg md:text-2xl text-cellvia-pink mb-10 leading-relaxed">
+                塗るたびに実感する、<br class="sm:hidden">豊かな潤いと弾むようなハリ感。
+            </p>
+            
+            <h1 class="font-serif text-4xl md:text-5xl font-black text-white leading-tight tracking-widest mb-4">
+                タイムレス ダーマ クリーム
+            </h1>
+            <p class="text-stone-400 font-light text-sm md:text-base tracking-[0.2em] mb-12 uppercase">
+                Timeless Derma Cream
+            </p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-y-3 gap-x-0 text-sm text-stone-300 font-medium">
+                <span class="px-4 border-r border-stone-600 last:border-0">トータルソリューション</span>
+                <span class="px-4 border-r border-stone-600 last:border-0">栄養・潤いチャージ</span>
+                <span class="px-4 border-r border-stone-600 last:border-0">弾力・ハリケア</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- STREAMING_CHUNK:Configuration Banner -->
+    <div class="bg-cellvia-pink text-white text-center py-4 font-bold tracking-widest text-lg shadow-inner">
+        内容量 : 50 ml
+    </div>
+
+    <!-- STREAMING_CHUNK:Content Area Wrapper -->
+    <div class="px-6 py-16 md:px-12 md:py-24">
+        
+        <!-- STREAMING_CHUNK:Concept Message -->
+        <section class="text-center mb-20 fade-in-up">
+            <p class="text-stone-500 text-sm tracking-widest mb-3 font-medium">こだわりの成分で、しっかりケア</p>
+            <h2 class="font-serif text-2xl md:text-3xl text-cellvia-darkpink font-bold mb-6">時を重ねた肌への集中保湿ケア時間</h2>
+            <p class="text-stone-700 text-base md:text-lg leading-relaxed mb-4">
+                年齢に応じたエイジングケア<span class="text-cellvia-pink">*</span>を取り入れ、<br class="hidden sm:block">
+                ハリとツヤに満ちた健やかな素肌へ。
+            </p>
+            <p class="text-xs text-stone-400">*年齢に応じた潤い・ハリのお手入れのこと</p>
+        </section>
+
+        <!-- STREAMING_CHUNK:Features List -->
+        <section class="bg-cellvia-bg-light border border-stone-100 rounded-2xl p-8 md:p-10 mb-16 shadow-sm fade-in-up delay-100">
+            <ul class="space-y-4 text-stone-700 text-sm md:text-base">
+                <li class="flex items-start">
+                    <span class="text-cellvia-pink mr-3 mt-0.5">◆</span>
+                    <span>高密度・高機能な肌のコンディショニングケア</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-cellvia-pink mr-3 mt-0.5">◆</span>
+                    <span>なじませるほどに実感する、ピンとしたハリ感</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-cellvia-pink mr-3 mt-0.5">◆</span>
+                    <span>明るい印象のハリツヤ肌へ導くデイリーエイジングケア<span class="text-xs">*</span></span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-cellvia-pink mr-3 mt-0.5">◆</span>
+                    <span>最後まで衛生的に使えるエアレス容器を採用</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-cellvia-pink mr-3 mt-0.5">◆</span>
+                    <span>朝・夜どちらのスキンケアにも使えるデイリークリーム</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- STREAMING_CHUNK:Focus Box -->
+        <section class="bg-stone-100 rounded-2xl p-8 md:p-12 text-center mb-24 fade-in-up delay-200">
+            <div class="space-y-8 font-serif text-lg md:text-xl font-bold text-stone-800 leading-relaxed">
+                <p>時を重ねた肌のための<br><span class="text-cellvia-darkpink text-xl md:text-2xl">集中栄養チャージ</span></p>
+                
+                <div class="w-12 h-px bg-stone-300 mx-auto"></div>
+                
+                <p>崩れがちな肌の水分・油分バランスを整える<br><span class="text-cellvia-darkpink text-xl md:text-2xl">トータルソリューション</span></p>
+                
+                <div class="w-12 h-px bg-stone-300 mx-auto"></div>
+                
+                <p>見逃しがちな<span class="text-cellvia-darkpink text-xl md:text-2xl">ハリケア</span>と<br>なめらかな<span class="text-cellvia-darkpink text-xl md:text-2xl">肌のキメケア</span>を同時に！</p>
+                
+                <div class="w-12 h-px bg-stone-300 mx-auto"></div>
+                
+                <p>豊かな美容成分がもたらす<br><span class="text-cellvia-darkpink text-xl md:text-2xl">肌のコンディショニングと保湿効果</span></p>
+            </div>
+        </section>
+
+        <!-- STREAMING_CHUNK:Ingredients Section -->
+        <section class="mb-24">
+            <div class="text-center mb-12 fade-in-up">
+                <h3 class="inline-block font-serif text-2xl md:text-3xl font-bold text-stone-800 border-b-4 border-cellvia-pink pb-2 px-4">
+                    主要成分と特徴
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Ingredient 1 (Full width on mobile, spans 2 columns on PC for emphasis) -->
+                <article class="bg-[#fdfaf6] p-8 rounded-2xl md:col-span-2 border border-stone-100 fade-in-up">
+                    <h4 class="font-bold text-cellvia-darkpink text-lg mb-2 flex items-baseline gap-2">
+                        <span class="text-xl">1.</span> ヒト幹細胞順化培養液
+                    </h4>
+                    <p class="text-xs text-cellvia-gold font-bold tracking-wider mb-4 border-b border-stone-200 pb-3 inline-block">
+                        （50,000ppm、羊水由来） | 高機能バイオ素材 / 集中栄養ケア
+                    </p>
+                    <p class="text-stone-600 text-sm leading-loose">
+                        乾燥などの外部環境によりツヤを失い、荒れがちな肌に豊かな潤いを与え、生き生きとした健やかな肌へ導きます。水分と油分のバランスを整え、なめらかでしっとりとした肌を保ちます。肌なじみの良い成分で、肌のコンディションケアをサポートします。
+                    </p>
+                </article>
+
+                <!-- Ingredient 2 -->
+                <article class="bg-[#fdfaf6] p-8 rounded-2xl border border-stone-100 fade-in-up delay-100">
+                    <h4 class="font-bold text-cellvia-darkpink text-lg mb-2 flex items-baseline gap-2">
+                        <span class="text-xl">2.</span> ボルフィリン
+                    </h4>
+                    <p class="text-xs text-stone-500 font-medium mb-4 border-b border-stone-200 pb-3">
+                        水添ポリイソブテン＋ハナスゲ根エキス<br>（フランス・セダーマ社開発原料）
+                    </p>
+                    <p class="text-stone-600 text-sm leading-loose">
+                        肌にピンとしたハリと、なめらかなツヤを与えるサポートをします。
+                    </p>
+                </article>
+
+                <!-- Ingredient 3 -->
+                <article class="bg-[#fdfaf6] p-8 rounded-2xl border border-stone-100 fade-in-up delay-100">
+                    <h4 class="font-bold text-cellvia-darkpink text-lg mb-2 flex items-baseline gap-2">
+                        <span class="text-xl">3.</span> イデベノン
+                    </h4>
+                    <p class="text-xs text-stone-500 font-medium mb-4 border-b border-stone-200 pb-3">
+                        （ヒドロキシデシルユビキノン）<br>トータルスキンケア / 肌のコンディショニング
+                    </p>
+                    <p class="text-stone-600 text-sm leading-loose">
+                        乾燥などによる外的ダメージを受けた肌をすこやかに保ち、トータルスキンケアをサポートします。
+                    </p>
+                </article>
+
+                <!-- Ingredient 4 -->
+                <article class="bg-[#fdfaf6] p-8 rounded-2xl border border-stone-100 fade-in-up delay-200">
+                    <h4 class="font-bold text-cellvia-darkpink text-lg mb-2 flex items-baseline gap-2">
+                        <span class="text-xl">4.</span> シア脂（シアバター）
+                    </h4>
+                    <p class="text-xs text-stone-500 font-medium mb-4 border-b border-stone-200 pb-3">
+                        豊かな潤いバリアの形成
+                    </p>
+                    <p class="text-stone-600 text-sm leading-loose">
+                        ビタミンを豊富に含み、肌の水分バリア形成をサポート。乾燥してゴワついた角質をなめらかに整え、長時間しっとりとした状態を保つよう助けます。
+                    </p>
+                </article>
+
+                <!-- Ingredient 5 -->
+                <article class="bg-[#fdfaf6] p-8 rounded-2xl border border-stone-100 fade-in-up delay-200">
+                    <h4 class="font-bold text-cellvia-darkpink text-lg mb-2 flex items-baseline gap-2">
+                        <span class="text-xl">5.</span> ペプチドコンプレックス
+                    </h4>
+                    <p class="text-xs text-stone-500 font-medium mb-4 border-b border-stone-200 pb-3">
+                        肌のキメ・ハリケア
+                    </p>
+                    <p class="text-stone-600 text-sm leading-loose">
+                        5種類のペプチド成分が肌のコンディションを整え、クリアでハリのある肌へと導くサポートをします。
+                    </p>
+                </article>
+            </div>
+            
+            <p class="text-right text-xs text-stone-400 mt-6 pr-4">※上記の内容は、原料の一般的な性質に関する説明です。</p>
+        </section>
+
+        <!-- STREAMING_CHUNK:Key Point Section -->
+        <section class="relative border-2 border-cellvia-pink/60 rounded-2xl p-8 md:p-12 text-center mb-16 mt-16 bg-white fade-in-up">
+            <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-cellvia-dark text-white font-bold tracking-widest px-8 py-2 rounded-full text-sm">
+                KEY POINT
+            </div>
+            
+            <div class="space-y-4">
+                <p class="bg-[#fdf2f4] text-cellvia-darkpink font-bold py-3 px-4 rounded-lg text-sm md:text-base">
+                    生き生きとした、潤いあふれる肌のキメを完成
+                </p>
+                <p class="bg-[#fdf2f4] text-cellvia-darkpink font-bold py-3 px-4 rounded-lg text-sm md:text-base">
+                    ハリケア ＆ 肌のキメ管理を同時に！トータルソリューション効果
+                </p>
+                <p class="bg-[#fdf2f4] text-cellvia-darkpink font-bold py-3 px-4 rounded-lg text-sm md:text-base">
+                    豊かな美容成分が、必要な潤いと栄養を集中チャージ
+                </p>
+            </div>
+        </section>
+
+        <!-- STREAMING_CHUNK:How to Use Section -->
+        <section class="bg-stone-100 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 fade-in-up">
+            <div class="bg-stone-500 text-white font-bold px-6 py-2 rounded-md whitespace-nowrap tracking-widest text-sm">
+                使用方法
+            </div>
+            <p class="text-stone-700 text-sm md:text-base leading-relaxed text-center md:text-left">
+                適量を手に取り、肌のキメに沿って優しく顔全体に塗り広げてなじませます。
+            </p>
+        </section>
+
+    </div>
+</main>
+
+<!-- Intersection Observer for scroll animations -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    });
+</script>
+
+</body>
+</html>

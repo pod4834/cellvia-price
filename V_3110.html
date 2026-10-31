@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリエイション タッチ B.B</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#d88a91',
+                        'brand-light': '#fce8eb',
+                        'text-main': '#3b2c2f',
+                        'text-light': '#7a5c62',
+                        'accent-gold': '#c5a059',
+                        'highlight-red': '#cc6670',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f7f1f2;
+            color: #3b2c2f;
+        }
+        .font-serif-jp {
+            font-family: 'Noto Serif JP', serif;
+        }
+        /* スクロールバーを少し細くしてスタイリッシュに(PC用) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7f1f2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d88a91;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased m-0 p-0 text-[15px] sm:text-base leading-relaxed">
+
+    <main class="max-w-2xl mx-auto bg-white shadow-xl overflow-hidden sm:my-4 sm:rounded-xl">
+        
+        <header class="relative bg-gradient-to-br from-brand-light to-[#f7dadd] px-4 py-8 sm:py-10 text-center overflow-hidden z-0">
+            <!-- 背景の装飾効果 -->
+            <div class="absolute -top-16 -left-16 w-48 h-48 bg-white/80 rounded-full blur-2xl -z-10"></div>
+            <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-brand-dark/20 rounded-full blur-3xl -z-10"></div>
+
+            <p class="text-text-light text-sm sm:text-base tracking-widest mb-3 font-medium">
+                軽いタッチでなめらかなフィット感<br>一日中、明るい印象の肌表現
+            </p>
+            
+            <h1 class="font-serif-jp text-2xl sm:text-3xl font-black text-brand-dark tracking-widest mb-1">
+                クリエイション タッチ B.B
+            </h1>
+            <div class="text-accent-gold text-xs sm:text-sm tracking-[0.2em] mb-4 font-light uppercase">
+                Creation Touch B.B
+            </div>
+            
+            <div class="inline-block bg-gradient-to-br from-[#ebd2a4] to-[#d4b572] text-white font-serif-jp font-bold text-lg px-6 py-1.5 rounded-full shadow-md mb-5 border border-white/40">
+                SPF50+ / PA++++
+            </div>
+            
+            <!-- タグリスト（区切り線をTailwindのdivideで実装） -->
+            <div class="flex flex-wrap justify-center items-center text-xs sm:text-sm font-medium text-text-main divide-x divide-text-light/30">
+                <span class="px-2 sm:px-3 py-1">紫外線プロテクト</span>
+                <span class="px-2 sm:px-3 py-1">なめらかなカバー力</span>
+                <span class="px-2 sm:px-3 py-1">くすみにくい華やかさ</span>
+                <span class="px-2 sm:px-3 py-1 border-r-0">ピンクベージュカラー</span>
+            </div>
+        </header>
+
+        <div class="bg-brand-dark text-white text-center py-2 text-sm font-bold tracking-widest">
+            内容量 : 50g
+        </div>
+
+        <div class="px-4 py-6 sm:px-8 sm:py-8">
+            
+            <!-- 特徴リスト -->
+            <div class="bg-white border border-[#f0e6e8] rounded-lg p-4 sm:p-5 mb-6 shadow-sm">
+                <ul class="flex flex-col gap-2.5">
+                    <li class="flex items-start">
+                        <span class="text-brand-dark font-bold mr-2 mt-0.5">✓</span>
+                        <span class="font-medium">高い紫外線防止効果 (SPF50+ / PA++++)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-dark font-bold mr-2 mt-0.5">✓</span>
+                        <span class="font-medium">肌にすっとなじむ、なめらかなフィッティング感</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-dark font-bold mr-2 mt-0.5">✓</span>
+                        <span class="font-medium">素肌を美しく見せる自然なカバー力</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-dark font-bold mr-2 mt-0.5">✓</span>
+                        <span class="font-medium">肌をパッと明るく見せるピンクベージュカラー</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-dark font-bold mr-2 mt-0.5">✓</span>
+                        <span class="font-medium">時間が経ってもくすみにくく、華やかな印象をキープ</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center mb-8 p-4 sm:p-6 bg-brand-light rounded-lg border-t-4 border-brand-dark">
+                <p class="font-bold mb-4">
+                    <span class="text-highlight-red">なめらかな塗り心地</span>でダマになったり浮いたりしにくく、<br>肌に均一に密着して<span class="text-highlight-red">華やかなトーンアップ効果*</span><br>
+                    <span class="text-xs font-normal text-gray-500 block mt-1">(*メイクアップ効果による)</span>
+                </p>
+                <p class="font-bold mb-4">
+                    羊水由来のヒト幹細胞順化培養液(10,000ppm)配合で<br>
+                    <span class="text-highlight-red">豊かな栄養を与え、健やかな肌へ</span>
+                </p>
+                <p class="font-bold">
+                    紫外線防止に加え、乾燥によるくすみを防ぎ、<br>ハリを与える<span class="text-highlight-red">複合ケア B.Bクリーム</span>
+                </p>
+            </div>
+
+            <div class="text-center mb-4">
+                <h3 class="inline-block font-serif-jp text-lg sm:text-xl font-bold border-b-2 border-brand-dark pb-1">
+                    主要成分と特徴
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 gap-3 mb-2">
+                <!-- 成分 1 -->
+                <div class="bg-white border-l-4 border-brand-dark p-3 sm:p-4 rounded-r-md shadow-sm">
+                    <div class="flex items-baseline mb-1">
+                        <span class="text-highlight-red font-serif-jp text-lg font-bold mr-2">1.</span>
+                        <span class="font-bold text-[15px]">ヒト幹細胞順化培養液<span class="text-xs font-normal ml-1">（10,000ppm、羊水由来）</span></span>
+                    </div>
+                    <p class="text-sm text-text-light ml-6">豊かな栄養を含み、肌のコンディションを整えるサポートをする高機能バイオ素材です。長時間メイクをしている時でも肌をすこやかに保ち、潤いを与えます。</p>
+                </div>
+
+                <!-- 成分 2 -->
+                <div class="bg-white border-l-4 border-brand-dark p-3 sm:p-4 rounded-r-md shadow-sm">
+                    <div class="flex items-baseline mb-1">
+                        <span class="text-highlight-red font-serif-jp text-lg font-bold mr-2">2.</span>
+                        <span class="font-bold text-[15px]">サッカロミセス／コメ発酵液</span>
+                    </div>
+                    <p class="text-sm text-text-light ml-6">伝統的な美容法である米ぬかや米のとぎ汁の知恵を活かした成分。肌に水分を補給し、ハリのあるなめらかな状態へ整えるサポートをします。</p>
+                </div>
+
+                <!-- 成分 3 -->
+                <div class="bg-white border-l-4 border-brand-dark p-3 sm:p-4 rounded-r-md shadow-sm">
+                    <div class="flex items-baseline mb-1">
+                        <span class="text-highlight-red font-serif-jp text-lg font-bold mr-2">3.</span>
+                        <span class="font-bold text-[15px]">ノニエキス<span class="text-xs font-normal ml-1">（ヤエヤマアオキ果実エキス）</span></span>
+                    </div>
+                    <p class="text-sm text-text-light ml-6">豊富なミネラルとビタミンが肌に生き生きとした印象を与えます。乾燥などによりデリケートになった肌をすこやかに保つサポートをします。</p>
+                </div>
+
+                <!-- 成分 4 -->
+                <div class="bg-white border-l-4 border-brand-dark p-3 sm:p-4 rounded-r-md shadow-sm">
+                    <div class="flex items-baseline mb-1">
+                        <span class="text-highlight-red font-serif-jp text-lg font-bold mr-2">4.</span>
+                        <span class="font-bold text-[15px]">ヨモギ コンプレックス エキス</span>
+                    </div>
+                    <p class="text-sm text-text-light ml-6">（ヨモギ葉エキス、カワラヨモギエキスなど）アミノ酸、ベータカロチン、フラボノイドなどの成分を含有。肌にツヤを与え、本来の健やかさを引き出し、なめらかな状態へ導くサポートをします。</p>
+                </div>
+
+                <!-- 成分 5 -->
+                <div class="bg-white border-l-4 border-brand-dark p-3 sm:p-4 rounded-r-md shadow-sm">
+                    <div class="flex items-baseline mb-1">
+                        <span class="text-highlight-red font-serif-jp text-lg font-bold mr-2">5.</span>
+                        <span class="font-bold text-[15px]">ナイアシンアミド</span>
+                    </div>
+                    <p class="text-sm text-text-light ml-6">ビタミンB3の一種。肌の水分・油分のバランスを整え、乾燥によるくすみを防ぎ、明るく透明感のある印象の肌を保つサポートをします。</p>
+                </div>
+
+                <!-- 成分 6 -->
+                <div class="bg-white border-l-4 border-brand-dark p-3 sm:p-4 rounded-r-md shadow-sm">
+                    <div class="flex items-baseline mb-1">
+                        <span class="text-highlight-red font-serif-jp text-lg font-bold mr-2">6.</span>
+                        <span class="font-bold text-[15px]">アデノシン</span>
+                    </div>
+                    <p class="text-sm text-text-light ml-6">肌にハリと弾力を与え、すこやかな状態を保つためのエイジングケア*をサポートします。紫外線に対して安定性が高く、日中のケアにも適しています。<br><span class="text-xs text-gray-400 mt-1 block">*年齢に応じたケア</span></p>
+                </div>
+            </div>
+            
+            <div class="text-right text-[11px] text-gray-400 mb-2 pr-2">
+                ※上記の内容は、原料の一般的な性質に関する説明です。
+            </div>
+            
+            <div class="bg-[#f9f5f6] border border-[#efe8e9] rounded-lg p-4 sm:p-5">
+                <div class="inline-block bg-text-light text-white px-3 py-1 text-xs font-bold rounded mb-2">
+                    使用方法
+                </div>
+                <p class="text-[15px] sm:text-base m-0 font-medium">
+                    スキンケアの最後の段階で適量を取り、肌のキメに沿ってやさしく塗り広げ、なじませます。
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytholomune(ミソロミューン) パッケージ (3Box)</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0d47a1',    // Deep blue
+                            main: '#1976d2',    // Primary blue
+                            light: '#bbdefb',   // Light blue
+                            bg: '#e3f2fd',      // Very light blue background
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #f0f4f8; } /* Gray-blue backdrop for the whole page */
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #e3f2fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased m-0 p-0 leading-snug text-sm font-sans">
+
+<div class="w-full max-w-4xl mx-auto bg-white sm:shadow-xl sm:my-4 overflow-hidden">
+    
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-br from-brand-dark to-brand-main text-center px-3 py-6 sm:py-8 sm:px-6 relative text-white">
+        <div class="text-[11px] sm:text-xs text-brand-light font-bold tracking-widest mb-1.5 drop-shadow-sm">
+            毎日の活力と健康のために
+        </div>
+        
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-gradient tracking-widest mb-0.5 drop-shadow-md">
+            Mytholomune
+        </h1>
+        <div class="text-[10px] sm:text-sm text-blue-100 tracking-[0.25em] mb-3 font-medium opacity-90">
+            Mytholomune(ミソロミューン) 
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-1.5 text-[10px] sm:text-xs font-bold text-brand-main">
+            <span class="bg-white border border-blue-300 rounded-full px-2.5 py-0.5 shadow-sm">活力サポート</span>
+            <span class="bg-white border border-blue-300 rounded-full px-2.5 py-0.5 shadow-sm">健康維持</span>
+            <span class="bg-white border border-blue-300 rounded-full px-2.5 py-0.5 shadow-sm">紅参エキス配合</span>
+            <span class="bg-white border border-blue-300 rounded-full px-2.5 py-0.5 shadow-sm">NMN</span>
+            <span class="bg-white border border-blue-300 rounded-full px-2.5 py-0.5 shadow-sm">L-アルギニン</span>
+        </div>
+        
+        <div class="text-[8px] sm:text-[9px] text-blue-200 mt-2.5">
+            ※本製品は病気の診断、治療、治癒、予防を目的としたものではありません。
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="px-3 pb-4 pt-4 sm:px-5">
+        
+        <!-- Points Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+            <div class="bg-gray-50 border-l-4 border-brand-main rounded p-2.5 flex items-center shadow-sm">
+                <div class="text-xl sm:text-2xl mr-2.5 flex-shrink-0">💪</div>
+                <div>
+                    <h3 class="text-[11px] sm:text-xs font-bold text-brand-dark mb-0.5 leading-tight">活気に満ちた毎日のための栄養補給</h3>
+                    <p class="text-[10px] text-gray-600 leading-tight m-0">忙しい現代人の健康的なライフスタイルをサポートします。</p>
+                </div>
+            </div>
+            <div class="bg-gray-50 border-l-4 border-brand-main rounded p-2.5 flex items-center shadow-sm">
+                <div class="text-xl sm:text-2xl mr-2.5 flex-shrink-0">🧪</div>
+                <div>
+                    <h3 class="text-[11px] sm:text-xs font-bold text-brand-dark mb-0.5 leading-tight">厳選された成分の最適な配合</h3>
+                    <p class="text-[10px] text-gray-600 leading-tight m-0">紅参、NMN、L-アルギニンなど、健康維持に役立つ成分をバランスよく配合しました。</p>
+                </div>
+            </div>
+            <div class="bg-gray-50 border-l-4 border-brand-main rounded p-2.5 flex items-center shadow-sm">
+                <div class="text-xl sm:text-2xl mr-2.5 flex-shrink-0">💊</div>
+                <div>
+                    <h3 class="text-[11px] sm:text-xs font-bold text-brand-dark mb-0.5 leading-tight">飲みやすいカプセルタイプ</h3>
+                    <p class="text-[10px] text-gray-600 leading-tight m-0">いつでもどこでも手軽に摂取でき、毎日の習慣にしやすい設計です。</p>
+                </div>
+            </div>
+            <div class="bg-gray-50 border-l-4 border-brand-main rounded p-2.5 flex items-center shadow-sm">
+                <div class="text-xl sm:text-2xl mr-2.5 flex-shrink-0">🏭</div>
+                <div>
+                    <h3 class="text-[11px] sm:text-xs font-bold text-brand-dark mb-0.5 leading-tight">徹底した品質管理</h3>
+                    <p class="text-[10px] text-gray-600 leading-tight m-0">信頼できる製造施設で、厳格な基準のもと生産されています。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ginseng Section -->
+        <div class="bg-[#efebe9] rounded-lg p-3 sm:p-4 mb-4 border border-[#d7ccc8] flex flex-col sm:flex-row gap-3 items-center shadow-sm">
+            <!-- Title Area -->
+            <div class="sm:w-1/3 text-center sm:text-left">
+                <h2 class="text-base sm:text-lg font-bold text-[#5d4037] mb-1.5 border-b-2 border-[#8d6e63] inline-block sm:block pb-0.5 w-auto">紅参の力</h2>
+                <p class="text-[10px] sm:text-[11px] text-[#4e342e] leading-snug m-0">
+                    古くから健康維持のために親しまれてきた紅参。<br>
+                    ミソロミューンは、高品質な紅参エキスを配合し、あなたの毎日の活力を応援します。
+                </p>
+            </div>
+            
+            <!-- Features List -->
+            <div class="sm:w-2/3 flex flex-col gap-1.5 w-full">
+                <div class="bg-white p-2 rounded border border-[#d7ccc8] text-[10px] leading-tight shadow-sm">
+                    <span class="block font-bold text-[#c62828] mb-0.5">Point 1. 厳選された紅参を使用</span>
+                    豊かな土壌で育った質の高い紅参を厳選しています。
+                </div>
+                <div class="bg-white p-2 rounded border border-[#d7ccc8] text-[10px] leading-tight shadow-sm">
+                    <span class="block font-bold text-[#c62828] mb-0.5">Point 2. サポニン含有</span>
+                    紅参特有の成分であるサポニンを含み、健康的なリズムをサポートします。
+                </div>
+                <div class="bg-white p-2 rounded border border-[#d7ccc8] text-[10px] leading-tight shadow-sm">
+                    <span class="block font-bold text-[#c62828] mb-0.5">Point 3. 吸収率を考慮した配合</span>
+                    体内で効率よく利用されるよう、成分の組み合わせにこだわりました。
+                </div>
+            </div>
+        </div>
+
+        <!-- Target Audience (Radar Tags) -->
+        <div class="bg-brand-bg rounded-lg p-2.5 sm:p-3 text-center mb-4 border border-blue-100 shadow-sm">
+            <h2 class="text-[11px] sm:text-xs font-bold text-brand-dark mb-2">ミソロミューンはこんな方におすすめです</h2>
+            <div class="flex flex-wrap justify-center gap-1">
+                <span class="bg-white border border-brand-main text-brand-main rounded-full px-2 py-0.5 text-[9px] sm:text-[10px] font-medium">毎日の健康を維持したい方</span>
+                <span class="bg-white border border-brand-main text-brand-main rounded-full px-2 py-0.5 text-[9px] sm:text-[10px] font-medium">朝からスッキリと活動したい方</span>
+                <span class="bg-white border border-brand-main text-brand-main rounded-full px-2 py-0.5 text-[9px] sm:text-[10px] font-medium">年齢に負けない活力を保ちたい方</span>
+                <span class="bg-white border border-brand-main text-brand-main rounded-full px-2 py-0.5 text-[9px] sm:text-[10px] font-medium">忙しい日々を送っている方</span>
+                <span class="bg-white border border-brand-main text-brand-main rounded-full px-2 py-0.5 text-[9px] sm:text-[10px] font-medium">手軽に栄養補給をしたい方</span>
+            </div>
+        </div>
+
+        <!-- Q&A Section -->
+        <div class="mb-5">
+            <div class="text-center mb-2">
+                <h2 class="text-sm sm:text-base font-bold text-brand-dark inline-block border-b-2 border-brand-main pb-0.5">Q & A</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="bg-white border border-gray-200 rounded p-2 text-[10px] shadow-sm">
+                    <div class="font-bold text-brand-main mb-1">Q. どのように摂取すればいいですか？</div>
+                    <div class="pl-2 border-l-2 border-brand-light text-gray-700 leading-tight">1日1回、水またはぬるま湯と一緒にお召し上がりください。</div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded p-2 text-[10px] shadow-sm sm:row-span-2">
+                    <div class="font-bold text-brand-main mb-1">Q. いつ飲むのが効果的ですか？</div>
+                    <div class="pl-2 border-l-2 border-brand-light text-gray-700 leading-tight">健康食品ですので、特に決まった時間はありません。ご自身のライフスタイルに合わせて、毎日続けやすいタイミングでお召し上がりいただくことをおすすめします。</div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded p-2 text-[10px] shadow-sm">
+                    <div class="font-bold text-brand-main mb-1">Q. 他のサプリメントと一緒に飲んでも大丈夫ですか？</div>
+                    <div class="pl-2 border-l-2 border-brand-light text-gray-700 leading-tight">基本的には問題ありませんが、ご心配な場合は医師や薬剤師にご相談ください。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Info Table -->
+        <div class="text-center mb-2">
+            <h2 class="text-sm sm:text-base font-bold text-brand-dark inline-block border-b-2 border-brand-dark pb-0.5">製品情報</h2>
+        </div>
+        
+        <table class="w-full text-[10px] sm:text-[11px] border-collapse mb-3 shadow-sm border border-gray-300">
+            <tbody>
+                <tr class="border-b border-gray-200 flex flex-col sm:table-row">
+                    <th class="bg-gray-100 p-1.5 sm:w-1/4 text-left font-bold text-gray-700 border-r-0 sm:border-r border-gray-300">製品名</th>
+                    <td class="p-1.5 bg-white text-gray-800">ミソロミューン(Mytholomune) </td>
+                </tr>
+                <tr class="border-b border-gray-200 flex flex-col sm:table-row">
+                    <th class="bg-gray-100 p-1.5 text-left font-bold text-gray-700 border-r-0 sm:border-r border-gray-300">内容量</th>
+                    <td class="p-1.5 bg-white text-gray-800">500mg × 30カプセル (15g)</td>
+                </tr>
+                <tr class="border-b border-gray-200 flex flex-col sm:table-row">
+                    <th class="bg-gray-100 p-1.5 text-left font-bold text-gray-700 border-r-0 sm:border-r border-gray-300">原材料名</th>
+                    <td class="p-1.5 bg-white text-gray-800 leading-tight">紅参エキス粉末、ニコチンアミドモノヌクレオチド(NMN)、L-アルギニン、マカ抽出物粉末、亜鉛含有酵母 / セルロース、ステアリン酸カルシウム、微粒二酸化ケイ素、（一部にゼラチンを含む）</td>
+                </tr>
+                <tr class="border-b border-gray-200 flex flex-col sm:table-row">
+                    <th class="bg-gray-100 p-1.5 text-left font-bold text-gray-700 border-r-0 sm:border-r border-gray-300">お召し上がり方</th>
+                    <td class="p-1.5 bg-white text-gray-800">1日1カプセルを目安に、水またはぬるま湯とともにお召し上がりください。</td>
+                </tr>
+                <tr class="border-b border-gray-200 flex flex-col sm:table-row">
+                    <th class="bg-gray-100 p-1.5 text-left font-bold text-gray-700 border-r-0 sm:border-r border-gray-300">保存方法</th>
+                    <td class="p-1.5 bg-white text-gray-800">直射日光、高温多湿を避けて涼しいところに保管してください。</td>
+                </tr>
+                <tr class="flex flex-col sm:table-row">
+                    <th class="bg-gray-100 p-1.5 text-left font-bold text-gray-700 border-r-0 sm:border-r border-gray-300">摂取上の注意</th>
+                    <td class="p-1.5 bg-white text-gray-800 leading-tight space-y-0.5">
+                        <div class="flex items-start"><span class="mr-1">・</span><span>特異体質、アレルギー体質の方は原材料をご確認の上、お召し上がりください。</span></div>
+                        <div class="flex items-start"><span class="mr-1">・</span><span>妊娠・授乳中の方、お薬を服用中の方は、医師にご相談の上お召し上がりください。</span></div>
+                        <div class="flex items-start"><span class="mr-1">・</span><span>お子様の手の届かないところに保管してください。</span></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Notices -->
+        <div class="bg-gray-50 border border-gray-200 rounded p-2 text-[9px] text-gray-500 leading-tight">
+            ※食生活は、主食、主菜、副菜を基本に、食事のバランスを。<br>
+            ※本製品は、病気の診断、治療、治癒、または予防を意図したものではありません。
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

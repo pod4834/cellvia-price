@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>バリア カーミング クリーム 150ml</title>
+    
+    <!-- Google Fonts & Libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #fcfaf9;
+            color: #1e293b;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 250px;
+        }
+        .transition-all {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Custom scrollbar for clean aesthetic */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="w-full overflow-x-hidden text-slate-800">
+
+    <main class="w-full max-w-5xl mx-auto px-3 sm:px-6 py-4 space-y-6">
+
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-rose-50/80 via-amber-50/40 to-white rounded-2xl p-4 sm:p-6 border border-rose-100/80 shadow-sm">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <!-- Text Content -->
+                <div class="md:w-3/5 space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="px-2.5 py-0.5 bg-rose-600 text-white text-[11px] font-bold tracking-wider rounded-md">CELLVIA</span>
+                        <span class="px-2.5 py-0.5 bg-rose-100 text-rose-800 text-[11px] font-bold tracking-wider rounded-md">CALMING & MOISTURE</span>
+                    </div>
+                    
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-snug">
+                        乾燥しがちな素肌に<br>
+                        <span class="text-rose-600">優しく寄り添う</span> 潤いヴェール。
+                    </h1>
+                    
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        デリケートなお肌に贅沢な水分補給と整肌ケアを。ヒト幹細胞順化培養液(10,000ppm)と厳選された植物由来成分が、角層の水分・油分バランスを理想的に整え、健やかでなめらかな肌へと導きます。
+                    </p>
+
+                    <div class="grid grid-cols-4 gap-2 pt-1">
+                        <div class="flex flex-col items-center py-2 px-1 bg-white rounded-xl shadow-xs border border-rose-100 text-center">
+                            <span class="text-rose-600 font-bold text-xs sm:text-sm">水分補給</span>
+                            <span class="text-[8px] text-slate-400 font-medium tracking-tighter uppercase">Hydration</span>
+                        </div>
+                        <div class="flex flex-col items-center py-2 px-1 bg-white rounded-xl shadow-xs border border-rose-100 text-center">
+                            <span class="text-rose-600 font-bold text-xs sm:text-sm">整肌ケア</span>
+                            <span class="text-[8px] text-slate-400 font-medium tracking-tighter uppercase">Soothing</span>
+                        </div>
+                        <div class="flex flex-col items-center py-2 px-1 bg-white rounded-xl shadow-xs border border-rose-100 text-center">
+                            <span class="text-rose-600 font-bold text-xs sm:text-sm">バランス</span>
+                            <span class="text-[8px] text-slate-400 font-medium tracking-tighter uppercase">Balancing</span>
+                        </div>
+                        <div class="flex flex-col items-center py-2 px-1 bg-white rounded-xl shadow-xs border border-rose-100 text-center">
+                            <span class="text-rose-600 font-bold text-xs sm:text-sm">デイリー</span>
+                            <span class="text-[8px] text-slate-400 font-medium tracking-tighter uppercase">Daily Care</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Display Card -->
+                <div class="md:w-2/5 w-full">
+                    <div class="w-full bg-white rounded-2xl shadow-md border border-rose-100 p-5 flex flex-col justify-between h-full relative overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-rose-100/60 rounded-full blur-xl"></div>
+                        <div class="absolute -left-10 -bottom-10 w-32 h-32 bg-amber-100/50 rounded-full blur-xl"></div>
+
+                        <div class="relative z-10 flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-[10px] font-bold tracking-widest text-rose-600 uppercase">Barrier Calming Solution</span>
+                                <h3 class="text-2xl font-black text-slate-800 tracking-tight">CELLVIA</h3>
+                                <p class="text-xs text-slate-500 font-medium">Barrier Calming Cream</p>
+                            </div>
+                            <span class="px-2 py-1 bg-rose-50 text-rose-700 text-[10px] font-bold rounded-md border border-rose-200 shrink-0">
+                                ALL SKIN
+                            </span>
+                        </div>
+
+                        <div class="relative z-10 my-3 text-center py-4 bg-rose-50/50 rounded-xl border border-rose-100">
+                            <span class="text-3xl">🌸</span>
+                            <p class="text-[11px] text-slate-600 font-bold mt-1">10,000 ppm</p>
+                            <p class="text-[9px] text-slate-400">Human Stem Cell Conditioned Media</p>
+                        </div>
+
+                        <div class="relative z-10 flex justify-between items-center border-t border-slate-100 pt-3 mt-2">
+                            <span class="text-xs text-slate-500 font-medium">Net Weight</span>
+                            <span class="text-base font-extrabold text-slate-800">150 ml</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-100 shadow-sm space-y-4">
+            <div class="text-center">
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">お肌に優しく潤いを満たす4つのこだわり</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">乾燥によるカサつきやキメの乱れを整え、健やかな素肌環境へ導きます。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="p-3.5 bg-rose-50/40 rounded-xl border border-rose-100 flex items-start gap-3">
+                    <div class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">01</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-0.5">長時間しっとり持続する高保湿クリーム</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            お肌になじみやすいモイスチャー処方で、べたつくことなく角層深くまで潤いを届け、なめらかな肌触りをキープします。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-3.5 bg-rose-50/40 rounded-xl border border-rose-100 flex items-start gap-3">
+                    <div class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">02</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-0.5">水分・油分の理想的なバランスケア</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            乾燥によって崩れがちな水分と油分のバランスを整え、乾燥からお肌を守る健やかな肌環境を育みます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-3.5 bg-rose-50/40 rounded-xl border border-rose-100 flex items-start gap-3">
+                    <div class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">03</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-0.5">デリケートなお肌をやさしく包み込む整肌</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            外部環境などのストレスを受けてデリケートになりがちな素肌をマイルドに保湿し、しなやかに整えます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-3.5 bg-rose-50/40 rounded-xl border border-rose-100 flex items-start gap-3">
+                    <div class="w-8 h-8 bg-rose-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">04</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm mb-0.5">ご家族みんなで使えるマイルド設計</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            顔はもちろん、乾燥の気になるボディにも。デイリーケアとして心地よくお使いいただけるマイルド感です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Ingredients Section -->
+        <section class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-100 shadow-sm space-y-4">
+            <div class="text-center">
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">厳選された7つのキー成分</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">タップして各成分の詳細情報をご確認いただけます。</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <button onclick="showIngredient(0)" id="ing-btn-0" class="p-2.5 bg-slate-50 hover:bg-rose-50 rounded-xl border border-slate-200 hover:border-rose-300 text-left transition-all">
+                    <span class="text-[10px] font-bold text-rose-600 block mb-0.5">01</span>
+                    <h3 class="font-bold text-xs text-slate-800 truncate">ヒト幹細胞順化培養液</h3>
+                </button>
+                <button onclick="showIngredient(1)" id="ing-btn-1" class="p-2.5 bg-slate-50 hover:bg-rose-50 rounded-xl border border-slate-200 hover:border-rose-300 text-left transition-all">
+                    <span class="text-[10px] font-bold text-rose-600 block mb-0.5">02</span>
+                    <h3 class="font-bold text-xs text-slate-800 truncate">スベリヒユエキス</h3>
+                </button>
+                <button onclick="showIngredient(2)" id="ing-btn-2" class="p-2.5 bg-slate-50 hover:bg-rose-50 rounded-xl border border-slate-200 hover:border-rose-300 text-left transition-all">
+                    <span class="text-[10px] font-bold text-rose-600 block mb-0.5">03</span>
+                    <h3 class="font-bold text-xs text-slate-800 truncate">トウキンセンカ花エキス</h3>
+                </button>
+                <button onclick="showIngredient(3)" id="ing-btn-3" class="p-2.5 bg-slate-50 hover:bg-rose-50 rounded-xl border border-slate-200 hover:border-rose-300 text-left transition-all">
+                    <span class="text-[10px] font-bold text-rose-600 block mb-0.5">04</span>
+                    <h3 class="font-bold text-xs text-slate-800 truncate">ローズマリー葉エキス</h3>
+                </button>
+                <button onclick="showIngredient(4)" id="ing-btn-4" class="p-2.5 bg-slate-50 hover:bg-rose-50 rounded-xl border border-slate-200 hover:border-rose-300 text-left transition-all">
+                    <span class="text-[10px] font-bold text-rose-600 block mb-0.5">05</span>
+                    <h3 class="font-bold text-xs text-slate-800 truncate">チャ葉エキス</h3>
+                </button>
+                <button onclick="showIngredient(5)" id="ing-btn-5" class="p-2.5 bg-slate-50 hover:bg-rose-50 rounded-xl border border-slate-200 hover:border-rose-300 text-left transition-all">
+                    <span class="text-[10px] font-bold text-rose-600 block mb-0.5">06</span>
+                    <h3 class="font-bold text-xs text-slate-800 truncate">β-グルカン</h3>
+                </button>
+                <button onclick="showIngredient(6)" id="ing-btn-6" class="p-2.5 bg-slate-50 hover:bg-rose-50 rounded-xl border border-slate-200 hover:border-rose-300 text-left transition-all col-span-2">
+                    <span class="text-[10px] font-bold text-rose-600 block mb-0.5">07</span>
+                    <h3 class="font-bold text-xs text-slate-800 truncate">ヒアルロン酸Na</h3>
+                </button>
+            </div>
+
+            <!-- Detail Panel -->
+            <div id="ingredient-detail" class="p-4 bg-gradient-to-r from-rose-50 to-amber-50/60 rounded-xl border border-rose-200 transition-all">
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2 py-0.5 bg-rose-600 text-white text-[10px] font-bold rounded">KEY INGREDIENT</span>
+                    <h4 id="ingredient-title" class="text-sm font-bold text-rose-900"></h4>
+                </div>
+                <p id="ingredient-desc" class="text-xs sm:text-sm text-slate-700 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <!-- Science & Performance Section -->
+        <section class="bg-slate-900 rounded-2xl p-4 sm:p-6 text-white space-y-4">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <!-- Bars -->
+                <div class="md:w-1/2 space-y-3 w-full">
+                    <div>
+                        <span class="text-rose-400 font-bold text-[10px] tracking-widest uppercase block">Skin Harmony Index</span>
+                        <h2 class="text-lg sm:text-xl font-bold mt-0.5">健やかな肌へと導くトータルバリアバランス</h2>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                            水分補給・整肌・油分バランス・保護膜形成・キメ整頓の5つのアプローチでお肌の基礎コンディションを総合サポート。
+                        </p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700/80 flex items-center justify-between">
+                            <span class="font-medium text-xs text-slate-200">角層への水分補給力</span>
+                            <div class="w-32 sm:w-40 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="w-[95%] h-full bg-rose-500"></div>
+                            </div>
+                        </div>
+                        <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700/80 flex items-center justify-between">
+                            <span class="font-medium text-xs text-slate-200">お肌のマイルド整肌感</span>
+                            <div class="w-32 sm:w-40 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="w-[94%] h-full bg-rose-500"></div>
+                            </div>
+                        </div>
+                        <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700/80 flex items-center justify-between">
+                            <span class="font-medium text-xs text-slate-200">水分・油分バランス保持</span>
+                            <div class="w-32 sm:w-40 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="w-[92%] h-full bg-rose-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart -->
+                <div class="md:w-1/2 w-full bg-slate-800/50 p-3 rounded-xl border border-slate-700 flex flex-col items-center">
+                    <div class="chart-container">
+                        <canvas id="creamChart"></canvas>
+                    </div>
+                    <p class="text-center text-[10px] text-slate-400 mt-2">※成分特性および使用感に関するイメージ指標です</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How To Use Section -->
+        <section class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-100 shadow-sm space-y-4">
+            <div class="text-center">
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">How To Use</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">毎日のスキンケアの仕上げに。優しく包み込むお手入れステップ。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 text-center">
+                    <div class="w-8 h-8 bg-rose-100 text-rose-700 font-extrabold rounded-full flex items-center justify-center mx-auto mb-2 text-xs">1</div>
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">TAKE AN AMOUNT</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">スキンケアの最後の段階で、適量（パール1〜2粒大）を清潔な手に取ります。</p>
+                </div>
+
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 text-center">
+                    <div class="w-8 h-8 bg-rose-100 text-rose-700 font-extrabold rounded-full flex items-center justify-center mx-auto mb-2 text-xs">2</div>
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">APPLY GENTLY</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">顔の中心から外側に向かって、肌のキメに沿うように優しく伸ばしていきます。</p>
+                </div>
+
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-100 text-center">
+                    <div class="w-8 h-8 bg-rose-100 text-rose-700 font-extrabold rounded-full flex items-center justify-center mx-auto mb-2 text-xs">3</div>
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">HAND PRESS</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">手のひらで顔全体を優しく包み込み、温もりで角層までしっかりとなじませます。</p>
+                </div>
+            </div>
+
+            <!-- Tip -->
+            <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-100 flex items-start gap-3">
+                <span class="text-lg leading-none shrink-0">✨</span>
+                <div>
+                    <h4 class="font-bold text-rose-900 text-xs mb-0.5">Skincare Tip</h4>
+                    <p class="text-[11px] text-rose-800 leading-relaxed">
+                        特に乾燥が気になる目元や口元、または体のかさつく部分には重ね塗り（レイヤリング）が効果的です。密着感のある水分保護膜が形成され、翌朝までしっとりとなめらかな肌触りが続きます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const ingredients = [
+            {
+                title: "ヒト幹細胞順化培養液 (10,000ppm / 整肌成分)",
+                desc: "希少なヒト幹細胞順化培養液（整肌成分）を10,000ppm高配合。乾燥や環境ストレスを受けがちな肌に豊かな潤いと栄養を補給し、すこやかな肌環境のベースを整えます。"
+            },
+            {
+                title: "スベリヒユエキス (整肌成分)",
+                desc: "デリケートになりがちな肌をやさしく整え、乾燥による肌荒れを防ぎます。キメの整った健やかでなめらかな肌状態をキープします。"
+            },
+            {
+                title: "トウキンセンカ花エキス (保湿・整肌成分)",
+                desc: "フラボノイドやビタミンを含み、肌にツヤとみずみずしい潤いを与える植物性エキス。明るく輝くような素肌へ導きます。"
+            },
+            {
+                title: "ローズマリー葉エキス (保湿成分)",
+                desc: "肌の水分保持力をサポートし、乾燥からお肌を保護。みずみずしいツヤと柔らかな肌触りを与えます。"
+            },
+            {
+                title: "チャ葉エキス (肌ひきしめ・整肌成分)",
+                desc: "カテキンなどのコンディショニング成分を含み、お肌を引き締めてフレッシュで健康的な状態に保ちます。"
+            },
+            {
+                title: "β-グルカン (保湿・保護成分)",
+                desc: "保水力に優れ、肌の表面に潤いの保護膜を形成。洗顔や入浴後もかさつきを防ぎ、心地よいしっとり感を提供します。"
+            },
+            {
+                title: "ヒアルロン酸Na (保水成分)",
+                desc: "自身の重量の約1,000倍の水分を抱え込める優れた保水成分。角層深くまで水分をチャージし、もっちりとした肌感を保ちます。"
+            }
+        ];
+
+        function showIngredient(index) {
+            const title = document.getElementById('ingredient-title');
+            const desc = document.getElementById('ingredient-desc');
+
+            title.innerText = ingredients[index].title;
+            desc.innerText = ingredients[index].desc;
+
+            // Highlight active button
+            for (let i = 0; i < ingredients.length; i++) {
+                const btn = document.getElementById(`ing-btn-${i}`);
+                if (btn) {
+                    if (i === index) {
+                        btn.classList.add('border-rose-500', 'bg-rose-50');
+                        btn.classList.remove('border-slate-200', 'bg-slate-50');
+                    } else {
+                        btn.classList.remove('border-rose-500', 'bg-rose-50');
+                        btn.classList.add('border-slate-200', 'bg-slate-50');
+                    }
+                }
+            }
+        }
+
+        window.addEventListener('load', () => {
+            showIngredient(0);
+
+            // Chart initialization
+            const ctx = document.getElementById('creamChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['水分補給', 'マイルド整肌', '油水分バランス', '潤い保護膜', 'キメ整頓'],
+                    datasets: [{
+                        label: 'CELLVIA Performance',
+                        data: [95, 94, 92, 93, 91],
+                        backgroundColor: 'rgba(225, 29, 72, 0.25)',
+                        borderColor: 'rgba(225, 29, 72, 0.9)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(225, 29, 72, 1)',
+                        pointRadius: 3
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255, 255, 255, 0.15)' },
+                            grid: { color: 'rgba(255, 255, 255, 0.15)' },
+                            pointLabels: { color: '#cbd5e1', font: { size: 10, weight: 'bold' } },
+                            ticks: { display: false, stepSize: 20 },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>シSHUSPELL(シュスペル) エアーセラピー</title>
+<style>
+    body {
+        font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', 'Noto Sans JP', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f9f6;
+        color: #2c3e50;
+        line-height: 1.7;
+    }
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+
+    .header-banner {
+        background: linear-gradient(135deg, #2e4d3a, #4a7c59);
+        color: white;
+        text-align: center;
+        padding: 60px 20px 50px 20px;
+        position: relative;
+    }
+    .header-banner .tagline {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: #c2eabd;
+        margin-bottom: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .header-banner h1 {
+        font-size: 2.6rem;
+        margin: 0 0 10px 0;
+        color: #ffffff;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+    .header-banner .subtitle-en {
+        font-size: 1.2rem;
+        color: #e2f4e0;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+        font-weight: 300;
+    }
+    .badges {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .badge {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: #ffffff;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        backdrop-filter: blur(4px);
+    }
+
+    .content-area {
+        padding: 40px 30px;
+    }
+
+    .catchphrase-box {
+        text-align: center;
+        margin: 0 auto 40px auto;
+        padding: 30px 20px;
+        background-color: #f2f7f3;
+        border-radius: 12px;
+        border-left: 5px solid #4a7c59;
+    }
+    .catchphrase-box h2 {
+        color: #2e4d3a;
+        font-size: 1.4rem;
+        margin: 0 0 10px 0;
+        font-weight: 700;
+    }
+    .catchphrase-box p {
+        font-size: 1.05rem;
+        color: #4a5568;
+        margin: 0;
+        line-height: 1.8;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        color: #2e4d3a;
+        border-bottom: 2px solid #4a7c59;
+        padding-bottom: 10px;
+        margin-top: 45px;
+        margin-bottom: 25px;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    .feature-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 22px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+    .feature-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    .feature-icon {
+        width: 36px;
+        height: 36px;
+        background-color: #e2f4e0;
+        color: #2e4d3a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 12px;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+    .feature-title {
+        font-size: 1.15rem;
+        font-weight: bold;
+        color: #2e4d3a;
+        margin: 0;
+    }
+    .feature-desc {
+        font-size: 0.95rem;
+        color: #555;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .multicare-container {
+        background-color: #fcfcfc;
+        border: 1px solid #edf2f7;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 40px;
+    }
+    .mode-item {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #cbd5e0;
+    }
+    .mode-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .mode-tag {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    .tag-spray { background-color: #e3f2fd; color: #1565c0; }
+    .tag-red { background-color: #ffebee; color: #c62828; }
+    .tag-blue { background-color: #e8eaf6; color: #283593; }
+    .tag-galvanic { background-color: #f3e5f5; color: #6a1b9a; }
+    .tag-vibration { background-color: #e8f5e9; color: #2e7d32; }
+
+    .mode-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #2d3748;
+        margin-bottom: 6px;
+    }
+    .mode-desc {
+        font-size: 0.95rem;
+        color: #4a5568;
+        margin: 0;
+    }
+
+    .usage-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    .step-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: left;
+        position: relative;
+    }
+    .step-number {
+        background-color: #4a7c59;
+        color: #ffffff;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 3px 10px;
+        border-radius: 12px;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    .step-title {
+        font-size: 1.05rem;
+        font-weight: bold;
+        color: #2e4d3a;
+        margin-bottom: 10px;
+    }
+    .step-list {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 0.9rem;
+        color: #4a5568;
+    }
+    .step-list li {
+        margin-bottom: 6px;
+    }
+
+    .precaution-box {
+        background-color: #fff9db;
+        border: 1px solid #ffe066;
+        border-radius: 10px;
+        padding: 20px 25px;
+        margin-bottom: 40px;
+    }
+    .precaution-title {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #f59f00;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .precaution-title::before {
+        content: '⚠️';
+        margin-right: 8px;
+    }
+    .precaution-list {
+        margin: 0;
+        padding-left: 20px;
+        font-size: 0.88rem;
+        color: #5c5f66;
+        line-height: 1.6;
+    }
+    .precaution-list li {
+        margin-bottom: 6px;
+    }
+
+    /* Product Info Table */
+    .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 0.9rem;
+    }
+    .spec-table th, .spec-table td {
+        border: 1px solid #e2e8f0;
+        padding: 12px 15px;
+        text-align: left;
+    }
+    .spec-table th {
+        background-color: #f7fafc;
+        width: 30%;
+        color: #4a5568;
+        font-weight: 600;
+    }
+    .spec-table td {
+        color: #2d3748;
+    }
+
+    .notice-legal {
+        font-size: 0.8rem;
+        color: #a0aec0;
+        margin-top: 25px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .header-banner h1 {
+            font-size: 2rem;
+        }
+        .content-area {
+            padding: 25px 15px;
+        }
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+        .usage-steps {
+            grid-template-columns: 1fr;
+        }
+        .spec-table th, .spec-table td {
+            display: block;
+            width: 100%;
+        }
+        .spec-table th {
+            background-color: #edf2f7;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-banner">
+        <div class="tagline">Powerful Micro Spray & Multi Beauty Care</div>
+        <h1>SHUSPELL Air Therapy</h1>
+        <div class="subtitle-en">シュスペル エアーセラピー</div>
+        
+        <div class="badges">
+            <span class="badge">超微細スプレー</span>
+            <span class="badge">マルチLEDライト</span>
+            <span class="badge">ガルバニックイオン</span>
+            <span class="badge">3D立体振動</span>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <div class="catchphrase-box">
+            <h2>「深まるお肌の悩みに、プレミアムなエアーケアを」</h2>
+            <p>
+                微細噴射エアブラシ、LEDライトセラピー、ガルバニックイオン、立体振動まで。<br>
+                毎日のスキンケア効率を高める美顔システムで、すこやかでハリのある肌印象へ導きます。
+            </p>
+        </div>
+
+        <div class="section-title">シュスペル エアーセラピーの主な特徴</div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">1</div>
+                    <h3 class="feature-title">超微細マイクロミスト</h3>
+                </div>
+                <p class="feature-desc">
+                    約0.4mmの精密ノズルから吐出される圧縮空気と美容液ミストが、手でお手入れするよりも均일かつ効率的にお肌の角質層へ浸透をサポートします。
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">2</div>
+                    <h3 class="feature-title">マルチLEDライトセラピー</h3>
+                </div>
+                <p class="feature-desc">
+                    赤色LED＋近赤外線（IR）および青色LEDの異なる波長を採用。肌コンディションに合わせて、すこやかな美肌づくりをサポートします。
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">3</div>
+                    <h3 class="feature-title">ガルバニック イオンケア</h3>
+                </div>
+                <p class="feature-desc">
+                    微弱電流（ガルバニック）の力を応用し、手持ちの美容液やアンプルの有用成分を角質層のすみずみまで届けます。
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">4</div>
+                    <h3 class="feature-title">1分間12,000回の3D立体振動</h3>
+                </div>
+                <p class="feature-desc">
+                    心地よい微細振動が肌表面をやさしく刺激。余分な古い角質のオフを助け、すっきりとした肌整えケアを実現します。
+                </p>
+            </div>
+        </div>
+
+        <div class="section-title">4つのマルチビューティーシステム</div>
+        <div class="multicare-container">
+            <div class="mode-item">
+                <span class="mode-tag tag-spray">Micro Spray</span>
+                <div class="mode-title">微細エアブラシテクノロジー</div>
+                <p class="mode-desc">
+                    美容液の粒子を細かく均一に分散。肌に直接手を触れることなく衛生的に塗布でき、メイクの上からでも崩れにくく水分補給が可能です。
+                </p>
+            </div>
+
+            <div class="mode-item">
+                <span class="mode-tag tag-red">Red LED + IR</span>
+                <div class="mode-title">レッドLED ＆ 近赤外線（IR）モード</div>
+                <p class="mode-desc">
+                    600nm台のレッド波長と900nm台の近赤外線波長で、肌に温かみと心地よい刺激を与え、引き締まったハリ肌印象へ導きます。
+                </p>
+            </div>
+
+            <div class="mode-item">
+                <span class="mode-tag tag-blue">Blue LED</span>
+                <div class="mode-title">ブルーLEDモード</div>
+                <p class="mode-desc">
+                    400nm台のブルー波長が、デ리ケートな肌やべたつきが気になるコンディションをやさしく整え、すこやかさを保ちます。
+                </p>
+            </div>
+
+            <div class="mode-item">
+                <span class="mode-tag tag-galvanic">Galvanic Care</span>
+                <div class="mode-title">ガルバニック 導入ヘッド</div>
+                <p class="mode-desc">
+                    手で塗るだけでは届きにくい美容成分の浸透（角質層まで）を促し、スキンケアのなじみをグッと高めます。
+                </p>
+            </div>
+
+            <div class="mode-item">
+                <span class="mode-tag tag-vibration">3D Vibration</span>
+                <div class="mode-title">立体微細マッサージ</div>
+                <p class="mode-desc">
+                    温熱感・ガルバニック・LEDと同時に作動。お肌を心地よくトリートメントし、滑らかな肌触りへ整えます。
+                </p>
+            </div>
+        </div>
+
+        <div class="section-title">ご使用方法 (HOW TO USE)</div>
+        <div class="usage-steps">
+            <div class="step-card">
+                <span class="step-number">Step 01</span>
+                <div class="step-title">エアブラシ モード</div>
+                <ul class="step-list">
+                    <li>洗顔後、タンクに美容液（アンプル）を入れます。</li>
+                    <li>噴射方向に合わせ、お顔全体に円を描くようにやさしくスプレーします。</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">Step 02</span>
+                <div class="step-title">LEDライト セラピー</div>
+                <ul class="step-list">
+                    <li>背面タッチ部を約3秒間長押しして電源を入れます。</li>
+                    <li>肌悩みに応じてブルーLEDまたはレッド＋IR LEDを選択し照射します。</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <span class="step-number">Step 03</span>
+                <div class="step-title">ガルバニック イオンケア</div>
+                <ul class="step-list">
+                    <li>電源オンの状態で、ガルバニック接地面に手が触れるように握ります。</li>
+                    <li>ガルバニックヘッドを肌にあて、キメに沿ってやさしく滑らせます。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="precaution-box">
+            <div class="precaution-title">ご使用上の注意点</div>
+            <ul class="precaution-list">
+                <li>ガルバニック機能をご使用の際は、肌に水分や美容液が塗布されている状態でお使いください。</li>
+                <li>本体のキャップは前後（ロゴの向き）を確認して正しく閉めてください。</li>
+                <li>アンプルの逆流を防ぐため、ご使用後は機器を立てた状態で保管してください。</li>
+                <li>スプレー使用時はキャップを開けた状態で行い、保管時はエアーホールからの漏れを防ぐためキャップをしっかりと閉めてください。</li>
+            </ul>
+        </div>
+
+        <div class="section-title">製品仕様</div>
+        <table class="spec-table">
+            <tr>
+                <th>製品名</th>
+                <td>シュスペル エアーセラピー (SHUSPELL Air Therapy)</td>
+            </tr>
+            <tr>
+                <th>タイプ</th>
+                <td>ハンディ型 マルチ美顔器</td>
+            </tr>
+            <tr>
+                <th>タンク容量</th>
+                <td>10 ml (大容量タンク)</td>
+            </tr>
+            <tr>
+                <th>ノズル径</th>
+                <td>約 0.4 mm</td>
+            </tr>
+            <tr>
+                <th>主な機能</th>
+                <td>マイクロエアースプレー / LEDセラピー(Red+IR, Blue) / ガルバニックイオン / 3D微振動 (約12,000回/分)</td>
+            </tr>
+            <tr>
+                <th>操作方法</th>
+                <td>ワンタッチタッチセンサー操作</td>
+            </tr>
+        </table>
+
+        <p class="notice-legal">
+            ※本製品は医療機器ではありません。スキンケアの補助を目的とした家庭用美容機器です。<br>
+            ※浸透は角質層までを指します。
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

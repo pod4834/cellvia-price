@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スカルピア クロマ デバイス</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f2b2b',    // Deep teal/green
+                            main: '#1a4a47',
+                            light: '#246059',
+                            accent: '#4fd1c5',  // Teal accent
+                            bg: '#f4f7f6',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #e2e8f0; } /* Gray backdrop for the whole page */
+        .hero-bg {
+            background: linear-gradient(135deg, #0f2b2b 0%, #1a4a47 50%, #246059 100%);
+            position: relative;
+        }
+        .hero-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(79, 209, 197, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #e2e8f0, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased m-0 p-0 leading-snug text-sm font-sans">
+
+<div class="w-full max-w-4xl mx-auto bg-white sm:shadow-2xl sm:my-4 overflow-hidden">
+    
+    <!-- Hero Section -->
+    <div class="hero-bg text-center px-3 py-6 sm:py-8 sm:px-6 relative">
+        <div class="text-[10px] sm:text-xs text-gray-300 tracking-widest mb-1.5 font-medium drop-shadow-sm">
+            美容液の浸透（※）をサポートする最高のシナジーアイテム<br><span class="text-[8px] sm:text-[9px]">※角質層まで</span>
+        </div>
+        
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl font-black text-gradient tracking-widest mb-0.5 drop-shadow-md">
+            スカルピア クロマ デバイス
+        </h1>
+        <div class="text-[11px] sm:text-sm text-brand-accent tracking-[0.25em] mb-2 font-light opacity-90">
+            SCALPIA CHROMA DEVICE
+        </div>
+        
+        <div class="text-[13px] sm:text-base font-bold text-[#81e6d9] mb-3 drop-shadow-md">
+            8,000RPMが届ける立体振動マッサージ
+        </div>
+
+        <div class="text-[9px] sm:text-[10px] text-gray-300 italic mb-4 leading-tight">
+            「頭皮へ届ける、力強いプレミアム・ケア。<br class="sm:hidden">頭皮ケア、もう先延ばしにしないでください。」
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-1.5 text-[10px] sm:text-xs font-semibold text-white/95">
+            <span class="bg-white/10 border border-white/30 rounded-full px-2.5 py-0.5 backdrop-blur-sm">頭皮のめぐりをサポート</span>
+            <span class="bg-white/10 border border-white/30 rounded-full px-2.5 py-0.5 backdrop-blur-sm">美容液のなじみを促進</span>
+            <span class="bg-white/10 border border-white/30 rounded-full px-2.5 py-0.5 backdrop-blur-sm">リフレッシュマッサージ</span>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="px-3 pb-4 pt-4 sm:px-5">
+        
+        <!-- Top Grid: Features List (Left) & 4in1 System (Right) on PC -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
+            
+            <!-- Summary Bullet Points -->
+            <div class="bg-brand-bg/50 border border-gray-200 rounded-lg p-3 shadow-sm h-full flex flex-col justify-center">
+                <ul class="space-y-1.5 text-[10px] sm:text-xs text-gray-700 m-0 p-0 list-none">
+                    <li class="flex items-start leading-tight"><span class="text-brand-accent font-bold mr-1.5">✓</span> <span>頭皮ケア用美容液の浸透（角質層まで）をサポート</span></li>
+                    <li class="flex items-start leading-tight"><span class="text-brand-accent font-bold mr-1.5">✓</span> <span>スカルピア プラス アンプルとの同時使用でシナジー効果UP</span></li>
+                    <li class="flex items-start leading-tight"><span class="text-brand-accent font-bold mr-1.5">✓</span> <span>マッサージ効果で頭皮を心地よく刺激する機器</span></li>
+                    <li class="flex items-start leading-tight"><span class="text-brand-accent font-bold mr-1.5">✓</span> <span>一般(ノーマル) / 温熱 / 冷却の3MODEでカスタマイズケア</span></li>
+                    <li class="flex items-start leading-tight"><span class="text-brand-accent font-bold mr-1.5">✓</span> <span>頭皮からデコルテラインまで幅広いマッサージケアに対応</span></li>
+                    <li class="flex items-start leading-tight"><span class="text-brand-accent font-bold mr-1.5">✓</span> <span>コンパクトなサイズで便利な携帯性</span></li>
+                    <li class="flex items-start leading-tight"><span class="text-brand-accent font-bold mr-1.5">✓</span> <span>簡単操作で毎日のケアを無理なく継続</span></li>
+                </ul>
+            </div>
+
+            <!-- 4in1 System -->
+            <div>
+                <div class="text-center mb-2">
+                    <h2 class="font-serif text-xs sm:text-sm font-bold text-brand-main inline-block border-b-2 border-brand-accent pb-0.5">4in1 スマートマルチケアシステム</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5">
+                    <div class="bg-gray-50 border border-gray-200 rounded p-2 text-center flex flex-col items-center justify-center">
+                        <div class="text-xl sm:text-2xl mb-1">🌡️❄️</div>
+                        <div class="text-[9px] sm:text-[10px] font-bold text-gray-800 leading-tight">温熱 ＆ クーリング</div>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 rounded p-2 text-center flex flex-col items-center justify-center">
+                        <div class="text-xl sm:text-2xl mb-1">⚡</div>
+                        <div class="text-[9px] sm:text-[10px] font-bold text-gray-800 leading-tight">ガルバニック<br>(微弱電流)</div>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 rounded p-2 text-center flex flex-col items-center justify-center">
+                        <div class="text-xl sm:text-2xl mb-1">〰️</div>
+                        <div class="text-[9px] sm:text-[10px] font-bold text-gray-800 leading-tight">3D 立体振動<br>(8,000RPM)</div>
+                    </div>
+                    <div class="bg-gray-50 border border-gray-200 rounded p-2 text-center flex flex-col items-center justify-center">
+                        <div class="text-xl sm:text-2xl mb-1">💡</div>
+                        <div class="text-[9px] sm:text-[10px] font-bold text-gray-800 leading-tight">LED<br>ライトセラピー</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Modes Comparison -->
+        <div class="text-center mb-2">
+            <h2 class="font-serif text-sm sm:text-base font-bold text-brand-main inline-block border-b-2 border-brand-accent pb-0.5">一般 / 温熱 / 冷却 3MODE</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4">
+            
+            <!-- Normal Mode -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-sm">
+                <div class="bg-[#319795] text-white text-center font-bold py-1.5 text-[11px] sm:text-xs">一般 (ノーマル) MODE</div>
+                <div class="p-2.5 bg-white flex-grow flex flex-col">
+                    <div class="bg-gray-50 p-1.5 rounded mb-2 text-center text-[10px] border border-gray-100">
+                        <span class="block font-bold text-gray-700 text-[11px] mb-0.5">28℃設定</span>
+                        微弱電流＆ガルバニック / Red LED / 3D立体振動(8,000RPM)
+                    </div>
+                    <ul class="text-[10px] text-gray-600 space-y-1 m-0 pl-3 leading-snug flex-grow">
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">美容液の頭皮へのなじみをサポート</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">頭皮にハリ・弾力を与える</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">マッサージ効果によるめぐりのサポート</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">古い角質のオフをサポート</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Heat Mode -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-sm">
+                <div class="bg-[#e53e3e] text-white text-center font-bold py-1.5 text-[11px] sm:text-xs">温熱 MODE</div>
+                <div class="p-2.5 bg-white flex-grow flex flex-col">
+                    <div class="bg-gray-50 p-1.5 rounded mb-2 text-center text-[10px] border border-gray-100">
+                        <span class="block font-bold text-gray-700 text-[11px] mb-0.5">35℃ ± 2℃</span>
+                        微弱電流＆ガルバニック / Red LED / 3D立体振動(8,000RPM)
+                    </div>
+                    <ul class="text-[10px] text-gray-600 space-y-1 m-0 pl-3 leading-snug flex-grow">
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">温感で毛穴を開きやすくし汚れを落としやすくする</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">頭皮にハリを与える</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">マッサージ効果により頭皮を柔らげる</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">古い角質のオフをサポート</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cool Mode -->
+            <div class="border border-gray-200 rounded-lg overflow-hidden flex flex-col shadow-sm">
+                <div class="bg-[#3182ce] text-white text-center font-bold py-1.5 text-[11px] sm:text-xs">冷却 MODE</div>
+                <div class="p-2.5 bg-white flex-grow flex flex-col">
+                    <div class="bg-gray-50 p-1.5 rounded mb-2 text-center text-[10px] border border-gray-100">
+                        <span class="block font-bold text-gray-700 text-[11px] mb-0.5">20℃ ± 2℃</span>
+                        微弱電流＆ガルバニック / Blue LED / 3D立体振動(8,000RPM)
+                    </div>
+                    <ul class="text-[10px] text-gray-600 space-y-1 m-0 pl-3 leading-snug flex-grow">
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">冷感で毛穴や肌を引き締める</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">デリケートな頭皮のクールダウン</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">マッサージ効果で頭皮環境をすこやかに整える</li>
+                        <li class="relative before:content-['・'] before:absolute before:-left-3 before:text-gray-400">古い角質のオフをサポート</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tip Box -->
+        <div class="bg-[#fffff0] border border-[#f6e05e] rounded p-2 sm:p-3 text-[10px] sm:text-[11px] text-[#744210] mb-5 shadow-sm leading-relaxed">
+            <span class="font-bold mr-1">💡 TIPS:</span> 68個の振動ブラシが3つのモードを通じて、マッサージ効果により頭皮のめぐりをサポートし、ハリのある状態へ導きます。「スカルピア プラス アンプル」と一緒に使用することで、毛穴の汚れを浮かし、古い角質のケアをより効果的にサポートするマッサージ機器です。
+        </div>
+
+        <!-- Massage Guide -->
+        <div class="bg-brand-bg rounded-xl p-3 sm:p-4 mb-4 border border-gray-200">
+            <div class="text-center mb-3">
+                <h2 class="font-serif text-sm sm:text-base font-bold text-brand-main inline-block border-b-2 border-brand-accent pb-0.5">HOW TO USE</h2>
+            </div>
+            
+            <div class="bg-white rounded p-2 sm:p-3 border border-gray-100">
+                <div class="text-[11px] sm:text-xs font-bold text-center text-gray-800 mb-2.5">
+                    スカルピア クロマ デバイスを使用した頭皮＆首周りのドレナージュ風マッサージ
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-[10px] text-gray-700 pl-4 sm:pl-0" style="counter-reset: step;">
+                    <div class="relative pl-6 sm:pl-7 leading-snug">
+                        <span class="absolute left-0 sm:left-1 top-0 w-4 h-4 bg-brand-main text-white rounded-full flex items-center justify-center text-[9px] font-bold before:content-[counter(step)]" style="counter-increment: step;"></span>
+                        <span class="font-bold text-[#2c5282]">なでる：</span>背中の中央付近から首の付け根に向かって、円を描くようにやさしく滑らせます。
+                    </div>
+                    <div class="relative pl-6 sm:pl-7 leading-snug">
+                        <span class="absolute left-0 sm:left-1 top-0 w-4 h-4 bg-brand-main text-white rounded-full flex items-center justify-center text-[9px] font-bold before:content-[counter(step)]" style="counter-increment: step;"></span>
+                        <span class="font-bold text-[#2c5282]">首周り：</span>耳の下から首筋を通り、鎖骨のくぼみに向かって、5回ずつ3セット小さな円を描くようにマッサージします。
+                    </div>
+                    <div class="relative pl-6 sm:pl-7 leading-snug">
+                        <span class="absolute left-0 sm:left-1 top-0 w-4 h-4 bg-brand-main text-white rounded-full flex items-center justify-center text-[9px] font-bold before:content-[counter(step)]" style="counter-increment: step;"></span>
+                        <span class="font-bold text-[#2c5282]">後頭部下部：</span>耳の後ろから鎖骨に向かって、5回ずつ3セット小さな円を描きます。
+                    </div>
+                    <div class="relative pl-6 sm:pl-7 leading-snug">
+                        <span class="absolute left-0 sm:left-1 top-0 w-4 h-4 bg-brand-main text-white rounded-full flex items-center justify-center text-[9px] font-bold before:content-[counter(step)]" style="counter-increment: step;"></span>
+                        <span class="font-bold text-[#2c5282]">後頭部の3箇所：</span>ぼんのくぼ、後頭部の中央、頭頂部の各ポイントで5回ずつ3セット、小さな円を描くように刺激します。
+                    </div>
+                    <div class="relative pl-6 sm:pl-7 leading-snug">
+                        <span class="absolute left-0 sm:left-1 top-0 w-4 h-4 bg-brand-main text-white rounded-full flex items-center justify-center text-[9px] font-bold before:content-[counter(step)]" style="counter-increment: step;"></span>
+                        <span class="font-bold text-[#2c5282]">頭の側面：</span>側頭部から鎖骨に向かって、5回ずつ1セット小さな円を描きます。
+                    </div>
+                    <div class="relative pl-6 sm:pl-7 leading-snug">
+                        <span class="absolute left-0 sm:left-1 top-0 w-4 h-4 bg-brand-main text-white rounded-full flex items-center justify-center text-[9px] font-bold before:content-[counter(step)]" style="counter-increment: step;"></span>
+                        <span class="font-bold text-[#2c5282]">うなじから後頭部：</span>約30秒間、軽い振動をあてて心地よく刺激します。
+                    </div>
+                    <div class="relative pl-6 sm:pl-7 leading-snug sm:col-span-2">
+                        <span class="absolute left-0 sm:left-1 top-0 w-4 h-4 bg-brand-main text-white rounded-full flex items-center justify-center text-[9px] font-bold before:content-[counter(step)]" style="counter-increment: step;"></span>
+                        <span class="font-bold text-[#2c5282]">肩先から首の付け根、鎖骨へ：</span>軽く押し流すように動かし、マッサージ効果によるめぐりをサポートします。
+                    </div>
+                </div>
+                <div class="text-[9px] text-gray-500 mt-2 text-center">※ドレナージュとは：機器の振動や手技を用いて、マッサージ効果によりすこやかなめぐりをサポートする美容ケアのことです。</div>
+            </div>
+        </div>
+
+        <!-- Disclaimers -->
+        <div class="bg-gray-100 p-2.5 rounded text-[9px] text-gray-500 leading-tight space-y-0.5">
+            <p class="font-bold mb-1 m-0 text-gray-600">【使用上の注意】</p>
+            <p class="m-0">※本製品は医療機器ではありません。美容と健康維持を目的とした家庭用美容機器です。</p>
+            <p class="m-0">※「浸透」とは、角質層までを指します。</p>
+            <p class="m-0">※記載されている効果はマッサージ効果によるものであり、疾病の治療や予防を目的とするものではありません。</p>
+            <p class="m-0">※お肌や頭皮に異常が生じていないかよく注意して使用してください。異常がある場合は使用を中止し、専門医にご相談ください。</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

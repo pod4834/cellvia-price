@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リジュブネイト アイ エリクサー</title>
+    
+    <!-- Google Fonts: Noto Serif JP (명조) & Noto Sans JP (고딕) & Cormorant Garamond (영문 포인트) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmetic: {
+                            base: '#FFF9F9',      /* 아주 연한 핑크톤 화이트 (배경) */
+                            pinkLight: '#FDE4E4', /* 부드러운 연핑크 (강조 포인트 1) */
+                            pinkDark: '#C18080',  /* 톤다운된 인디핑크/로즈 (메인 컬러) */
+                            border: '#F0D4D4',    /* 은은한 핑크 경계선 */
+                            textDark: '#4A3B3B',  /* 다크 웜 브라운 (메인 텍스트) */
+                            textMute: '#7A6B6B',  /* 뮤트 브라운 (보조 텍스트) */
+                            textPoint: '#A35B5B'  /* 포인트 레드/핑크 텍스트 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        engSerif: ['"Cormorant Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #f5eff0; /* 외부 배경색 (약간의 핑크빛 그레이) */
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.7s ease-out forwards;
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+    </style>
+</head>
+<body class="flex justify-center items-start min-h-screen py-6 text-cosmetic-textDark font-sans">
+
+    <!-- [SPA 라우터가 추출할 메인 컨텐츠 영역] 여백을 최소화한 슬림한 패딩 적용 -->
+    <main class="w-full max-w-[800px] bg-cosmetic-base shadow-sm overflow-hidden border border-cosmetic-border">
+        
+        <section class="text-center pt-8 pb-6 px-4 relative fade-in-up border-b border-cosmetic-border">
+            
+            <!-- 상단 서브 카피 -->
+            <p class="text-[12px] md:text-[13px] text-cosmetic-textMute mb-1 font-medium tracking-wide">
+                薄く敏感な目元の肌に優しく吸収され
+            </p>
+            <h2 class="text-[16px] md:text-[18px] text-cosmetic-textDark font-bold mb-6 font-serif tracking-tight">
+                弾力のあるなめらかな目元を完成
+            </h2>
+            
+            <!-- 브랜드 & 제품명 -->
+            <div class="mb-4">
+
+                <h1 class="text-2xl md:text-3xl font-bold text-cosmetic-textPoint tracking-wider mb-2 font-serif">
+                    リジュブネイト アイ エリクサー
+                </h1>
+                <p class="text-[11px] md:text-[12px] text-cosmetic-textDark tracking-widest uppercase font-engSerif italic">
+                    Cellvia Rejuvenate Eye Elixir
+                </p>
+            </div>
+
+            <!-- 제품 특징 키워드 -->
+            <div class="flex justify-center items-center gap-2 text-[11px] md:text-[12px] font-medium text-cosmetic-textDark mb-6">
+                <span>デイリーケア</span>
+                <span class="w-[1px] h-3 bg-cosmetic-textMute opacity-50"></span>
+                <span>美白・シワ二重機能性</span>
+                <span class="w-[1px] h-3 bg-cosmetic-textMute opacity-50"></span>
+                <span>弾力&栄養</span>
+            </div>
+
+            <!-- 4가지 주요 성분 강조 바 (이미지 하단부 참고) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6 max-w-2xl mx-auto">
+                <div class="bg-cosmetic-pinkDark/90 text-white rounded p-2 shadow-sm text-left relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                    <div class="font-bold text-[13px] mb-1 pl-1">LIFT Oléoactif</div>
+                    <ul class="text-[9.5px] leading-tight pl-3 list-disc list-outside opacity-90">
+                        <li>特許取得のOléo-éco方式で抽出した植物性オイルアクティブ成分</li>
+                        <li>肌にハリを与え、なめらかに整えるのに役立つ</li>
+                    </ul>
+                </div>
+                <div class="bg-cosmetic-pinkDark/90 text-white rounded p-2 shadow-sm text-left relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                    <div class="font-bold text-[13px] mb-1 pl-1">羊水由来ヒト幹細胞培養液(10,000ppm)</div>
+                    <ul class="text-[9.5px] leading-tight pl-3 list-disc list-outside opacity-90">
+                        <li>肌親和的で豊かな栄養供給</li>
+                        <li>生き生きとした健康な肌に整えるのに役立つ</li>
+                    </ul>
+                </div>
+                <div class="bg-cosmetic-pinkDark/90 text-white rounded p-2 shadow-sm text-left relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                    <div class="font-bold text-[13px] mb-1 pl-1">ブライトニング抽出物コンプレックス</div>
+                    <ul class="text-[9.5px] leading-tight pl-3 list-disc list-outside opacity-90">
+                        <li>ビタミンB, C, Eが豊富な複合抽出物</li>
+                        <li>肌を明るく健康に整えるのに役立つ</li>
+                    </ul>
+                </div>
+                <div class="bg-cosmetic-pinkDark/90 text-white rounded p-2 shadow-sm text-left relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                    <div class="font-bold text-[13px] mb-1 pl-1">4重マルチ複合ヒアルロン酸</div>
+                    <ul class="text-[9.5px] leading-tight pl-3 list-disc list-outside opacity-90">
+                        <li>4重ヒアルロン酸で隙間のない水分レイヤリング</li>
+                        <li>持続的に肌の水分を維持できるよう役立つ</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-cosmetic-pinkDark text-white py-3 px-6 flex justify-between items-center fade-in-up delay-100">
+            <div>
+                <h2 class="text-[16px] md:text-[18px] font-bold font-serif leading-tight">セルビア リジュブネイト アイ エリクサー</h2>
+                <p class="text-[10px] font-engSerif tracking-wider opacity-80 mt-0.5">Cellvia Rejuvenate Eye Elixir</p>
+            </div>
+            <div class="text-[14px] font-bold tracking-widest font-engSerif">20 ml</div>
+        </div>
+
+        <section class="px-4 py-6 fade-in-up delay-200 bg-cosmetic-base">
+            <div class="flex flex-col md:flex-row gap-6">
+                
+                <!-- Left Column: Key Points -->
+                <div class="w-full md:w-5/12 flex flex-col gap-4">
+                    
+                    <ul class="space-y-1.5 text-[11px] md:text-[12px] font-medium text-cosmetic-textDark font-sans">
+                        <li class="flex items-start gap-1.5"><span class="text-cosmetic-textPoint mt-0.5">•</span>美白、シワ改善 二重機能性</li>
+                        <li class="flex items-start gap-1.5"><span class="text-cosmetic-textPoint mt-0.5">•</span>豊かな栄養と保湿でしっとりとした肌のキメ</li>
+                        <li class="flex items-start gap-1.5"><span class="text-cosmetic-textPoint mt-0.5">•</span>肌に優しく吸収されるテクスチャー</li>
+                        <li class="flex items-start gap-1.5"><span class="text-cosmetic-textPoint mt-0.5">•</span>薄く敏感な目元を弾力的に管理</li>
+                        <li class="flex items-start gap-1.5"><span class="text-cosmetic-textPoint mt-0.5">•</span>目にしみる心配なく目元をケア</li>
+                        <li class="flex items-start gap-1.5"><span class="text-cosmetic-textPoint mt-0.5">•</span>デイリーで負担なく使用可能</li>
+                        <li class="flex items-start gap-1.5"><span class="text-cosmetic-textPoint mt-0.5">•</span>すべての肌タイプで使用可能</li>
+                    </ul>
+
+                    <div class="mt-4 text-center space-y-4">
+                        <div>
+                            <p class="text-[11px] font-bold text-cosmetic-textDark">肌が薄く乾燥しやすい目元に</p>
+                            <p class="text-[12px] font-bold text-cosmetic-textPoint">油水分バランスを整えしっとりと</p>
+                        </div>
+                        
+                        <div>
+                            <p class="text-[11px] font-bold text-cosmetic-textDark">肌親和的な栄養成分</p>
+                            <p class="text-[12px] font-bold text-cosmetic-textPoint">羊水由来ヒト幹細胞培養液(10,000ppm)含有</p>
+                        </div>
+
+                        <div>
+                            <p class="text-[11px] font-bold text-cosmetic-textDark">よりハリのある輝く目元の為の魔法のレシピ</p>
+                            <p class="text-[12px] font-bold text-cosmetic-textPoint">LIFT Oléoactifで弾力的に、<br>ブライトニング抽出物コンプレックスで華やかに！</p>
+                        </div>
+
+                        <div>
+                            <p class="text-[11px] font-bold text-cosmetic-textDark">エアレスポンプ容器で最後まで</p>
+                            <p class="text-[12px] font-bold text-cosmetic-textPoint">衛生的な使用</p>
+                        </div>
+                    </div>
+
+                    <!-- How to use -->
+                    <div class="mt-auto pt-4">
+                        <div class="inline-block bg-cosmetic-pinkDark text-white text-[11px] font-bold px-3 py-1 mb-2">使用方法</div>
+                        <div class="bg-[#e8dfdf] rounded p-3 text-[11px] text-center text-cosmetic-textDark leading-relaxed">
+                            スキンケアの最後の段階で適量を取り、<br>目元に優しく塗り広げて吸収させます。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Ingredients List -->
+                <div class="w-full md:w-7/12 bg-[#e8dfdf]/40 p-4 rounded-lg">
+                    <div class="inline-block bg-cosmetic-pinkDark text-white text-[12px] font-bold px-4 py-1 mb-4 shadow-sm">主要成分と特徴</div>
+                    
+                    <div class="space-y-3.5">
+                        <!-- Item 1 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">1. 羊水由来ヒト幹細胞培養液(10,000ppm)</h3>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">成体幹細胞の中で最も若い羊水幹細胞を低酸素培養して得た高機能性複合バイオ素材。人体由来成分を活用した肌親和的成分で肌に自然に栄養を供給し、肌コンディションをケアするのに役立つ。</p>
+                        </div>
+                        <!-- Item 2 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">2. LIFT Oléoactif</h3>
+                            <p class="text-[9px] text-cosmetic-textMute mb-0.5">(サフラワー油、オランダセンニチ花/葉/茎エキス、キバナオウギ根エキス、ユビキノン、トコフェロール)</p>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">特許取得のOléo-éco方式で抽出した植物性オイルアクティブ成分。スピラントール、リノール酸、コエンザイムQ10、サポニンが含有されており、肌にハリを与えなめらかに整えるのに役立つ。</p>
+                        </div>
+                        <!-- Item 3 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">3. ブライトニング抽出物コンプレックス</h3>
+                            <p class="text-[9px] text-cosmetic-textMute mb-0.5">(サジー果実エキス、ユズエキス、五味子エキス)</p>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">ビタミンB, C, Eとフェノールを豊富に含んでおり、肌を明るくきれいに整えるのに役立つ。</p>
+                        </div>
+                        <!-- Item 4 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">4. マルチ複合ヒアルロン酸</h3>
+                            <p class="text-[9px] text-cosmetic-textMute mb-0.5">(ヒアルロン酸Na、加水分解ヒアルロン酸Na、ヒアルロン酸、加水分解ヒアルロン酸)</p>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">乾燥しやすい繊細な目元の肌に高分子、低分子マルチヒアルロン酸水分レイヤリングで肌の水分維持に役立つ。</p>
+                        </div>
+                        <!-- Item 5 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">5. DNA-Na</h3>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">サーモンから抽出したDNA成分で、塩基物質の成分が人間とほぼ同じで肌親和的であり、保湿、肌コンディショニングに役立つ。</p>
+                        </div>
+                        <!-- Item 6 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">6. アラントイン</h3>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">敏感で繊細な目元の肌を鎮静させ、水分を供給して肌をなめらかに潤いある状態に整えるのに役立つ。</p>
+                        </div>
+                        <!-- Item 7 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">7. アルファ-アルブチン</h3>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">ブライトニング効果でよく知られている成分で、目元の肌を明るく華やかに整えるのに役立つ。</p>
+                        </div>
+                        <!-- Item 8 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">8. セラミドNP</h3>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">肌の脂質と類似した成分で、弾力のある肌の土台を造成し、健康な肌に整えるのに役立つ。</p>
+                        </div>
+                        <!-- Item 9 -->
+                        <div>
+                            <h3 class="text-[11px] font-bold text-cosmetic-textDark mb-0.5">9. シアバター</h3>
+                            <p class="text-[9.5px] text-cosmetic-textMute leading-snug">ビタミンA, D, Eなどの脂溶性ビタミンが豊富に含まれており、肌コンディショニングに役立ち、体温で優しく溶け込んで長時間の潤いを維持できるよう役立つ。</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <p class="text-[8px] text-cosmetic-textMute">*上記の内容は原料の説明に限ります。</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

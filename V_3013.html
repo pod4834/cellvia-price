@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミソロジー リカバリー クッション</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#f8f6f3',
+                            card: '#ffffff',
+                            text: '#3b302c',
+                            muted: '#73645e',
+                            coral: '#d48a8e',
+                            coralLight: '#fdf5f5',
+                            gold: '#bda272',
+                            accent: '#c53030'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e5e5e5; /* 뷰어 배경색 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* 장식용 배경 그래픽 */
+        .hero-bg {
+            background: linear-gradient(135deg, #f8f6f3 0%, #ede6db 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-start min-h-screen">
+
+    <main class="w-full max-w-2xl bg-white shadow-xl overflow-hidden text-brand-text font-sans leading-relaxed">
+        
+        <!-- Hero Section -->
+        <section class="hero-bg px-4 py-8 md:py-10 text-center flex flex-col items-center">
+            <span class="font-serif italic text-brand-accent font-bold text-lg mb-2 -rotate-3 inline-block">Renewal!</span>
+            
+            <p class="text-sm md:text-base font-medium tracking-widest mb-1 text-brand-text">軽やかなタッチで叶える、ツヤとカバーの魔法</p>
+            <p class="text-base md:text-lg text-brand-coral font-serif font-bold mb-4">なめらかに重なる、密着レイヤリング</p>
+            
+            <h1 class="text-2xl md:text-3xl font-black font-serif text-gray-900 tracking-wide mb-1 leading-tight">ミソロジー リカバリー クッション</h1>
+            <p class="text-xs md:text-sm text-brand-muted tracking-[0.2em] mb-5 font-light">Mythology Recovery Cushion</p>
+            
+            <div class="inline-block bg-gray-900 text-white font-bold text-sm md:text-base px-6 py-2 rounded-full mb-6 tracking-wider shadow-md">
+                SPF50+ / PA++++
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-2 text-xs md:text-sm font-medium mb-6">
+                <span class="bg-white/70 px-4 py-1.5 rounded-full border border-[#dfd1c3] shadow-sm">Cover</span>
+                <span class="bg-white/70 px-4 py-1.5 rounded-full border border-[#dfd1c3] shadow-sm">Soft Touch</span>
+                <span class="bg-white/70 px-4 py-1.5 rounded-full border border-[#dfd1c3] shadow-sm">Fixing</span>
+            </div>
+            
+            <!-- Floating Note -->
+            <div class="bg-gray-900/90 text-white p-3 md:p-4 rounded-lg -rotate-1 shadow-lg max-w-sm mx-auto w-full">
+                <p class="text-sm md:text-base font-bold mb-1">軽いタッチで、まるで肌が呼吸するような心地よさ</p>
+                <p class="text-sm md:text-base font-serif">内側から発光するような、ツヤめく仕上がりが持続</p>
+            </div>
+        </section>
+
+        <!-- Config Banner -->
+        <div class="bg-brand-coral text-white text-center py-2.5 px-4 text-sm md:text-base font-bold tracking-wider flex flex-col md:flex-row justify-center items-center gap-2 shadow-inner">
+            <span>内容量 : 15 g</span>
+            <span class="bg-white/20 px-3 py-0.5 rounded text-xs md:text-sm font-medium">リフィル内蔵 ＋ パフ5個入</span>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="p-4 md:p-6 space-y-6">
+            
+            <!-- Points Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="bg-brand-coralLight border border-brand-coral/20 p-4 rounded-xl text-center shadow-sm">
+                    <h4 class="text-brand-coral font-serif font-bold text-base mb-2 leading-tight">軽やかに魅せる<br>カバー＆ツヤ</h4>
+                    <p class="text-xs md:text-sm text-brand-text">薄く密着し、内側からにじみ出るような上品なツヤを演出。気になる肌悩みを自然にカバーする軽やかな仕上がりです。</p>
+                </div>
+                <div class="bg-brand-coralLight border border-brand-coral/20 p-4 rounded-xl text-center shadow-sm">
+                    <h4 class="text-brand-coral font-serif font-bold text-base mb-2 leading-tight">空気との接触を抑える<br>エアレス容器</h4>
+                    <p class="text-xs md:text-sm text-brand-text">エアレス（真空）ポンプ方式を採用。空気の流入を抑えて中身を清潔に保ち、みずみずしい使用感を最後までキープします。</p>
+                </div>
+                <div class="bg-brand-coralLight border border-brand-coral/20 p-4 rounded-xl text-center shadow-sm">
+                    <h4 class="text-brand-coral font-serif font-bold text-base mb-2 leading-tight">ヒト羊水細胞順化培養液エキス<br>10,000ppm 配合</h4>
+                    <p class="text-xs md:text-sm text-brand-text">肌のコンディションを整え、長時間のメイク時でも肌をすこやかに保ちます。潤いを与える肌なじみの良いバイオ素材です。</p>
+                </div>
+                <div class="bg-brand-coralLight border border-brand-coral/20 p-4 rounded-xl text-center shadow-sm">
+                    <h4 class="text-brand-coral font-serif font-bold text-base mb-2 leading-tight">なめらかに重なる<br>密着レイヤリング</h4>
+                    <p class="text-xs md:text-sm text-brand-text">網の目のように細かく広がるフォーミュラが、重ねるほどに肌にピタッと密着し、美しい仕上がりを演出します。</p>
+                </div>
+            </div>
+
+            <!-- Message Box -->
+            <div class="bg-brand-bg border-2 border-dashed border-[#dfd1c3] rounded-xl p-5 text-center">
+                <p class="font-bold text-sm md:text-base mb-3 leading-snug">肌が深呼吸するような、<span class="text-brand-accent">スリムな密着フィット感</span></p>
+                <p class="font-bold text-sm md:text-base mb-3 leading-snug">肌トーンを選ばず自然になじみ、<br>気になる部分を<span class="text-brand-accent">なめらかにカバー</span></p>
+                <p class="font-bold text-sm md:text-base mb-3 leading-snug">やわらかなタッチで、<br><span class="text-brand-accent">ツヤのある美しい肌表現</span>を叶えます</p>
+                <p class="font-bold text-sm md:text-base leading-snug">360°密閉型エアレスタイプで、<span class="text-brand-accent">衛生的な仕様</span></p>
+            </div>
+
+            <!-- UV Protection Box -->
+            <div class="bg-gradient-to-r from-[#fcfbfa] to-[#f8f6f3] rounded-xl p-4 md:p-5 border-l-4 border-brand-gold shadow-sm">
+                <h3 class="font-serif font-bold text-base md:text-lg mb-2 flex items-center gap-2">
+                    <span>☀️</span> ハイブリッド紫外線プロテクト処方
+                </h3>
+                <p class="text-xs md:text-sm text-brand-text mb-4">
+                    物理的に紫外線を反射・散乱させる「紫外線散乱剤」と、紫外線を吸収し熱に変換して放出する「紫外線吸収剤」を組み合わせ、それぞれの長所を活かしたこだわりの処方。肌を想いながら、効果的に紫外線をプロテクトします。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="flex-1 bg-white p-3 rounded-lg shadow-sm">
+                        <h5 class="text-brand-coral font-bold text-sm mb-1">紫外線吸収剤</h5>
+                        <p class="text-xs text-brand-muted">紫外線が肌に吸収された後、成分と反応して熱に変換し放出することで肌を保護する原理です。なめらかな塗り心地が特徴です。</p>
+                    </div>
+                    <div class="flex-1 bg-white p-3 rounded-lg shadow-sm">
+                        <h5 class="text-brand-coral font-bold text-sm mb-1">紫外線散乱剤</h5>
+                        <p class="text-xs text-brand-muted">肌表面に保護膜を形成し、紫外線を物理的に反射・散乱させて肌を保護する原理です。肌への負担を考慮した処方です。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ingredients Section -->
+            <div>
+                <div class="text-center mb-4">
+                    <h3 class="inline-block text-lg font-serif font-bold border-b-2 border-brand-coral pb-1 px-2">主要成分と特徴</h3>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="bg-white border-l-4 border-brand-coral p-3 rounded-r-lg shadow-sm">
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="text-brand-coral font-serif font-bold text-lg">1.</span>
+                            <span class="font-bold text-sm md:text-base text-gray-900">ヒト幹細胞順化培養液<span class="text-xs md:text-sm font-normal">（10,000ppm、羊水由来）</span></span>
+                        </div>
+                        <p class="text-xs md:text-sm text-brand-muted ml-6">豊かな栄養を含み、外部環境により乾燥してゴワつきがちな肌のコンディションを整えます。長時間のメイク時でも肌をすこやかに保ち、潤いを持続させるサポートをします。</p>
+                    </div>
+                    
+                    <div class="bg-white border-l-4 border-brand-coral p-3 rounded-r-lg shadow-sm">
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="text-brand-coral font-serif font-bold text-lg">2.</span>
+                            <span class="font-bold text-sm md:text-base text-gray-900">ナイアシンアミド</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-brand-muted ml-6">ビタミンB3の一種。肌に潤いとハリを与え、乾燥によるくすみを防ぎます。明るく透明感のある印象の肌へ導くサポートをします。</p>
+                    </div>
+
+                    <div class="bg-white border-l-4 border-brand-coral p-3 rounded-r-lg shadow-sm">
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="text-brand-coral font-serif font-bold text-lg">3.</span>
+                            <span class="font-bold text-sm md:text-base text-gray-900">アデノシン</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-brand-muted ml-6">紫外線などに対して安定性が高く、日中も使用しやすい成分。肌にハリと弾力を与え、すこやかな状態を保つためのエイジングケア<span class="text-[0.65rem] align-top text-gray-400">*</span>をサポートします。<br><span class="text-[0.65rem] text-gray-400 mt-1 block">*年齢に応じたケア</span></p>
+                    </div>
+
+                    <div class="bg-white border-l-4 border-brand-coral p-3 rounded-r-lg shadow-sm">
+                        <div class="flex items-baseline gap-2 mb-1">
+                            <span class="text-brand-coral font-serif font-bold text-lg">4.</span>
+                            <span class="font-bold text-sm md:text-base text-gray-900">フナバラソウエキス</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-brand-muted ml-6">肌をすこやかに保つサポートをし、やさしく心地よい使用感を与えます。乾燥しやすい環境でも、肌に水分を補給してしっとりと保つのを助けます。</p>
+                    </div>
+                </div>
+                <p class="text-right text-[0.7rem] text-gray-400 mt-2">※上記の内容は、原料の一般的な性質に関する説明です。</p>
+            </div>
+
+            <!-- How to Use Section -->
+            <div class="bg-[#fcfbfa] border border-[#dfd1c3] rounded-xl p-4 md:p-5 mt-2 shadow-sm">
+                <h3 class="inline-block bg-gray-900 text-white px-4 py-1 font-bold text-xs md:text-sm rounded mb-4">HOW TO USE</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h5 class="text-brand-coral font-bold text-sm mb-1 flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-brand-coral rounded-full"></span>基本の使用方法</h5>
+                        <p class="text-xs md:text-sm text-brand-text ml-3">容器内のボタンを押して中身を出し、パフに少量をとり、肌に軽く叩き込むように密着させて塗布します。</p>
+                    </div>
+                    
+                    <div>
+                        <h5 class="text-brand-coral font-bold text-sm mb-1 flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-brand-coral rounded-full"></span>リフィルの交換方法</h5>
+                        <p class="text-xs md:text-sm text-brand-text ml-3">容器の裏側を両手で押し上げて本体から外し、新しいリフィルを容器の位置に合わせてカチッとはめ込みます。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

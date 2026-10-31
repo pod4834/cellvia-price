@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>オリジナル プレミアム アンプル</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --color-bg: #faf8f5;
+        --color-text-main: #3e2723;
+        --color-text-light: #5d4037;
+        --color-gold: #c5a059;
+        --color-gold-light: #e8d5a5;
+        --color-accent: #d86c4f; /* Label color approximation */
+        --color-white: #ffffff;
+    }
+
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text-main);
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: 'Noto Serif JP', serif;
+        margin: 0;
+    }
+
+    .container {
+        max-width: 850px;
+        margin: 0 auto;
+        background-color: var(--color-white);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #fdfbf7 0%, #f4ebd8 100%);
+        padding: 80px 20px 60px;
+        text-align: center;
+        position: relative;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+        color: var(--color-text-light);
+        margin-bottom: 20px;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+    }
+    .hero-title {
+        font-size: 2.4rem;
+        font-weight: 900;
+        color: var(--color-text-main);
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    .hero-title-en {
+        font-size: 1.2rem;
+        color: var(--color-gold);
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+    }
+    .hero-features {
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: var(--color-text-main);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .hero-features span {
+        display: inline-block;
+        padding: 5px 15px;
+        border-right: 1px solid var(--color-gold-light);
+    }
+    .hero-features span:last-child {
+        border-right: none;
+    }
+
+    /* Product Config Section */
+    .config-box {
+        background-color: var(--color-text-main);
+        color: var(--color-white);
+        text-align: center;
+        padding: 20px;
+        margin: -20px auto 40px;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 8px;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .config-box .capacity {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--color-gold-light);
+    }
+    .config-box .note {
+        font-size: 0.85rem;
+        margin-top: 5px;
+        color: #ddd;
+    }
+
+    .content-padding {
+        padding: 0 40px 60px;
+    }
+
+    /* Catchphrase Section */
+    .catchphrase-section {
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 30px;
+        background-color: rgba(232, 213, 165, 0.15);
+        border-radius: 12px;
+        border: 1px solid rgba(197, 160, 89, 0.2);
+    }
+    .catchphrase-section p {
+        font-size: 1.15rem;
+        color: var(--color-text-main);
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    .catchphrase-section p:last-child {
+        margin-bottom: 0;
+    }
+    .highlight-text {
+        color: var(--color-accent);
+    }
+
+    /* Point List (Left Side of Image 2) */
+    .benefits-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .benefit-item {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gold-light);
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--color-text-light);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+    .benefit-item::before {
+        content: '✓';
+        color: var(--color-gold);
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+    /* Section Headers */
+    .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .section-header h3 {
+        font-size: 1.6rem;
+        color: var(--color-text-main);
+        display: inline-block;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--color-gold);
+    }
+
+    /* 4 Key Ingredients (Image 1) */
+    .key-ingredients {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+    .key-ing-card {
+        background-color: #fcfaf7;
+        border: 1px solid #efe8d9;
+        padding: 25px 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    .key-ing-title {
+        font-weight: 700;
+        color: var(--color-text-main);
+        font-size: 1.05rem;
+        margin-bottom: 15px;
+        background-color: var(--color-gold-light);
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+    }
+    .key-ing-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+    .key-ing-list li {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+        padding-left: 15px;
+        position: relative;
+    }
+    .key-ing-list li::before {
+        content: '・';
+        position: absolute;
+        left: 0;
+        color: var(--color-gold);
+    }
+
+    /* Detailed 10 Ingredients (Image 2) */
+    .ingredients-detail {
+        background-color: var(--color-bg);
+        padding: 35px;
+        border-radius: 12px;
+        margin-bottom: 50px;
+    }
+    .ing-detail-item {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed var(--color-gold-light);
+    }
+    .ing-detail-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .ing-name {
+        font-weight: 700;
+        color: var(--color-accent);
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    .ing-desc {
+        font-size: 0.95rem;
+        color: var(--color-text-light);
+    }
+
+    /* How to Use */
+    .how-to-use {
+        background-color: var(--color-text-main);
+        color: var(--color-white);
+        padding: 35px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+    }
+    .how-to-header {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: var(--color-gold-light);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+    .how-to-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* Notices */
+    .notices {
+        font-size: 0.8rem;
+        color: #888;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .notices p {
+        margin: 0 0 5px 0;
+    }
+
+    @media (max-width: 600px) {
+        .content-padding { padding: 0 20px 40px; }
+        .hero-title { font-size: 1.8rem; }
+        .key-ingredients { grid-template-columns: 1fr; }
+        .hero-features span { border-right: none; display: block; margin-bottom: 5px; }
+        .config-box { width: 95%; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-subtitle">外部環境によりデリケートになりがちな肌へ。<br>クリアですこやかな肌を保つためのソリューションケア</div>
+        <h1 class="hero-title">オリジナル プレミアム アンプル</h1>
+        <div class="hero-title-en">Original Premium Ampoule</div>
+        
+        <div class="hero-features">
+            <span>水分・油分のバランスケア</span>
+            <span>エイジングケア※</span>
+            <span>豊かな潤いチャージ</span>
+        </div>
+    </header>
+
+    <!-- Capacity Configuration -->
+    <div class="config-box">
+        <div class="capacity">6 ml × 10本</div>
+        <div class="note">※エイジングケア：年齢に応じた潤い・ハリのお手入れ</div>
+    </div>
+
+    <div class="content-padding">
+        
+        <!-- Key Benefits List -->
+        <div class="benefits-list">
+            <span class="benefit-item">豊かな潤いチャージ</span>
+            <span class="benefit-item">肌の土台※1をしっかりケア</span>
+            <span class="benefit-item">水分と油分のバランスを整える</span>
+            <span class="benefit-item">ベタつかず、さっぱりとした使用感</span>
+            <span class="benefit-item">ツヤのあるすこやかな肌へ</span>
+            <span class="benefit-item">エイジングケア※2に対応</span>
+        </div>
+
+        <!-- Catchphrases -->
+        <div class="catchphrase-section">
+            <p>羊水由来<span class="highlight-text">ヒト幹細胞順化培養液（300,000ppm）</span>※3をたっぷり配合し、<br>肌をよりすこやかで美しく！</p>
+            <p>潤いとハリを同時に与え、<span class="highlight-text">ツヤめく印象へ！</span></p>
+            <p>体系的なスキンケアアプローチで、<span class="highlight-text">ハリとツヤのある肌</span>をサポート</p>
+            <p>多彩な美容成分が角質層までしっとり浸透し、<span class="highlight-text">肌の土台からケア</span></p>
+        </div>
+
+        <!-- 4 Key Ingredients -->
+        <div class="section-header">
+            <h3>注目の4大美容成分</h3>
+        </div>
+        <div class="key-ingredients">
+            <div class="key-ing-card">
+                <div class="key-ing-title">羊水由来 ヒト幹細胞順化培養液<br><span style="font-size: 0.85rem; font-weight: normal;">(300,000ppm配合※3)</span></div>
+                <ul class="key-ing-list">
+                    <li>肌なじみの良い潤い補給</li>
+                    <li>ハリとツヤのある肌へ導くサポート</li>
+                </ul>
+            </div>
+            <div class="key-ing-card">
+                <div class="key-ing-title">ヒドロキシデシルユビキノン<br><span style="font-size: 0.85rem; font-weight: normal;">(イデベノン)</span></div>
+                <ul class="key-ing-list">
+                    <li>肌のベース（土台※1）ケア</li>
+                    <li>肌にツヤを与える</li>
+                </ul>
+            </div>
+            <div class="key-ing-card">
+                <div class="key-ing-title">シロキクラゲエキス</div>
+                <ul class="key-ing-list">
+                    <li>優れた保湿ケア</li>
+                    <li>肌のコンディションを整える</li>
+                </ul>
+            </div>
+            <div class="key-ing-card">
+                <div class="key-ing-title">ヒアルロン酸Na</div>
+                <ul class="key-ing-list">
+                    <li>しっとり保湿ケア</li>
+                    <li>潤いヴェールで肌を守る</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Detailed 10 Ingredients -->
+        <div class="section-header">
+            <h3>主要成分と特徴</h3>
+        </div>
+        <div class="ingredients-detail">
+            <div class="ing-detail-item">
+                <div class="ing-name">1. ヒト幹細胞順化培養液（300,000ppm、羊水由来）</div>
+                <div class="ing-desc">成体幹細胞の中で最も若い羊水幹細胞を低酸素培養して得られた、高機能複合バイオ素材。豊富な美容成分を含み、肌のコンディションを整え、すこやかでハリのある肌へ導くサポートをします。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">2. ナイアシンアミド</div>
+                <div class="ing-desc">ビタミンB3の一種。光や熱の影響を受けにくく、昼夜を問わず使用可能です。肌に潤いを与え、乾燥によるくすみを防ぎ、明るい印象の肌へ導きます。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">3. アデノシン</div>
+                <div class="ing-desc">安定性が高く紫外線などに関係なく着実に使用でき、肌にハリを与え、すこやかに保つサポートをします。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">4. ヒドロキシデシルユビキノン（イデベノン）</div>
+                <div class="ing-desc">肌のコンディションを整えるサポートをし、ハリとツヤのあるいきいきとした肌管理を助けます。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">5. ペプチド5種コンプレックス</div>
+                <div class="ing-desc">多様な肌のコンディションをサポートする5種のペプチドが含まれており、肌をすこやかに保つ助けとなります。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">6. ペディオコッカス／オタネニンジン根培養エキス発酵液</div>
+                <div class="ing-desc">サポニン成分をはじめとするオタネニンジン（山参）培養根の多様な栄養成分を含有。肌に水分と潤いを補給し、コンディションを整え、クリアですこやかな肌へ導くサポートをします。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">7. シロキクラゲエキス</div>
+                <div class="ing-desc">植物性ヒアルロン酸とも呼ばれ、ベータグルカンなどの成分を含有。高い保水力を誇る成分で、しっとりとしたすこやかな肌の演出を助けます。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">8. セラミドNP</div>
+                <div class="ing-desc">肌にある成分と似た成分で水分の維持をサポートし、外部環境によりデリケートになりがちな肌をすこやかに保つ助けとなります。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">9. ヒアルロン酸Na</div>
+                <div class="ing-desc">低分子ヒアルロン酸としてよく知られる保湿成分の一つ。持続的な水分供給をサポートし、乾燥しがちな肌をしっとりと保つ助けとなります。</div>
+            </div>
+            <div class="ing-detail-item">
+                <div class="ing-name">10. 植物性発酵エキスコンプレックス</div>
+                <div class="ing-desc">（乳酸桿菌/ダイズ発酵エキス、サッカロミセス/ヤドリギ発酵エキス、サッカロミセス/チガヤ根発酵エキス）タンパク質、ビタミンなど豊富な成分を含有し、イソフラボン、リグナンなど肌に嬉しい成分を含んでおり、効果的な肌のコンディション調整をサポートします。</div>
+            </div>
+            <div style="font-size: 0.8rem; color: #888; text-align: right; margin-top: 20px;">※上記の内容は成分の一般的な性質に関する説明です。</div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="how-to-use">
+            <div class="how-to-header">使用方法 (HOW TO USE)</div>
+            <div class="how-to-text">
+                アンプルのキャップ（蓋）を矢印の方向に沿って取り外した後、付属の専用三角キャップ（コーン）を取り付けます。<br>
+                お手持ちの美容機器（デバイス）等に適量を入れ、肌に塗布（噴射）してなじませてください。
+            </div>
+        </div>
+
+        <!-- Notes / Disclaimers (Yakkihou Compliant) -->
+        <div class="notices">
+            <p>※1 土台、浸透：角質層まで</p>
+            <p>※2 エイジングケア：年齢に応じた潤い・ハリのお手入れ</p>
+            <p>※3 保湿成分として配合</p>
+            <p>※お肌に異常が生じていないかよく注意して使用してください。化粧品がお肌に合わないとき、即ち次のような場合には、使用を中止してください。</p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

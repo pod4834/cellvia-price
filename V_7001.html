@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スカルピア クロマ デバイス</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #f4f7f6;
+        color: #2d3748;
+        line-height: 1.6;
+    }
+    .container-custom {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #0f2b2b, #1a4a47, #246059);
+        color: white;
+        text-align: center;
+        padding: 70px 20px 60px;
+        position: relative;
+        overflow: hidden;
+    }
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at center, rgba(79, 209, 197, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+        color: #a0aec0;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    .hero-title {
+        font-size: 2.6rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        background: linear-gradient(to right, #e2e8f0, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .hero-title-en {
+        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: 4px;
+        color: #cbd5e0;
+        margin-bottom: 30px;
+    }
+    .hero-catchphrase {
+        font-size: 1.1rem;
+        color: #81e6d9;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+    
+    .feature-badge-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .feature-badge {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 6px 15px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        backdrop-filter: blur(5px);
+    }
+
+    .content-padding {
+        padding: 50px 30px;
+    }
+
+    .section-heading {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a4a47;
+        margin-bottom: 35px;
+        position: relative;
+    }
+    .section-heading::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: #4fd1c5;
+        margin: 12px auto 0;
+        border-radius: 2px;
+    }
+
+    .four-in-one-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+    .system-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        font-weight: 700;
+        color: #2d3748;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s;
+    }
+    .system-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .icon-placeholder {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .mode-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .mode-card {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+    }
+    .mode-header {
+        padding: 15px;
+        text-align: center;
+        font-weight: 700;
+        color: white;
+        font-size: 1.1rem;
+    }
+    .mode-normal { background-color: #319795; }
+    .mode-heat { background-color: #e53e3e; }
+    .mode-cool { background-color: #3182ce; }
+    
+    .mode-body {
+        padding: 20px 15px;
+        background-color: #ffffff;
+        flex-grow: 1;
+    }
+    .mode-spec {
+        background-color: #f7fafc;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .mode-spec strong {
+        display: block;
+        color: #4a5568;
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+    .mode-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .mode-list li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        color: #4a5568;
+    }
+    .mode-list li::before {
+        content: '・';
+        position: absolute;
+        left: 0;
+        color: #a0aec0;
+    }
+    
+    .tip-box {
+        background-color: #fffff0;
+        border: 1px solid #f6e05e;
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        color: #744210;
+        margin-bottom: 50px;
+    }
+
+    .massage-guide {
+        background-color: #f7fafc;
+        border-radius: 12px;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .guide-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 20px;
+        text-align: center;
+        background: #e2e8f0;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .step-list {
+        counter-reset: step-counter;
+        list-style: none;
+        padding: 0;
+    }
+    .step-list li {
+        position: relative;
+        padding-left: 45px;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        color: #4a5568;
+        line-height: 1.5;
+    }
+    .step-list li::before {
+        counter-increment: step-counter;
+        content: counter(step-counter);
+        position: absolute;
+        left: 0;
+        top: -2px;
+        width: 28px;
+        height: 28px;
+        background-color: #1a4a47;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+    .step-highlight {
+        font-weight: 700;
+        color: #2c5282;
+    }
+
+    .disclaimer-text {
+        font-size: 0.8rem;
+        color: #a0aec0;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+        .content-padding { padding: 30px 15px; }
+        .hero-title { font-size: 2rem; }
+        .four-in-one-grid { grid-template-columns: 1fr; }
+        .mode-container { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container-custom">
+    <!-- Header Section -->
+    <div class="hero-section">
+        <div class="hero-subtitle">美容液の浸透（※）をサポートする最高のシナジーアイテム<br><span style="font-size: 0.75rem;">※角質層まで</span></div>
+        <div class="hero-title">スカルピア クロマ デバイス</div>
+        <div class="hero-title-en">SCALPIA CHROMA DEVICE</div>
+        
+        <div class="hero-catchphrase">
+            8,000RPMが届ける立体振動マッサージ
+        </div>
+        
+        <div class="text-sm text-gray-300 italic mb-4">
+            「頭皮へ届ける、力強いプレミアム・ケア。頭皮ケア、もう先延ばしにしないでください。」
+        </div>
+
+        <div class="feature-badge-container">
+            <span class="feature-badge">頭皮のめぐりをサポート</span>
+            <span class="feature-badge">美容液のなじみを促進</span>
+            <span class="feature-badge">リフレッシュマッサージ</span>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-padding">
+        
+        <!-- Summary Bullet Points -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 mb-12 shadow-sm">
+            <ul class="space-y-3 text-gray-700 text-sm md:text-base">
+                <li class="flex items-start"><span class="text-teal-600 mr-2">✓</span> <span>頭皮ケア用美容液の浸透（角質層まで）をサポート</span></li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">✓</span> <span>スカルピア プラス アンプルとの同時使用でシナジー効果UP</span></li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">✓</span> <span>マッサージ効果で頭皮を心地よく刺激する機器</span></li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">✓</span> <span>一般(ノーマル) / 温熱 / 冷却の3MODEでカスタマイズケア</span></li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">✓</span> <span>頭皮からデコルテラインまで幅広いマッサージケアに対応</span></li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">✓</span> <span>コンパクトなサイズで便利な携帯性</span></li>
+                <li class="flex items-start"><span class="text-teal-600 mr-2">✓</span> <span>簡単操作で毎日のケアを無理なく継続</span></li>
+            </ul>
+        </div>
+
+        <!-- 4in1 System -->
+        <h2 class="section-heading">さらに本格的な頭皮ケアのための<br>4in1 スマートマルチケアシステム</h2>
+        <div class="four-in-one-grid">
+            <div class="system-card">
+                <div class="icon-placeholder">🌡️❄️</div>
+                <div>温熱 ＆ クーリング</div>
+            </div>
+            <div class="system-card">
+                <div class="icon-placeholder">⚡</div>
+                <div>ガルバニック (微弱電流)</div>
+            </div>
+            <div class="system-card">
+                <div class="icon-placeholder">〰️</div>
+                <div>3D 立体振動 (8,000RPM)</div>
+            </div>
+            <div class="system-card">
+                <div class="icon-placeholder">💡</div>
+                <div>LED ライトセラピー</div>
+            </div>
+        </div>
+
+        <!-- 3 Modes Comparison -->
+        <h2 class="section-heading">一般 / 温熱 / 冷却 3MODE</h2>
+        <div class="mode-container">
+            <!-- Normal Mode -->
+            <div class="mode-card">
+                <div class="mode-header mode-normal">一般 (ノーマル) MODE</div>
+                <div class="mode-body">
+                    <div class="mode-spec">
+                        <strong>機能仕様</strong>
+                        28℃設定<br>
+                        微弱電流＆ガルバニック<br>
+                        Red LED<br>
+                        3D立体振動 (8,000RPM)
+                    </div>
+                    <ul class="mode-list">
+                        <li>美容液の頭皮へのなじみをサポート</li>
+                        <li>頭皮にハリ・弾力を与える</li>
+                        <li>マッサージ効果によるめぐりのサポート</li>
+                        <li>古い角質のオフをサポート</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Heat Mode -->
+            <div class="mode-card">
+                <div class="mode-header mode-heat">温熱 MODE</div>
+                <div class="mode-body">
+                    <div class="mode-spec">
+                        <strong>機能仕様</strong>
+                        35℃ ± 2℃<br>
+                        微弱電流＆ガルバニック<br>
+                        Red LED<br>
+                        3D立体振動 (8,000RPM)
+                    </div>
+                    <ul class="mode-list">
+                        <li>温感で毛穴を開きやすくし、汚れを落としやすくする</li>
+                        <li>頭皮にハリを与える</li>
+                        <li>マッサージ効果により頭皮を柔らげる</li>
+                        <li>古い角質のオフをサポート</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cool Mode -->
+            <div class="mode-card">
+                <div class="mode-header mode-cool">冷却 MODE</div>
+                <div class="mode-body">
+                    <div class="mode-spec">
+                        <strong>機能仕様</strong>
+                        20℃ ± 2℃<br>
+                        微弱電流＆ガルバニック<br>
+                        Blue LED<br>
+                        3D立体振動 (8,000RPM)
+                    </div>
+                    <ul class="mode-list">
+                        <li>冷感で毛穴や肌を引き締める</li>
+                        <li>デリケートな頭皮のクールダウン</li>
+                        <li>マッサージ効果で頭皮環境をすこやかに整える</li>
+                        <li>古い角質のオフをサポート</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tip Box -->
+        <div class="tip-box">
+            <strong>💡 TIPS:</strong><br>
+            68個の振動ブラシが3つのモード（一般/温熱/冷却）を通じて、マッサージ効果により頭皮のめぐりをサポートし、ハリのある状態へ導きます。「スカルピア プラス アンプル」と一緒に使用することで、毛穴の汚れを浮かし、古い角質のケアをより効果的にサポートするマッサージ機器です。
+        </div>
+
+        <!-- Massage Guide -->
+        <h2 class="section-heading">HOW TO USE</h2>
+        <div class="massage-guide">
+            <div class="guide-title">スカルピア クロマ デバイスを使用した頭皮＆首周りのドレナージュ風マッサージ</div>
+            <ul class="step-list">
+                <li><span class="step-highlight">なでる：</span>背中の中央付近から首の付け根に向かって、円を描くようにやさしく滑らせます。</li>
+                <li><span class="step-highlight">首周り（プロフンダス〜ターミヌス）：</span>耳の下から首筋を通り、鎖骨のくぼみに向かって、5回ずつ3セット小さな円を描くようにマッサージします。</li>
+                <li><span class="step-highlight">後頭部下部：</span>耳の後ろから鎖骨に向かって、5回ずつ3セット小さな円を描きます。</li>
+                <li><span class="step-highlight">後頭部の3箇所（ぼんのくぼ、後頭部の中央、頭頂部）：</span>各ポイントで5回ずつ3セット、小さな円を描くように刺激します。</li>
+                <li><span class="step-highlight">頭の側面：</span>側頭部から鎖骨に向かって、5回ずつ1セット小さな円を描きます。</li>
+                <li><span class="step-highlight">うなじから後頭部：</span>約30秒間、軽い振動をあてて心地よく刺激します。</li>
+                <li><span class="step-highlight">肩先から首の付け根、鎖骨へ：</span>軽く押し流すように動かし、マッサージ効果によるめぐりをサポートします。</li>
+            </ul>
+            <div class="text-xs text-gray-500 mt-4 text-center">
+                ※ドレナージュとは：機器の振動や手技を用いて、マッサージ効果によりすこやかなめぐりをサポートする美容ケアのことです。
+            </div>
+        </div>
+
+        <!-- Disclaimers (Yakki-hou Compliance) -->
+        <div class="disclaimer-text">
+            【使用上の注意】<br>
+            ※本製品は医療機器ではありません。美容と健康維持を目的とした家庭用美容機器です。<br>
+            ※「浸透」とは、角質層までを指します。<br>
+            ※記載されている効果はマッサージ効果によるものであり、疾病の治療や予防を目的とするものではありません。<br>
+            ※お肌や頭皮に異常が生じていないかよく注意して使用してください。異常がある場合は使用を中止し、専門医にご相談ください。
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

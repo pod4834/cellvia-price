@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミソロジー サン プロテクション</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#3b5a88',   /* Deep blue */
+                            light: '#e8f0fe',  /* Light blue */
+                            accent: '#6c9ae0', /* Medium blue */
+                            uv: '#ea580c'      /* Orange for UV */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base typography adjustments for high readability with tight spacing */
+        body { 
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom highlight for specific text */
+        .text-highlight {
+            color: theme('colors.brand.dark');
+            font-family: theme('fontFamily.serif');
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans leading-snug">
+
+<div class="max-w-3xl mx-auto bg-white shadow-md overflow-hidden">
+    
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-br from-blue-50 to-blue-200 px-3 py-6 sm:py-8 text-center overflow-hidden">
+        <!-- Decorative Sun Ring -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 border-2 border-white/60 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.7)] pointer-events-none"></div>
+        
+        <div class="relative z-10 flex flex-col items-center justify-center space-y-2 sm:space-y-3">
+            <p class="text-xs sm:text-sm font-bold text-brand-dark tracking-wide">紫外線対策と保湿を同時に！パーフェクトUVケア</p>
+            
+            <h1 class="font-serif font-black text-2xl sm:text-3xl lg:text-4xl text-brand-dark tracking-widest leading-tight">
+            ミソロジー<br>サン プロテクション
+            </h1>
+            
+            <p class="text-[10px] sm:text-xs text-blue-600/80 tracking-[0.2em] font-light uppercase">Cellvia Mythology Sun Protection</p>
+            
+            <div class="mt-2 inline-block bg-white/90 backdrop-blur-sm border border-gray-200 text-brand-dark font-serif font-black text-lg sm:text-xl px-5 py-1.5 rounded-full shadow-sm">
+                SPF50+ PA++++
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-1 sm:gap-2 mt-2 text-[10px] sm:text-xs font-medium text-brand-dark">
+                <span class="bg-white/50 px-2 py-1 rounded">しっかりとした紫外線プロテクト</span>
+                <span class="bg-white/50 px-2 py-1 rounded">なめらかなクリームテクスチャー</span>
+                <span class="bg-white/50 px-2 py-1 rounded">ナチュラルな肌色補整</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Configuration Banner -->
+    <div class="bg-brand-dark text-white text-center py-1.5 text-xs sm:text-sm font-bold tracking-widest">
+        内容量 : 50 g
+    </div>
+
+    <!-- Content Area (Minimized padding for compactness) -->
+    <div class="p-3 sm:p-5 space-y-5 sm:space-y-6">
+        
+        <!-- Features List -->
+        <div class="bg-brand-light rounded-lg p-3 sm:p-4">
+            <ul class="space-y-1.5 sm:space-y-2">
+                <li class="flex items-start text-xs sm:text-sm font-medium">
+                    <svg class="w-4 h-4 text-brand-accent mr-1.5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    紫外線プロテクト・潤い・ハリをサポートする多機能性
+                </li>
+                <li class="flex items-start text-xs sm:text-sm font-medium">
+                    <svg class="w-4 h-4 text-brand-accent mr-1.5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    生クリームのようになめらかなテクスチャー
+                </li>
+                <li class="flex items-start text-xs sm:text-sm font-medium">
+                    <svg class="w-4 h-4 text-brand-accent mr-1.5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    べたつかず軽やかな使用感
+                </li>
+                <li class="flex items-start text-xs sm:text-sm font-medium">
+                    <svg class="w-4 h-4 text-brand-accent mr-1.5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    <span>自然なトーンアップ効果<sup class="text-[10px]">*</sup>で素肌を美しく <span class="text-[10px] text-gray-500">(*メイクアップ効果による)</span></span>
+                </li>
+                <li class="flex items-start text-xs sm:text-sm font-medium">
+                    <svg class="w-4 h-4 text-brand-accent mr-1.5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                    国内最高レベルの紫外線防止効果 (SPF50+ / PA++++)
+                </li>
+            </ul>
+        </div>
+
+        <!-- Message Box -->
+        <div class="text-center py-3 border-y border-gray-200">
+            <p class="text-[13px] sm:text-base font-medium leading-relaxed mb-2 sm:mb-3">
+                <span class="text-highlight text-[14px] sm:text-lg">高い紫外線防止効果</span>はもちろん、<br class="hidden sm:block">
+                豊かな保湿力で日差しや乾燥などの外的ダメージから肌を保護
+            </p>
+            <p class="text-[13px] sm:text-base font-medium leading-relaxed mb-2 sm:mb-3">
+                なめらかな塗り心地で、白浮きしにくく<br>
+                <span class="text-highlight text-[14px] sm:text-lg">自然で明るい印象の肌を演出</span>
+            </p>
+            <p class="text-[13px] sm:text-base font-medium leading-relaxed mb-2 sm:mb-3">
+                羊水由来のヒト幹細胞順化培養液が<br>
+                <span class="text-highlight text-[14px] sm:text-lg">肌に豊かな栄養をチャージ</span>
+            </p>
+            <p class="text-[13px] sm:text-base font-medium leading-relaxed">
+                素肌を美しく見せる、<span class="text-highlight text-[14px] sm:text-lg">クリアで明るい肌表現</span>
+            </p>
+        </div>
+
+        <!-- UV Info Box -->
+        <div class="bg-gradient-to-b from-white to-orange-50/30 border border-orange-100 rounded-lg p-3 sm:p-4 text-center">
+            <div class="text-brand-uv font-bold text-sm sm:text-base mb-1.5 flex items-center justify-center gap-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                UVAとUVBを同時にブロック！
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 text-left sm:text-center">
+                肌の奥深くに影響を与える波長の長いUVAと、肌表面に作用する強力なUVB。高いSPF・PA数値で両方を同時に防ぎ、大切な肌を紫外線からしっかり保護します。
+            </p>
+        </div>
+
+        <!-- Ingredients Section -->
+        <div>
+            <div class="text-center mb-3">
+                <h3 class="inline-block text-brand-dark font-serif font-bold text-base sm:text-lg border-b-2 border-brand-accent pb-0.5">主要成分と特徴</h3>
+            </div>
+
+            <div class="space-y-2">
+                <!-- Ingredient 1 -->
+                <div class="bg-white border border-gray-100 border-l-4 border-l-brand-accent rounded-r-lg p-3 sm:p-4 shadow-sm">
+                    <div class="font-bold text-brand-dark text-sm sm:text-base mb-1 flex items-baseline">
+                        <span class="text-brand-accent font-serif text-base sm:text-lg mr-1.5">1.</span>
+                        ヒト幹細胞順化培養液 <span class="text-[10px] sm:text-xs text-gray-500 font-normal ml-1">（10,000ppm、羊水由来）</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-600">豊かな栄養を含み、肌のコンディションを整えて健やかな状態へと導くサポートをする高機能バイオ素材です。長時間メイクをしている時でも肌をすこやかに保ち、潤いを与えます。</p>
+                </div>
+
+                <!-- Ingredient 2 -->
+                <div class="bg-white border border-gray-100 border-l-4 border-l-brand-accent rounded-r-lg p-3 sm:p-4 shadow-sm">
+                    <div class="font-bold text-brand-dark text-sm sm:text-base mb-1 flex items-baseline">
+                        <span class="text-brand-accent font-serif text-base sm:text-lg mr-1.5">2.</span>
+                        ナイアシンアミド
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-600">ビタミンB3の一種。肌の水分・油分のバランスを整え、乾燥によるくすみを防ぎます。明るく透明感のある印象の肌を保つサポートをします。</p>
+                </div>
+
+                <!-- Ingredient 3 -->
+                <div class="bg-white border border-gray-100 border-l-4 border-l-brand-accent rounded-r-lg p-3 sm:p-4 shadow-sm">
+                    <div class="font-bold text-brand-dark text-sm sm:text-base mb-1 flex items-baseline">
+                        <span class="text-brand-accent font-serif text-base sm:text-lg mr-1.5">3.</span>
+                        アデノシン
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-600">肌にハリと弾力を与え、すこやかな状態を保つためのエイジングケア<sup class="text-[10px]">*</sup>をサポートします。紫外線に対して安定性が高く、日中のケアにも適しています。<br>
+                    <span class="block mt-1 text-[10px] sm:text-xs text-gray-400">*エイジングケア：年齢に応じた潤い・ハリのお手入れのこと</span></p>
+                </div>
+            </div>
+            
+            <p class="text-right text-[10px] text-gray-400 mt-1">* 上記の内容は、原料の一般的な性質に関する説明です。</p>
+        </div>
+
+        <!-- How to Use -->
+        <div class="bg-gray-100 rounded-lg p-3 sm:p-4 flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4">
+            <div class="bg-brand-dark text-white font-serif font-bold text-xs sm:text-sm px-3 py-1 rounded-full whitespace-nowrap shrink-0">
+                HOW TO USE
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 text-center sm:text-left mt-1 sm:mt-0 leading-tight sm:leading-snug">
+                スキンケアの最後の段階で適量を手に取り、肌にやさしくのばしてなじませます。
+            </p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

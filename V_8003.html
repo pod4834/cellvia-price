@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mytholomune(ミソロミューン) (1Box)</title>
+<style>
+    body {
+        font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+    }
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+
+    /* Header Section */
+    .header-banner {
+        background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        color: #0d47a1;
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+    }
+    .header-banner h1 {
+        font-size: 2.8rem;
+        margin: 0 0 10px 0;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: #0d47a1;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .main-features {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .feature-badge {
+        background: #ffffff;
+        color: #1976d2;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        border: 1px solid #90caf9;
+    }
+
+    /* Content Area */
+    .content-area {
+        padding: 40px 30px;
+    }
+
+    /* Points Section */
+    .points-section {
+        margin-bottom: 40px;
+    }
+    .point-item {
+        display: flex;
+        align-items: center;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-left: 5px solid #1976d2;
+    }
+    .point-icon {
+        font-size: 2rem;
+        margin-right: 20px;
+        color: #1976d2;
+    }
+    .point-text h3 {
+        margin: 0 0 5px 0;
+        font-size: 1.1rem;
+        color: #0d47a1;
+    }
+    .point-text p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    /* Red Ginseng Section */
+    .ginseng-section {
+        background: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="%23efebe9"/></svg>') repeat;
+        background-color: #efebe9;
+        padding: 40px 30px;
+        text-align: center;
+        border-radius: 12px;
+        margin-bottom: 40px;
+    }
+    .ginseng-section h2 {
+        color: #5d4037;
+        font-size: 1.8rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #8d6e63;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    .ginseng-section p {
+        color: #4e342e;
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+    .ginseng-features {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .g-feature {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #d7ccc8;
+        text-align: left;
+    }
+    .g-feature span {
+        display: block;
+        font-weight: bold;
+        color: #c62828;
+        margin-bottom: 5px;
+    }
+
+    /* Radar Chart Section */
+    .radar-section {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 30px;
+        background-color: #e3f2fd;
+        border-radius: 12px;
+    }
+    .radar-section h2 {
+        color: #0d47a1;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .radar-tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .r-tag {
+        background: #ffffff;
+        border: 1px solid #1976d2;
+        color: #1976d2;
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Q&A Section */
+    .qa-section {
+        margin-bottom: 40px;
+    }
+    .qa-title {
+        text-align: center;
+        color: #0d47a1;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #1976d2;
+        padding-bottom: 10px;
+    }
+    .qa-item {
+        margin-bottom: 20px;
+    }
+    .qa-q {
+        font-weight: bold;
+        color: #1976d2;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+    .qa-a {
+        color: #444;
+        font-size: 1rem;
+        padding-left: 20px;
+        border-left: 3px solid #bbdefb;
+    }
+
+    /* Product Info Table */
+    .product-info-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        font-size: 0.9rem;
+    }
+    .product-info-table th, .product-info-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+    .product-info-table th {
+        background-color: #f5f5f5;
+        width: 30%;
+        color: #333;
+    }
+    
+    .notice {
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .header-banner h1 {
+            font-size: 2.2rem;
+        }
+        .content-area {
+            padding: 20px 15px;
+        }
+        .point-item {
+            flex-direction: column;
+            text-align: center;
+        }
+        .point-icon {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        .product-info-table th, .product-info-table td {
+            display: block;
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-banner">
+        <div class="subtitle">毎日の活力と健康のために</div>
+        <h1>Mythlosome</h1>
+        <div>マイドロソーム</div>
+        
+        <div class="main-features">
+            <span class="feature-badge">活力サポート</span>
+            <span class="feature-badge">健康維持</span>
+            <span class="feature-badge">紅参エキス配合</span>
+            <span class="feature-badge">NMN</span>
+            <span class="feature-badge">L-アルギニン</span>
+        </div>
+        <p style="margin-top: 15px; font-size: 0.9rem;">※本製品は病気の診断、治療、治癒、予防を目的としたものではありません。</p>
+    </div>
+
+    <div class="content-area">
+        <div class="points-section">
+            <div class="point-item">
+                <div class="point-icon">💪</div>
+                <div class="point-text">
+                    <h3>活気に満ちた毎日のための栄養補給</h3>
+                    <p>忙しい現代人の健康的なライフスタイルをサポートします。</p>
+                </div>
+            </div>
+            <div class="point-item">
+                <div class="point-text">
+                    <h3>厳選された成分の最適な配合</h3>
+                    <p>紅参、NMN、L-アルギニンなど、健康維持に役立つ成分をバランスよく配合しました。</p>
+                </div>
+            </div>
+            <div class="point-item">
+                <div class="point-text">
+                    <h3>飲みやすいカプセルタイプ</h3>
+                    <p>いつでもどこでも手軽に摂取でき、毎日の習慣にしやすい設計です。</p>
+                </div>
+            </div>
+            <div class="point-item">
+                <div class="point-text">
+                    <h3>徹底した品質管理</h3>
+                    <p>信頼できる製造施設で、厳格な基準のもと生産されています。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ginseng-section">
+            <h2>紅参の力</h2>
+            <p>古くから健康維持のために親しまれてきた紅参。<br>マイドロソームは、高品質な紅参エキスを配合し、あなたの毎日の活力を応援します。</p>
+            <div class="ginseng-features">
+                <div class="g-feature">
+                    <span>Point 1. 厳選された紅参を使用</span>
+                    豊かな土壌で育った質の高い紅参を厳選しています。
+                </div>
+                <div class="g-feature">
+                    <span>Point 2. サポニン含有</span>
+                    紅参特有の成分であるサポニンを含み、健康的なリズムをサポートします。
+                </div>
+                <div class="g-feature">
+                    <span>Point 3. 吸収率を考慮した配合</span>
+                    体内で効率よく利用されるよう、成分の組み合わせにこだわりました。
+                </div>
+            </div>
+        </div>
+
+        <div class="radar-section">
+            <h2>マイドロソームはこんな方におすすめです</h2>
+            <div class="radar-tags">
+                <span class="r-tag">毎日の健康を維持したい方</span>
+                <span class="r-tag">朝からスッキリと活動したい方</span>
+                <span class="r-tag">年齢に負けない活力を保ちたい方</span>
+                <span class="r-tag">忙しい日々を送っている方</span>
+                <span class="r-tag">手軽に栄養補給をしたい方</span>
+            </div>
+        </div>
+
+        <div class="qa-section">
+            <h2 class="qa-title">Q & A</h2>
+            <div class="qa-item">
+                <div class="qa-q">Q. どのように摂取すればいいですか？</div>
+                <div class="qa-a">1日1回、水またはぬるま湯と一緒にお召し上がりください。</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">Q. いつ飲むのが効果的ですか？</div>
+                <div class="qa-a">健康食品ですので、特に決まった時間はありません。ご自身のライフスタイルに合わせて、毎日続けやすいタイミングでお召し上がりいただくことをおすすめします。</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">Q. 他のサプリメントと一緒に飲んでも大丈夫ですか？</div>
+                <div class="qa-a">基本的には問題ありませんが、ご心配な場合は医師や薬剤師にご相談ください。</div>
+            </div>
+        </div>
+
+        <h2 style="color: #0d47a1; text-align: center; border-bottom: 2px solid #0d47a1; padding-bottom: 10px;">製品情報</h2>
+        <table class="product-info-table">
+            <tr>
+                <th>製品名</th>
+                <td>Mythlosome (マイドロソーム)</td>
+            </tr>
+            <tr>
+                <th>内容量</th>
+                <td>500mg × 30カプセル (15g)</td>
+            </tr>
+            <tr>
+                <th>原材料名</th>
+                <td>紅参エキス粉末、ニコチンアミドモノヌクレオチド(NMN)、L-アルギニン、マカ抽出物粉末、亜鉛含有酵母 / セルロース、ステアリン酸カルシウム、微粒二酸化ケイ素、（一部にゼラチンを含む）</td>
+            </tr>
+            <tr>
+                <th>お召し上がり方</th>
+                <td>1日1カプセルを目安に、水またはぬるま湯とともにお召し上がりください。</td>
+            </tr>
+            <tr>
+                <th>保存方法</th>
+                <td>直射日光、高温多湿を避けて涼しいところに保管してください。</td>
+            </tr>
+            <tr>
+                <th>摂取上の注意</th>
+                <td>
+                    ・特異体質、アレルギー体質の方は原材料をご確認の上、お召し上がりください。<br>
+                    ・妊娠・授乳中の方、お薬を服用中の方は、医師にご相談の上お召し上がりください。<br>
+                    ・お子様の手の届かないところに保管してください。
+                </td>
+            </tr>
+        </table>
+        
+        <p class="notice">
+            ※食生活は、主食、主菜、副菜を基本に、食事のバランスを。<br>
+            ※本製品は、病気の診断、治療、治癒、または予防を意図したものではありません。
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

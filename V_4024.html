@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- STREAMING_CHUNK:Configuring meta tags and external resources... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リラクシング ボディ アップ ローション</title>
+    
+    <!-- Google Fonts: Noto Serif JP (명조) & Noto Sans JP (고딕) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- STREAMING_CHUNK:Setting up custom Tailwind configuration... -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmetic: {
+                            base: '#FDFBF9',      /* 아주 밝은 크림 베이지 */
+                            peach: '#F8F3EF',     /* 부드러운 소프트 피치 */
+                            accent: '#D9C5B2',    /* 고급스러운 로즈 골드/베이지 */
+                            border: '#EAE1D8',    /* 은은한 경계선 */
+                            textDark: '#4A3B32',  /* 딥 웜 브라운 (메인 텍스트) */
+                            textMute: '#8C7B70',  /* 뮤트 브라운 (보조 텍스트) */
+                            textPoint: '#C2A388'  /* 포인트 타이포 컬러 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        engSerif: ['"Cormorant Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- STREAMING_CHUNK:Defining custom animations and base styles... -->
+    <style>
+        body {
+            background-color: #f0ece9; /* 외부 배경색 */
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.7s ease-out forwards;
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* 애니메이션 딜레이 설정 */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="flex justify-center items-start min-h-screen py-8 text-cosmetic-textDark font-sans">
+
+    <!-- [SPA 라우터가 추출할 메인 컨텐츠 영역] -->
+    <main class="w-full max-w-3xl bg-cosmetic-base shadow-[0_4px_20px_-4px_rgba(74,59,50,0.1)] overflow-hidden border border-cosmetic-border">
+        
+        <!-- STREAMING_CHUNK:Rendering the Hero Section... -->
+        <section class="bg-gradient-to-b from-cosmetic-peach to-cosmetic-base text-center pt-8 pb-5 px-4 relative fade-in-up border-b border-cosmetic-border">
+            
+            <!-- 상단 장식선 & 브랜드명 -->
+            <div class="flex justify-center items-center gap-3 mb-3">
+                <div class="h-[1px] w-10 bg-cosmetic-accent opacity-70"></div>
+                <div class="text-[9px] text-cosmetic-textMute tracking-[0.25em] uppercase font-bold font-engSerif">Cellvia Body Care</div>
+                <div class="h-[1px] w-10 bg-cosmetic-accent opacity-70"></div>
+            </div>
+
+            <!-- 서브 카피 -->
+            <div class="text-[13px] md:text-sm text-cosmetic-textMute mb-3 tracking-wide font-medium leading-snug">
+                ベタつかず素早く肌になじみ、毎日のケアに最適な<br>
+                しっとりなめらかな高保湿ボディローション
+            </div>
+            
+            <!-- 메인 타이틀 -->
+            <div class="mb-4 relative inline-block">
+                <h1 class="text-2xl md:text-3xl font-medium text-cosmetic-textDark tracking-widest mb-1 font-serif">
+                    リラクシング ボディ アップ ローション
+                </h1>
+                <p class="text-[11px] text-cosmetic-textPoint tracking-[0.2em] uppercase font-engSerif italic">
+                    Relaxing Body Up Lotion
+                </p>
+            </div>
+
+            <!-- 제품 특징 키워드 -->
+            <div class="flex justify-center items-center flex-wrap gap-1.5 mb-4">
+                <span class="text-[9px] md:text-[10px] text-cosmetic-textMute bg-white px-2.5 py-0.5 rounded border border-cosmetic-border tracking-wider">Daily Hydration</span>
+                <span class="text-[9px] md:text-[10px] text-cosmetic-textMute bg-white px-2.5 py-0.5 rounded border border-cosmetic-border tracking-wider">Floral Musk</span>
+                <span class="text-[9px] md:text-[10px] text-cosmetic-textMute bg-white px-2.5 py-0.5 rounded border border-cosmetic-border tracking-wider">Silky Texture</span>
+            </div>
+
+            <!-- 용량 표기 -->
+            <div class="inline-flex items-center justify-center bg-transparent border border-cosmetic-accent px-4 py-0.5 rounded-full">
+                <span class="text-cosmetic-textDark font-engSerif text-sm tracking-widest font-semibold">300 ml</span>
+            </div>
+        </section>
+
+        <!-- STREAMING_CHUNK:Rendering the Points Section (Features)... -->
+        <section class="px-4 py-5 fade-in-up delay-100 bg-cosmetic-base relative">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                <!-- Point 1 -->
+                <div class="bg-white border border-cosmetic-border p-3 rounded-lg text-center flex flex-col justify-center shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-cosmetic-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                    <div class="text-cosmetic-textPoint text-[11px] font-engSerif italic font-bold mb-0.5">Point 01</div>
+                    <div class="text-[12px] md:text-[13px] font-medium font-serif text-cosmetic-textDark mb-1">全肌質対応</div>
+                    <div class="h-[1px] w-6 bg-cosmetic-border mx-auto mb-1.5"></div>
+                    <div class="text-[10px] text-cosmetic-textMute leading-tight">ベタつかない<br>さっぱりとした使用感</div>
+                </div>
+                <!-- Point 2 -->
+                <div class="bg-white border border-cosmetic-border p-3 rounded-lg text-center flex flex-col justify-center shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-cosmetic-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                    <div class="text-cosmetic-textPoint text-[11px] font-engSerif italic font-bold mb-0.5">Point 02</div>
+                    <div class="text-[12px] md:text-[13px] font-medium font-serif text-cosmetic-textDark mb-1">なめらかな塗り心地</div>
+                    <div class="h-[1px] w-6 bg-cosmetic-border mx-auto mb-1.5"></div>
+                    <div class="text-[10px] text-cosmetic-textMute leading-tight">肌にするりと溶け込む<br>シルキーテクスチャー</div>
+                </div>
+                <!-- Point 3 -->
+                <div class="bg-white border border-cosmetic-border p-3 rounded-lg text-center flex flex-col justify-center shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-cosmetic-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                    <div class="text-cosmetic-textPoint text-[11px] font-engSerif italic font-bold mb-0.5">Point 03</div>
+                    <div class="text-[12px] md:text-[13px] font-medium font-serif text-cosmetic-textDark mb-1">しっとりとした肌へ</div>
+                    <div class="h-[1px] w-6 bg-cosmetic-border mx-auto mb-1.5"></div>
+                    <div class="text-[10px] text-cosmetic-textMute leading-tight">肌なじみの良い成分の<br>潤い補給</div>
+                </div>
+                <!-- Point 4 -->
+                <div class="bg-white border border-cosmetic-border p-3 rounded-lg text-center flex flex-col justify-center shadow-sm relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-[2px] bg-cosmetic-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+                    <div class="text-cosmetic-textPoint text-[11px] font-engSerif italic font-bold mb-0.5">Point 04</div>
+                    <div class="text-[12px] md:text-[13px] font-medium font-serif text-cosmetic-textDark mb-1">リラクシングケア</div>
+                    <div class="h-[1px] w-6 bg-cosmetic-border mx-auto mb-1.5"></div>
+                    <div class="text-[10px] text-cosmetic-textMute leading-tight">水分を与えて肌を整え<br>乾燥がちなボディケア</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STREAMING_CHUNK:Rendering the Catchphrase Section... -->
+        <section class="text-center px-4 py-5 fade-in-up delay-200 bg-cosmetic-peach border-y border-cosmetic-border">
+            <p class="text-[10px] text-cosmetic-textPoint mb-1.5 font-medium tracking-widest font-engSerif uppercase">After Shower Care</p>
+            <h2 class="text-base md:text-lg font-medium text-cosmetic-textDark font-serif leading-snug">
+                豊かな栄養となめらかな塗り心地で完成する<br>
+                デイリーボディローション
+            </h2>
+        </section>
+
+        <!-- STREAMING_CHUNK:Rendering the Ingredients Section... -->
+        <section class="px-4 py-5 fade-in-up delay-300 bg-cosmetic-base">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                
+                <!-- Ingredient 1 -->
+                <div class="bg-white border border-cosmetic-border rounded-lg p-3 flex items-start gap-2.5">
+                    <div class="w-8 h-8 rounded-full bg-cosmetic-peach flex-shrink-0 flex items-center justify-center text-cosmetic-textPoint text-xs">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-[12px] font-bold text-cosmetic-textDark mb-0.5">
+                            ヒト羊水幹細胞順化培養液
+                            <span class="text-[9px] font-normal text-cosmetic-textMute ml-0.5">(10,000ppm)</span>
+                        </h3>
+                        <p class="text-[10px] text-cosmetic-textMute leading-snug text-justify">
+                            羊水由来の幹細胞を培養して得られたバイオ素材。肌なじみが良く、毎日のケアに取り入れやすい成分で、すこやかな肌を保ちます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ingredient 2 -->
+                <div class="bg-white border border-cosmetic-border rounded-lg p-3 flex items-start gap-2.5">
+                    <div class="w-8 h-8 rounded-full bg-cosmetic-peach flex-shrink-0 flex items-center justify-center text-cosmetic-textPoint text-xs">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-[12px] font-bold text-cosmetic-textDark mb-0.5">
+                            マスタケ菌糸体 / オウゴン根エキス発酵液
+                        </h3>
+                        <p class="text-[10px] text-cosmetic-textMute leading-snug text-justify">
+                            オウゴン根エキスを発酵させた独自原料。乾燥しがちなボディに潤いを与えて肌荒れを防ぎ、キメの整った肌へ導きます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ingredient 3 -->
+                <div class="bg-white border border-cosmetic-border rounded-lg p-3 flex items-start gap-2.5">
+                    <div class="w-8 h-8 rounded-full bg-cosmetic-peach flex-shrink-0 flex items-center justify-center text-cosmetic-textPoint text-xs">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-[12px] font-bold text-cosmetic-textDark mb-0.5">
+                            プロバイオティクスコンプレックス
+                        </h3>
+                        <p class="text-[10px] text-cosmetic-textMute leading-snug text-justify">
+                            乳酸桿菌、ビフィズス菌などの発酵成分を複合した素材。肌のコンディションを整え、すこやかな肌環境をサポートします。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ingredient 4 -->
+                <div class="bg-white border border-cosmetic-border rounded-lg p-3 flex items-start gap-2.5">
+                    <div class="w-8 h-8 rounded-full bg-cosmetic-peach flex-shrink-0 flex items-center justify-center text-cosmetic-textPoint text-xs">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-[12px] font-bold text-cosmetic-textDark mb-0.5">
+                            ヒアルロン酸Na
+                        </h3>
+                        <p class="text-[10px] text-cosmetic-textMute leading-snug text-justify">
+                            肌に潤いを与え、乾燥しやすいボディをしっとりと保ちます。肌表面に潤いのヴェールを形成し、しなやかな肌へ導きます。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <p class="text-[8.5px] text-cosmetic-textMute text-right mt-1.5">※上記の説明は、原料の一般的な性質に関するものです。</p>
+        </section>
+
+        <!-- STREAMING_CHUNK:Rendering the How To Use Section... -->
+        <section class="px-4 pb-5 fade-in-up delay-300 bg-cosmetic-base">
+            <div class="border border-cosmetic-border rounded-md p-3 text-center flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmRmYmY5Ij48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2VjZTciPjwvcmVjdD4KPC9zdmc+')]">
+                <div class="flex items-center gap-2">
+                    <h3 class="text-[11px] font-bold text-cosmetic-textPoint tracking-widest uppercase font-engSerif">How to use</h3>
+                    <div class="hidden sm:block w-[1px] h-6 bg-cosmetic-accent opacity-50"></div>
+                </div>
+                <p class="text-[11px] text-cosmetic-textDark leading-snug font-medium text-left">
+                    適量を手に取り、肌のキメに沿ってマッサージするように<br class="hidden md:inline">
+                    優しく塗り広げ、なじませてください。
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

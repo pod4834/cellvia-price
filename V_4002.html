@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>コンフィデンス オイル</title>
+    
+    <!-- Google Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@600;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        oil: {
+                            purple: '#6a1b9a',
+                            purpledark: '#4a126d',
+                            purplelight: '#f3e5f5',
+                            pink: '#d81b60',
+                            pinklight: '#fce4ec',
+                            pinksoft: '#f8bbd0',
+                            text: '#2d3748',
+                            subtext: '#5a6578',
+                            gold: '#d4af37'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f1e6f5;
+            color: #2d3748;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero-pattern {
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+        }
+        .accent-border {
+            border-left: 3.5px solid #d81b60;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Main Container without header or footer -->
+    <main class="max-w-3xl mx-auto bg-white min-h-screen shadow-md overflow-hidden my-0 sm:my-3 sm:rounded-2xl">
+        
+        <!-- Hero Banner Section -->
+        <section class="hero-pattern p-5 sm:p-7 text-center relative overflow-hidden border-b border-pink-100">
+            <!-- Badge floating at top right -->
+            <div class="absolute top-3 right-3 sm:top-5 sm:right-5 bg-amber-100/90 border border-amber-300 text-amber-900 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex flex-col items-center justify-center font-bold text-[10px] sm:text-xs shadow-sm leading-tight z-10">
+                <span>フェイス &</span>
+                <span>ボディ兼用</span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-oil-subtext font-medium leading-tight mb-1">
+                潤いを逃さない、なめらかな肌のキメの秘密
+            </p>
+            <p class="text-xs sm:text-sm font-bold text-oil-pink mb-3">
+                自信に満ちた印象のための、私だけの集中ケア
+            </p>
+
+            <h1 class="font-serif text-2xl sm:text-4xl font-black text-oil-purpledark leading-snug tracking-wide mb-1">
+                セルビア<br class="sm:hidden"> コンフィデンス オイル
+            </h1>
+            <p class="text-xs sm:text-sm font-semibold tracking-widest text-oil-pink mb-4 uppercase">
+                Cellvia Confidence Oil
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap justify-center gap-1.5 sm:gap-2 text-xs font-semibold text-oil-text">
+                <span class="px-2.5 py-1 bg-white/90 rounded-md border border-purple-100 shadow-2xs">✨ スポットケア</span>
+                <span class="px-2.5 py-1 bg-white/90 rounded-md border border-purple-100 shadow-2xs">🌿 セルフマッサージ</span>
+                <span class="px-2.5 py-1 bg-white/90 rounded-md border border-purple-100 shadow-2xs">🌸 リラクシングケア</span>
+            </div>
+        </section>
+
+        <!-- Configuration Banner -->
+        <div class="bg-oil-purple text-white text-center py-2.5 sm:py-3 text-xs sm:text-sm font-bold tracking-widest">
+            内容量 : 50 ml
+        </div>
+
+        <div class="p-4 sm:p-7 space-y-5">
+
+            <!-- Info Grid (4 Key Usage Areas) -->
+            <section class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5">
+                <div class="bg-oil-pinklight/60 p-3 rounded-xl border border-pink-100 text-center">
+                    <h4 class="text-xs font-black text-oil-pink tracking-wider mb-1">SPOT CARE</h4>
+                    <p class="text-xs font-bold text-oil-text">集中スポットケア</p>
+                    <p class="text-[10px] text-oil-subtext mt-0.5">(デコルテ、目元、頬など)</p>
+                </div>
+                <div class="bg-oil-pinklight/60 p-3 rounded-xl border border-pink-100 text-center">
+                    <h4 class="text-xs font-black text-oil-pink tracking-wider mb-1">MOISTURE</h4>
+                    <p class="text-xs font-bold text-oil-text">乾燥予防</p>
+                    <p class="text-[10px] text-oil-subtext mt-0.5">(指先、ひじ、かかと)</p>
+                </div>
+                <div class="bg-oil-pinklight/60 p-3 rounded-xl border border-pink-100 text-center">
+                    <h4 class="text-xs font-black text-oil-pink tracking-wider mb-1">MASSAGE</h4>
+                    <p class="text-xs font-bold text-oil-text">リラクシングケア</p>
+                    <p class="text-[10px] text-oil-subtext mt-0.5">(首すじ〜肩、脚)</p>
+                </div>
+                <div class="bg-oil-pinklight/60 p-3 rounded-xl border border-pink-100 text-center">
+                    <h4 class="text-xs font-black text-oil-pink tracking-wider mb-1">DUAL TYPE</h4>
+                    <p class="text-xs font-bold text-oil-text">デイリーデュアル</p>
+                    <p class="text-[10px] text-oil-subtext mt-0.5">(フェイシャル＆ボディ)</p>
+                </div>
+            </section>
+
+            <!-- Features Checklist Section -->
+            <section class="bg-oil-purplelight/50 rounded-xl p-4 sm:p-5 border border-purple-100">
+                <h2 class="text-xs font-bold text-oil-purple tracking-widest uppercase mb-3 text-center sm:text-left">
+                    CHECK POINT
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-purple-100/60 shadow-2xs">
+                        <span class="w-5 h-5 bg-purple-100 text-oil-purple font-bold rounded-full flex items-center justify-center text-xs shrink-0">✓</span>
+                        <span class="text-xs sm:text-sm font-bold text-oil-text">悩みが気になる部位の集中ケア</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-purple-100/60 shadow-2xs">
+                        <span class="w-5 h-5 bg-purple-100 text-oil-purple font-bold rounded-full flex items-center justify-center text-xs shrink-0">✓</span>
+                        <span class="text-xs sm:text-sm font-bold text-oil-text">乾燥して荒れがちな肌を保護</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-purple-100/60 shadow-2xs">
+                        <span class="w-5 h-5 bg-purple-100 text-oil-purple font-bold rounded-full flex items-center justify-center text-xs shrink-0">✓</span>
+                        <span class="text-xs sm:text-sm font-bold text-oil-text">潤いを維持するモイスチャーベールを形成</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-purple-100/60 shadow-2xs">
+                        <span class="w-5 h-5 bg-purple-100 text-oil-purple font-bold rounded-full flex items-center justify-center text-xs shrink-0">✓</span>
+                        <span class="text-xs sm:text-sm font-bold text-oil-text">乾燥をあらかじめ防ぐ</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-purple-100/60 shadow-2xs">
+                        <span class="w-5 h-5 bg-purple-100 text-oil-purple font-bold rounded-full flex items-center justify-center text-xs shrink-0">✓</span>
+                        <span class="text-xs sm:text-sm font-bold text-oil-text">ベタつかず、なめらかなテクスチャー</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2.5 rounded-lg border border-purple-100/60 shadow-2xs">
+                        <span class="w-5 h-5 bg-purple-100 text-oil-purple font-bold rounded-full flex items-center justify-center text-xs shrink-0">✓</span>
+                        <span class="text-xs sm:text-sm font-bold text-oil-text">こまめに塗っても負担のないスピーディーな肌なじみ</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Highlight Box -->
+            <section class="text-center py-4 px-4 bg-gradient-to-b from-white to-pink-50/60 rounded-xl border-y-2 border-dashed border-pink-200 space-y-3">
+                <p class="text-xs sm:text-sm text-oil-text font-medium leading-relaxed">
+                    フランス・セダーマ社の名品原料・国際特許を取得した信頼できる成分<br>
+                    <span class="font-bold text-oil-purple bg-purple-100/80 px-2 py-0.5 rounded">純度高い「ボルフィリン」原料を使用</span>
+                </p>
+                <div class="w-12 h-0.5 bg-pink-200 mx-auto"></div>
+                <p class="text-xs sm:text-sm text-oil-text font-medium leading-relaxed">
+                    活用度満点！<br>
+                    <span class="font-bold text-oil-pink bg-pink-100/80 px-2 py-0.5 rounded">集中スポット＆乾燥部位のケア</span>
+                </p>
+                <div class="w-12 h-0.5 bg-pink-200 mx-auto"></div>
+                <p class="text-xs sm:text-sm text-oil-text font-medium leading-relaxed">
+                    デイリーに使えるデュアルタイプで<br>
+                    <span class="font-bold text-oil-pink bg-pink-100/80 px-2 py-0.5 rounded">顔と体の両方に使用可能</span>
+                </p>
+            </section>
+
+            <!-- Main Ingredients Section -->
+            <section class="space-y-3">
+                <div class="text-center">
+                    <h2 class="font-serif font-bold text-base sm:text-lg text-oil-purpledark inline-block pb-1 border-b-2 border-oil-pink">
+                        主要成分と特徴
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-2.5 pt-1">
+                    
+                    <!-- Ingredient 1 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-purple-100/80">
+                        <div class="flex flex-wrap items-baseline gap-1.5 mb-1">
+                            <span class="font-serif font-black text-oil-pink text-sm sm:text-base">01.</span>
+                            <h3 class="font-bold text-xs sm:text-sm text-oil-text">ボルフィリン</h3>
+                            <span class="text-[10px] text-oil-subtext bg-gray-100 px-2 py-0.5 rounded-full">水添ポリイソブテン＋ハナスゲ根エキス</span>
+                        </div>
+                        <p class="text-xs text-oil-subtext leading-relaxed pl-5">
+                            ユリ科の植物であるハナスゲの根から抽出した成分と、水添ポリイソブテンを結合させて作られた複合成分。乾燥してゴワついた肌に潤いとツヤを与え、ハリのあるすこやかな状態へ導くサポートをする効果的な成分です。
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 2 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-purple-100/80">
+                        <div class="flex items-center gap-1.5 mb-1">
+                            <span class="font-serif font-black text-oil-pink text-sm sm:text-base">02.</span>
+                            <h3 class="font-bold text-xs sm:text-sm text-oil-text">オリーブ果実油</h3>
+                        </div>
+                        <p class="text-xs text-oil-subtext leading-relaxed pl-5">
+                            ポリフェノールやビタミンEを豊富に含み、肌に生き生きとした印象を与えます。水分の蒸発を抑え、栄養を供給することで、肌のコンディションを整えるサポートをします。
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 3 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-purple-100/80">
+                        <div class="flex items-center gap-1.5 mb-1">
+                            <span class="font-serif font-black text-oil-pink text-sm sm:text-base">03.</span>
+                            <h3 class="font-bold text-xs sm:text-sm text-oil-text">ブドウ種子油</h3>
+                        </div>
+                        <p class="text-xs text-oil-subtext leading-relaxed pl-5">
+                            優れた吸収力と豊富なビタミン、ミネラルなどを含有し、ツヤのあるなめらかな肌の維持を助けます。
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 4 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-purple-100/80">
+                        <div class="flex items-center gap-1.5 mb-1">
+                            <span class="font-serif font-black text-oil-pink text-sm sm:text-base">04.</span>
+                            <h3 class="font-bold text-xs sm:text-sm text-oil-text">ヒマワリ種子油</h3>
+                        </div>
+                        <p class="text-xs text-oil-subtext leading-relaxed pl-5">
+                            タンパク質、レシチン、ビタミンA, Eなどを含み、肌の水分蒸発を防いで潤いを保ち、外的ダメージから肌を保護するサポートをします。
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 5 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-purple-100/80">
+                        <div class="flex items-center gap-1.5 mb-1">
+                            <span class="font-serif font-black text-oil-pink text-sm sm:text-base">05.</span>
+                            <h3 class="font-bold text-xs sm:text-sm text-oil-text">ホホバ種子油</h3>
+                        </div>
+                        <p class="text-xs text-oil-subtext leading-relaxed pl-5">
+                            ビタミンA, B, Cを含有し、肌に栄養を供給してすこやかな肌の維持とツヤ感アップを助けます。
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 6 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-purple-100/80">
+                        <div class="flex items-center gap-1.5 mb-1">
+                            <span class="font-serif font-black text-oil-pink text-sm sm:text-base">06.</span>
+                            <h3 class="font-bold text-xs sm:text-sm text-oil-text">カニナバラ果実油（ローズヒップオイル）</h3>
+                        </div>
+                        <p class="text-xs text-oil-subtext leading-relaxed pl-5">
+                            ビタミンB, C, Eおよび不飽和脂肪酸が豊富で、乾燥して疲れた印象の肌に生き生きとした活力を与え、健やかな肌環境を保つサポートをします。
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 7 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-purple-100/80">
+                        <div class="flex items-center gap-1.5 mb-1">
+                            <span class="font-serif font-black text-oil-pink text-sm sm:text-base">07.</span>
+                            <h3 class="font-bold text-xs sm:text-sm text-oil-text">イランイラン花油</h3>
+                        </div>
+                        <p class="text-xs text-oil-subtext leading-relaxed pl-5">
+                            肌の油分・水分バランスの維持を助け、心地よい植物由来の香りでリラクシングケアをサポートします。
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 8 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-purple-100/80">
+                        <div class="flex items-center gap-1.5 mb-1">
+                            <span class="font-serif font-black text-oil-pink text-sm sm:text-base">08.</span>
+                            <h3 class="font-bold text-xs sm:text-sm text-oil-text">ベルガモット果実油</h3>
+                        </div>
+                        <p class="text-xs text-oil-subtext leading-relaxed pl-5">
+                            デリケートになった肌のコンディションを整えるのを助け、穏やかな植物由来の香りで心地よいリラクシングタイムをサポートします。
+                        </p>
+                    </div>
+
+                </div>
+
+                <p class="text-[10px] text-gray-400 text-right pt-1">
+                    ※上記の内容は、原料の一般的な性質に関する説明です。
+                </p>
+            </section>
+
+            <!-- How To Use Section -->
+            <section class="bg-oil-purplelight/60 border border-purple-100 rounded-xl p-4 sm:p-5">
+                <div class="text-center mb-3">
+                    <span class="inline-block bg-oil-purple text-white font-bold text-xs px-3 py-1 rounded-full tracking-wider">
+                        HOW TO USE
+                    </span>
+                </div>
+                
+                <div class="space-y-3 text-xs sm:text-sm text-oil-text">
+                    <div class="bg-white p-3 rounded-lg border border-purple-100">
+                        <h4 class="font-bold text-oil-pink mb-1 flex items-center gap-1.5">
+                            <span class="w-2 h-2 bg-oil-purple rounded-full"></span>
+                            1. 顔に塗る場合
+                        </h4>
+                        <p class="text-oil-subtext leading-relaxed pl-3.5">
+                            目元、口元、額など、スポットケアが必要な気になる部位に適量をのせ、トントンと軽く叩き込むようになじませて吸収させます。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-3 rounded-lg border border-purple-100">
+                        <h4 class="font-bold text-oil-pink mb-1 flex items-center gap-1.5">
+                            <span class="w-2 h-2 bg-oil-purple rounded-full"></span>
+                            2. ボディに塗る場合
+                        </h4>
+                        <p class="text-oil-subtext leading-relaxed pl-3.5">
+                            デコルテ、首すじ、ヒップなど、スポットケアを希望する部位にオイルを塗布し、3〜5分程度、手でやさしく伸ばすようにマッサージします。（1日2回の使用をおすすめします）
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

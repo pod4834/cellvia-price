@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Oligoオリジナルセット</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#f8f9fa',
+                            textMain: '#2d3748',
+                            textLight: '#718096',
+                            gold: '#bda272',
+                            dark: '#1a202c',
+                            border: '#e2e8f0',
+                            device: '#8b7355',
+                            gel: '#7da0b1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #edf2f7; }
+        
+        /* Custom Device Card with Hover Effect */
+        .device-card-custom {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .device-card-custom::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: var(--bg-image);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.15; /* Adjusted for placeholder visibility */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .device-card-custom:hover::before {
+            opacity: 0.05;
+            transform: scale(1.05);
+        }
+        .device-text-shadow {
+            text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 4px rgba(255,255,255,1);
+        }
+    </style>
+</head>
+<body class="text-brand-textMain antialiased m-0 p-0 leading-snug text-sm sm:text-base font-sans">
+
+<div class="w-full max-w-5xl mx-auto bg-white sm:shadow-2xl overflow-hidden sm:my-4">
+
+    <!-- Package Header -->
+    <div class="bg-gradient-to-br from-gray-900 to-gray-700 text-center px-4 py-8 sm:py-10 border-b-4 border-brand-gold text-white relative">
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl font-black tracking-widest mb-2 sm:mb-3 drop-shadow-md">
+            ドクターオリゴ(Dr.Oligo) オリジナル セット
+        </h1>
+        <p class="text-xs sm:text-sm md:text-base text-gray-300 tracking-wide font-medium">
+            ヘルスケアからビューティーケアまで、健やかな美しさをトータルサポート
+        </p>
+    </div>
+
+    <!-- 1. Dr. Oligo Device -->
+    <div class="px-4 py-6 sm:px-6 sm:py-8 border-b border-brand-border">
+        
+        <!-- Section Title -->
+        <div class="flex flex-col sm:flex-row sm:items-center mb-4 sm:mb-6">
+            <div class="flex items-center mb-2 sm:mb-0">
+                <div class="w-1.5 h-6 sm:h-8 bg-brand-device rounded-sm mr-2.5 sm:mr-3"></div>
+                <h2 class="font-serif text-xl sm:text-2xl font-bold text-brand-dark leading-none">ドクターオリゴ 高周波マッサージ器</h2>
+            </div>
+            <span class="inline-block bg-slate-50 text-brand-textLight border border-slate-200 rounded-full px-3 py-1 text-[10px] sm:text-xs font-bold sm:ml-4 whitespace-nowrap w-fit shadow-sm">
+                メインコントローラー / フェイス・ボディハンドピース / フットプレート 各1ea
+            </span>
+        </div>
+
+        <!-- Split Layout -->
+        <div class="flex flex-col md:flex-row gap-4 sm:gap-6">
+            <!-- Visual Column -->
+            <div class="md:w-2/5 flex-shrink-0">
+                <div class="w-full h-48 sm:h-64 md:h-full bg-slate-50 border border-dashed border-slate-300 rounded-lg overflow-hidden flex items-center justify-center relative">
+                    <img src="img/detail6707_droligo.png" 
+                         alt="ドクターオリゴ 高周波マッサージ器" 
+                         class="absolute inset-0 w-full h-full object-cover"
+                         onerror="this.src='https://placehold.co/600x800/f8fafc/a0aec0?text=Image+Not+Found'">
+                </div>
+            </div>
+            
+            <!-- Info Column -->
+            <div class="md:w-3/5 flex flex-col justify-center">
+                <div class="text-sm sm:text-base font-bold text-brand-dark mb-3 sm:mb-4 leading-relaxed border-l-4 border-brand-device pl-3 bg-orange-50/50 py-1">
+                    ヘルスからビューティーまで、高周波ケア！<br>
+                    今は家で手軽にプレミアムホームケア
+                </div>
+                
+                <ul class="space-y-1.5 text-xs sm:text-sm text-brand-textMain mb-4 sm:mb-6">
+                    <li class="flex items-start"><span class="text-brand-device font-bold mr-1.5 flex-shrink-0">✓</span><span>高周波ケアで健康と美容を一度に叶えるプレミアム機器</span></li>
+                    <li class="flex items-start"><span class="text-brand-device font-bold mr-1.5 flex-shrink-0">✓</span><span>フットプレートを使用した手軽な全身ケア</span></li>
+                    <li class="flex items-start"><span class="text-brand-device font-bold mr-1.5 flex-shrink-0">✓</span><span>ハンドピースを使用したフェイス、ボディの部分ケア</span></li>
+                    <li class="flex items-start"><span class="text-brand-device font-bold mr-1.5 flex-shrink-0">✓</span><span>振動マッサージ機能搭載で高周波をより緻密に伝達 (ボディ/フットのみ)</span></li>
+                    <li class="flex items-start"><span class="text-brand-device font-bold mr-1.5 flex-shrink-0">✓</span><span>気分まで考えた心地よい感性温熱デザイン</span></li>
+                </ul>
+
+                <div class="grid grid-cols-2 gap-3 mt-6">
+                    <!-- 하위 카드들 -->
+                    <div class="relative bg-white border border-gray-200 p-3 rounded-lg text-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-40 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10" style="background-image: url('img/dr_oligo_footplate.png');"></div>
+                        <h5 class="relative z-10 text-brand-device font-bold text-sm mb-1 text-glow">フットプレート</h5>
+                        <p class="relative z-10 text-[11px] text-gray-700 text-glow leading-tight">足を乗せるだけで全身に高周波を伝達し、<br>手軽なヘルスケアをサポート。</p>
+                    </div>
+                    <div class="relative bg-white border border-gray-200 p-3 rounded-lg text-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-40 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10" style="background-image: url('img/dr_oligo_bodyhandpiece.png');"></div>
+                        <h5 class="relative z-10 text-brand-device font-bold text-sm mb-1 text-glow">ボディ ハンドピース</h5>
+                        <p class="relative z-10 text-[11px] text-gray-700 text-glow leading-tight">広い部位に適用。振動機能と赤色LEDで<br>ボディラインケアをサポート。</p>
+                    </div>
+                    <div class="relative bg-white border border-gray-200 p-3 rounded-lg text-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-40 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10" style="background-image: url('img/dr_oligo_facehandpiece.png');"></div>
+                        <h5 class="relative z-10 text-brand-device font-bold text-sm mb-1 text-glow">フェイス ハンドピース</h5>
+                        <p class="relative z-10 text-[11px] text-gray-700 text-glow leading-tight">顔の肌に合わせた繊細な出力。<br>しずく型ヘッドで細部までケア。</p>
+                    </div>
+                    <div class="relative bg-white border border-gray-200 p-3 rounded-lg text-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-40 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10" style="background-image: url('img/dr_oligo_controler.png');"></div>
+                        <h5 class="relative z-10 text-brand-device font-bold text-sm mb-1 text-glow">コントローラー</h5>
+                        <p class="relative z-10 text-[11px] text-gray-700 text-glow leading-tight">直感的なLEDディスプレイと<br>リモコン連動で簡単操作。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Pure Multi Nutrient Gel -->
+    <div class="px-4 py-6 sm:px-6 sm:py-8 bg-slate-50">
+        
+        <!-- Section Title -->
+        <div class="flex flex-col sm:flex-row sm:items-center mb-4 sm:mb-6">
+            <div class="flex items-center mb-2 sm:mb-0">
+                <div class="w-1.5 h-6 sm:h-8 bg-brand-gel rounded-sm mr-2.5 sm:mr-3"></div>
+                <h2 class="font-serif text-xl sm:text-2xl font-bold text-brand-dark leading-none">ピュア マルチ ニュートリエント ジェル</h2>
+            </div>
+            <span class="inline-block bg-white text-brand-textLight border border-slate-200 rounded-full px-3 py-1 text-[10px] sm:text-xs font-bold sm:ml-4 whitespace-nowrap w-fit shadow-sm">
+                300 ml × 10 ea
+            </span>
+        </div>
+
+        <!-- Split Layout (Reversed for Gel) -->
+        <div class="flex flex-col md:flex-row-reverse gap-4 sm:gap-6">
+            <!-- Visual Column -->
+            <div class="md:w-2/5 flex-shrink-0">
+                <div class="w-full h-48 sm:h-64 md:h-full bg-white border border-dashed border-slate-300 rounded-lg overflow-hidden flex items-center justify-center relative shadow-sm">
+                    <img src="img/detail6707_v6707.png" 
+                         alt="ピュア マルチ ニュートリエント ジェル" 
+                         class="absolute inset-0 w-full h-full object-cover"
+                         onerror="this.src='https://placehold.co/600x800/f8fafc/a0aec0?text=Image+Not+Found'">
+                </div>
+            </div>
+            
+            <!-- Info Column -->
+            <div class="md:w-3/5 flex flex-col justify-center">
+                <div class="text-sm sm:text-base font-bold text-brand-dark mb-3 sm:mb-4 leading-relaxed border-l-4 border-brand-gel pl-3 bg-blue-50/50 py-1">
+                    高周波マッサージの効果をブースト！<br>
+                    水分と栄養を満たす 3 in 1 専用ジェル
+                </div>
+                
+                <ul class="space-y-1.5 text-xs sm:text-sm text-brand-textMain mb-4 sm:mb-5">
+                    <li class="flex items-start"><span class="text-brand-gel font-bold mr-1.5 flex-shrink-0">✓</span><span>フェイス・ボディ用ハンドピースの高周波効果を最大化する専用ジェル</span></li>
+                    <li class="flex items-start"><span class="text-brand-gel font-bold mr-1.5 flex-shrink-0">✓</span><span>肌との密着力を高め、高周波がしっかり伝わるようサポート</span></li>
+                    <li class="flex items-start"><span class="text-brand-gel font-bold mr-1.5 flex-shrink-0">✓</span><span>べたつかない、さっぱりとした使用感</span></li>
+                    <li class="flex items-start"><span class="text-brand-gel font-bold mr-1.5 flex-shrink-0">✓</span><span>デイリー保湿用として単独でも使用可能</span></li>
+                </ul>
+
+                <div class="bg-white border border-slate-200 rounded-lg p-3 sm:p-4 shadow-sm">
+                    <h4 class="font-bold text-brand-gel text-xs sm:text-sm mb-2 sm:mb-3 border-b border-slate-100 pb-1.5 flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        主要成分
+                    </h4>
+                    <div class="space-y-2.5">
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="font-bold text-brand-dark text-[11px] sm:text-xs sm:w-1/3 flex-shrink-0 mb-0.5 sm:mb-0">ヒト幹細胞順化培養液</span>
+                            <span class="text-[10px] sm:text-[11px] text-brand-textLight sm:w-2/3 leading-tight">豊かな栄養感を与え、肌のコンディションを整えます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="font-bold text-brand-dark text-[11px] sm:text-xs sm:w-1/3 flex-shrink-0 mb-0.5 sm:mb-0">酵母/コメ発酵濾過物</span>
+                            <span class="text-[10px] sm:text-[11px] text-brand-textLight sm:w-2/3 leading-tight">肌に潤いを与え、乾燥してゴワついた肌をなめらかに保ちます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline">
+                            <span class="font-bold text-brand-dark text-[11px] sm:text-xs sm:w-1/3 flex-shrink-0 mb-0.5 sm:mb-0">ヒアルロン酸Na / ベタイン</span>
+                            <span class="text-[10px] sm:text-[11px] text-brand-textLight sm:w-2/3 leading-tight">強力な保湿効果で、マッサージ中も肌の水分を長く維持します。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

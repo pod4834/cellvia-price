@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>プレミアム ヘアケア シャンプー</title>
+    
+    <!-- Google Fonts & Tailwind CSS & Chart.js -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f1f5f9;
+            color: #334155;
+            -webkit-font-smoothing: antialiased;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
+            height: 250px;
+        }
+        .accent-border {
+            border-left: 3.5px solid #059669;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800">
+
+    <!-- Main Container without Header or Footer -->
+    <main class="max-w-4xl mx-auto bg-white min-h-screen shadow-md overflow-hidden my-0 sm:my-3 sm:rounded-2xl">
+        
+        <!-- Hero Section -->
+        <section class="relative p-5 sm:p-7 bg-gradient-to-b from-emerald-100/70 via-teal-50/40 to-white border-b border-emerald-100">
+            <div class="flex flex-col md:flex-row items-center gap-5">
+                <!-- Text Content -->
+                <div class="md:w-3/5 text-center md:text-left">
+                    <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full mb-2 tracking-wider">
+                        PREMIUM SCALP & HAIR CARE
+                    </span>
+                    
+                    <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight mb-2">
+                        スッキリ健やかな頭皮へ。<br>
+                        <span class="text-emerald-600">根元からふんわり</span> 豊かな輝き
+                    </h1>
+                    
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                        皮脂汚れや角質をすっきりディープクレンジング。<br class="hidden sm:inline">
+                        ヒト幹細胞順化培養液(10,000ppm)と特許発酵成分が、頭皮環境を基礎から整え、ハリ・コシのある美髪へ導きます。
+                    </p>
+
+                    <!-- Feature Badges Grid -->
+                    <div class="grid grid-cols-3 gap-2 max-w-md mx-auto md:mx-0">
+                        <div class="p-2 bg-white/90 rounded-xl border border-emerald-100/90 text-center shadow-2xs">
+                            <span class="text-emerald-700 font-bold text-xs block">毛穴洗浄</span>
+                            <span class="text-[9px] text-slate-400 font-medium tracking-wider uppercase">Cleansing</span>
+                        </div>
+                        <div class="p-2 bg-white/90 rounded-xl border border-emerald-100/90 text-center shadow-2xs">
+                            <span class="text-emerald-700 font-bold text-xs block">頭皮整肌</span>
+                            <span class="text-[9px] text-slate-400 font-medium tracking-wider uppercase">Soothing</span>
+                        </div>
+                        <div class="p-2 bg-white/90 rounded-xl border border-emerald-100/90 text-center shadow-2xs">
+                            <span class="text-emerald-700 font-bold text-xs block">ハリ・コシ</span>
+                            <span class="text-[9px] text-slate-400 font-medium tracking-wider uppercase">Elasticity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card Representation -->
+                <div class="md:w-2/5 w-full flex justify-center">
+                    <div class="w-full max-w-xs bg-gradient-to-br from-emerald-50 to-white rounded-2xl shadow-md p-5 border border-emerald-100 flex flex-col justify-between text-center relative overflow-hidden">
+                        <div class="relative z-10 mb-2">
+                            <span class="text-[10px] font-bold tracking-widest text-emerald-600 uppercase">Scalp Deep Care Solution</span>
+                            <h3 class="text-xl font-extrabold text-slate-800">SCALPIA</h3>
+                            <p class="text-[11px] text-slate-500">Premium Hair Care Shampoo</p>
+                        </div>
+                        
+                        <div class="relative z-10 my-3 flex flex-col items-center justify-center">
+                            <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center text-2xl shadow-inner border border-emerald-200">
+                                🌿
+                            </div>
+                            <span class="text-[10px] text-slate-600 font-medium mt-2 bg-white px-2.5 py-0.5 rounded-full border border-emerald-100 shadow-2xs">
+                                10,000 ppm 羊水由来ヒト幹細胞順化培養液
+                            </span>
+                        </div>
+
+                        <div class="relative z-10 flex justify-between items-center border-t border-slate-100 pt-3 text-left">
+                            <div>
+                                <p class="text-[9px] text-slate-400">Net Weight</p>
+                                <p class="text-xs font-bold text-slate-800">500 g</p>
+                            </div>
+                            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-semibold rounded border border-emerald-200">
+                                デイリー頭皮ケア
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="p-4 sm:p-6 bg-white border-b border-emerald-100">
+            <div class="text-center mb-4">
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900 inline-block pb-1 border-b-2 border-emerald-500">
+                    サロン級の頭皮＆髪のトータルケア 6つのこだわり
+                </h2>
+                <p class="text-xs text-slate-600 mt-1">
+                    毎日のシャンプーで頭皮のべたつきやニオイの元を落とし、豊かな潤いを与えます。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <div class="p-3.5 bg-emerald-50/40 rounded-xl border border-emerald-100/80 shadow-2xs">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="w-6 h-6 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">01</span>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">スッキリ爽快なディープクレンジング</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-600 leading-relaxed pl-8">
+                        余分な皮脂や毛穴の汚れをやさしくオフし、洗髪後も心地よい清涼感が持続します。
+                    </p>
+                </div>
+
+                <div class="p-3.5 bg-emerald-50/40 rounded-xl border border-emerald-100/80 shadow-2xs">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="w-6 h-6 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">02</span>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">豊かな泡立ちで摩擦を低減</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-600 leading-relaxed pl-8">
+                        きめ細かく濃密な泡が頭皮と髪を包み込み、洗髪時の摩擦ダメージから守ります。
+                    </p>
+                </div>
+
+                <div class="p-3.5 bg-emerald-50/40 rounded-xl border border-emerald-100/80 shadow-2xs">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="w-6 h-6 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">03</span>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">水分ヴェールでうるおいキープ</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-600 leading-relaxed pl-8">
+                        洗い流した後も髪のパサつきを防ぎ、指通りの良いなめらかな質感に整えます。
+                    </p>
+                </div>
+
+                <div class="p-3.5 bg-emerald-50/40 rounded-xl border border-emerald-100/80 shadow-2xs">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="w-6 h-6 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">04</span>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">水分・油分バランス調和</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-600 leading-relaxed pl-8">
+                        乾燥しやすい頭皮に水分を補い、健康的で健やかな頭皮環境を育みます。
+                    </p>
+                </div>
+
+                <div class="p-3.5 bg-emerald-50/40 rounded-xl border border-emerald-100/80 shadow-2xs">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="w-6 h-6 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">05</span>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">特許成分配合のプレミアム処方</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-600 leading-relaxed pl-8">
+                        独自の発酵成分と植物由来エキスが、根元からハリとコシを与えます。
+                    </p>
+                </div>
+
+                <div class="p-3.5 bg-emerald-50/40 rounded-xl border border-emerald-100/80 shadow-2xs">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <span class="w-6 h-6 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold text-xs shrink-0">06</span>
+                        <h3 class="font-bold text-slate-900 text-xs sm:text-sm">毎日の頭皮ケアにマイルド設計</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-600 leading-relaxed pl-8">
+                        デイリー使いにぴったりの優しさで、敏感になりがちな頭皮をやさしく包みます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredient Interactive Grid Section -->
+        <section class="p-4 sm:p-6 bg-white border-b border-emerald-100 text-center">
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900 inline-block pb-1 border-b-2 border-emerald-500 mb-1">
+                厳選された8つのキー成分
+            </h2>
+            <p class="text-xs text-slate-600 mb-4">
+                頭皮の清浄・保湿・補修のために配合されたキー成分。（タップで詳細表示）
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 max-w-2xl mx-auto">
+                <button onclick="showIngredient(0)" class="p-2.5 bg-emerald-50/50 hover:bg-emerald-100/80 rounded-xl border border-emerald-100 text-left transition-colors flex items-center gap-2">
+                    <span class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0">01</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">ヒト幹細胞順化培養液</span>
+                </button>
+                <button onclick="showIngredient(1)" class="p-2.5 bg-emerald-50/50 hover:bg-emerald-100/80 rounded-xl border border-emerald-100 text-left transition-colors flex items-center gap-2">
+                    <span class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0">02</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">特許発酵エキス</span>
+                </button>
+                <button onclick="showIngredient(2)" class="p-2.5 bg-emerald-50/50 hover:bg-emerald-100/80 rounded-xl border border-emerald-100 text-left transition-colors flex items-center gap-2">
+                    <span class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0">03</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">パンテノール</span>
+                </button>
+                <button onclick="showIngredient(3)" class="p-2.5 bg-emerald-50/50 hover:bg-emerald-100/80 rounded-xl border border-emerald-100 text-left transition-colors flex items-center gap-2">
+                    <span class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0">04</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">メントール</span>
+                </button>
+                <button onclick="showIngredient(4)" class="p-2.5 bg-emerald-50/50 hover:bg-emerald-100/80 rounded-xl border border-emerald-100 text-left transition-colors flex items-center gap-2">
+                    <span class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0">05</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">ワサビ葉エキス</span>
+                </button>
+                <button onclick="showIngredient(5)" class="p-2.5 bg-emerald-50/50 hover:bg-emerald-100/80 rounded-xl border border-emerald-100 text-left transition-colors flex items-center gap-2">
+                    <span class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0">06</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">コメ発酵液</span>
+                </button>
+                <button onclick="showIngredient(6)" class="p-2.5 bg-emerald-50/50 hover:bg-emerald-100/80 rounded-xl border border-emerald-100 text-left transition-colors flex items-center gap-2">
+                    <span class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0">07</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">ダイズ種子エキス</span>
+                </button>
+                <button onclick="showIngredient(7)" class="p-2.5 bg-emerald-50/50 hover:bg-emerald-100/80 rounded-xl border border-emerald-100 text-left transition-colors flex items-center gap-2">
+                    <span class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xs shrink-0">08</span>
+                    <span class="text-xs font-bold text-slate-800 leading-tight">ツルドクダミ根エキス</span>
+                </button>
+            </div>
+
+            <!-- Detail Display Box -->
+            <div id="ingredient-detail" class="mt-3 p-3.5 bg-emerald-50/90 rounded-xl text-left border border-emerald-200/80 max-w-2xl mx-auto transition-all duration-300">
+                <div class="flex items-center space-x-2 mb-1">
+                    <span class="px-2 py-0.5 bg-emerald-600 text-white text-[10px] font-bold rounded">KEY INGREDIENT</span>
+                    <h4 id="ingredient-title" class="text-xs sm:text-sm font-bold text-emerald-900"></h4>
+                </div>
+                <p id="ingredient-desc" class="text-slate-700 leading-relaxed text-xs"></p>
+            </div>
+        </section>
+
+        <!-- Science & Data Visualization Section -->
+        <section class="bg-slate-900 p-4 sm:p-6 text-white border-b border-slate-800">
+            <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-5">
+                <div class="md:w-1/2 w-full text-center md:text-left">
+                    <span class="text-emerald-400 font-bold text-[10px] tracking-widest uppercase">Synergy Care Ratio</span>
+                    <h2 class="text-base sm:text-lg font-bold mt-0.5 mb-2">頭皮環境をトータルケアする黄金バランス</h2>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        頭皮の清浄・保湿・柔軟・ハリ・整肌の5つのアプローチを緻密に設計。洗髪のたびに健やかで魅力的な毛髪環境へ導きます。
+                    </p>
+                    
+                    <div class="space-y-2 text-xs">
+                        <div class="flex items-center justify-between p-2.5 bg-slate-800/90 rounded-lg border border-slate-700">
+                            <span class="font-medium text-slate-200">毛穴のすっきり清浄度</span>
+                            <div class="w-28 sm:w-32 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="w-[96%] h-full bg-emerald-400"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 bg-slate-800/90 rounded-lg border border-slate-700">
+                            <span class="font-medium text-slate-200">洗髪後の保湿持続力</span>
+                            <div class="w-28 sm:w-32 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="w-[92%] h-full bg-emerald-400"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-2.5 bg-slate-800/90 rounded-lg border border-slate-700">
+                            <span class="font-medium text-slate-200">頭皮のリフレッシュ感</span>
+                            <div class="w-28 sm:w-32 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                                <div class="w-[98%] h-full bg-emerald-400"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 w-full bg-slate-800/60 p-3 sm:p-4 rounded-2xl border border-slate-700">
+                    <div class="chart-container">
+                        <canvas id="scalpChart"></canvas>
+                    </div>
+                    <p class="text-center text-[10px] text-slate-400 mt-2">※成分特性および使用感に関するイメージ指標です</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How To Use Section -->
+        <section class="p-4 sm:p-6 bg-white">
+            <div class="text-center mb-4">
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900 inline-block pb-1 border-b-2 border-emerald-500">
+                    HOW TO USE
+                </h2>
+                <p class="text-xs text-slate-600 mt-1">毎日の頭皮ケア習慣ステップ</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center mb-4">
+                <div class="p-3 bg-emerald-50/40 rounded-xl border border-emerald-100 flex flex-col items-center">
+                    <span class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-extrabold text-xs mb-2">1</span>
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">PRE-RINSE</h4>
+                    <p class="text-[11px] text-slate-600 leading-relaxed">ぬるま湯で頭皮と髪全体をしっかり予洗いし、表面のほこりや汚れを落とします。</p>
+                </div>
+
+                <div class="p-3 bg-emerald-50/40 rounded-xl border border-emerald-100 flex flex-col items-center">
+                    <span class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-extrabold text-xs mb-2">2</span>
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">MASSAGE & LATHER</h4>
+                    <p class="text-[11px] text-slate-600 leading-relaxed">適量を手に取り十分泡立てた後、指の腹で頭皮をやさしく揉み込むようにマッサージします。</p>
+                </div>
+
+                <div class="p-3 bg-emerald-50/40 rounded-xl border border-emerald-100 flex flex-col items-center">
+                    <span class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-extrabold text-xs mb-2">3</span>
+                    <h4 class="font-bold text-slate-800 text-xs mb-1">RINSE THOROUGHLY</h4>
+                    <p class="text-[11px] text-slate-600 leading-relaxed">3〜5分ほどおいた後、泡が残らないようぬるま湯で丁寧にしっかり洗い流します。</p>
+                </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200/80 flex items-start gap-3">
+                <span class="text-xl shrink-0">💡</span>
+                <div>
+                    <h4 class="font-bold text-emerald-900 text-xs mb-0.5">Scalp Care Tip</h4>
+                    <p class="text-[11px] text-emerald-800 leading-relaxed">
+                        シャンプーの泡をすぐに流さず、2〜3分ほど置く「頭皮泡パック」を行うことで、保湿・整肌成分が頭皮の角質層まで浸透し、さらにスッキリとしなやかな仕上がりを実感していただけます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const ingredients = [
+            {
+                title: "ヒト幹細胞順化培養液 (10,000ppm / 保湿・整肌成分)",
+                desc: "羊水由来の希少なヒト幹細胞順化培養液（保湿・整肌成分）を10,000ppm高配合。乾燥しがちな頭皮に潤いと豊富な栄養を補給し、健やかな頭皮環境のベースを整えます。"
+            },
+            {
+                title: "独自特許発酵エキス (ハナビラタケ/オウゴン根発酵液)",
+                desc: "ハナビラタケ菌糸体とオウゴン根エキスを厳選されたプロセスで発酵させた独自特許成分。外部刺激を受けて敏感になった頭皮をやさしく保護し、弾力と活力を与えます。"
+            },
+            {
+                title: "パンテノール (D-パンテノール)",
+                desc: "プロビタミンB5として知られるコンディショニング成分。髪とうるおいヴェールを形成し、傷んだ髪を補修しながら指通りの良いスムーズな髪へ導きます。"
+            },
+            {
+                title: "メントール (清涼成分)",
+                desc: "ハッカ類から得られる爽快清涼成分。べたつきや毛穴詰まりの気になる頭皮をすっきりリフレッシュさせ、洗髪後も心地よい清涼感を与えます。"
+            },
+            {
+                title: "ワサビ葉エキス (整肌成分)",
+                desc: "ワサビの葉から抽出された頭皮ケア成分。頭皮を清潔に保ち、不快感の原因にアプローチして爽やかな状態をキープします。"
+            },
+            {
+                title: "コメ発酵液 (SAKE Extract)",
+                desc: "伝統的な発酵技術から生まれた保湿成分。アミノ酸やミネラルを含み、デリケートな頭皮に潤いを与え、しなやかな素肌へと整えます。"
+            },
+            {
+                title: "ダイズ種子エキス (黒豆エキス / 整肌成分)",
+                desc: "ポリフェノールやイソフラボンを含み、頭皮を健やかに保ちながら髪にハリとコシを与え、根本からの立ち上がりをサポートします。"
+            },
+            {
+                title: "ツルドクダミ根エキス (何首烏 / 保湿成分)",
+                desc: "古くから重宝されてきた植物性エキス。乾燥などの外的ストレスから頭皮と毛髪を保護し、ツヤやかで美しい髪へと導きます。"
+            }
+        ];
+
+        function showIngredient(index) {
+            const title = document.getElementById('ingredient-title');
+            const desc = document.getElementById('ingredient-desc');
+
+            title.innerText = ingredients[index].title;
+            desc.innerText = ingredients[index].desc;
+        }
+
+        window.addEventListener('load', () => {
+            showIngredient(0);
+
+            const ctx = document.getElementById('scalpChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['頭皮清浄', '保湿力', 'ハリ・コシ', '頭皮整肌', '爽快感'],
+                    datasets: [{
+                        label: 'SCALPIA Performance',
+                        data: [96, 92, 90, 94, 98],
+                        backgroundColor: 'rgba(16, 185, 129, 0.25)',
+                        borderColor: 'rgba(16, 185, 129, 0.9)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(16, 185, 129, 1)',
+                        pointRadius: 3
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255, 255, 255, 0.15)' },
+                            grid: { color: 'rgba(255, 255, 255, 0.15)' },
+                            pointLabels: { color: '#cbd5e1', font: { size: 10, weight: 'bold' } },
+                            ticks: { display: false, stepSize: 20 },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>グリナリースパウォッシュ</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        cellvia: {
+                            green: '#2C4C3B',
+                            darkgreen: '#1a3327',
+                            lightgreen: '#8FB09A',
+                            mintbg: '#f2f7f4',
+                            gold: '#D4AF37',
+                            goldlight: '#f7edda',
+                            text: '#2d3748',
+                            subtext: '#4a5568'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #e5ece8;
+            color: #2d3748;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hero-pattern {
+            background: linear-gradient(135deg, #1a3327 0%, #2C4C3B 100%);
+        }
+        .accent-border {
+            border-left: 3.5px solid #2C4C3B;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <main class="max-w-3xl mx-auto bg-white min-h-screen shadow-md overflow-hidden my-0 sm:my-3 sm:rounded-2xl">
+        
+        <!-- Hero Section -->
+        <section class="hero-pattern p-5 sm:p-7 text-center relative overflow-hidden border-b border-cellvia-green">
+            <div class="inline-block bg-white/10 backdrop-blur-xs border border-white/20 px-3 py-1 rounded-full text-cellvia-lightgreen font-bold text-xs tracking-wider mb-2 shadow-2xs">
+                <i class="fa-solid fa-leaf text-xs mr-1.5 text-cellvia-lightgreen"></i>CELLVIA BODY CARE
+            </div>
+
+            <p class="text-xs sm:text-sm text-cellvia-lightgreen/90 font-medium leading-tight mb-1">
+                肌を心地よく包み込む保湿と、爽やかなシトラスの香りで仕上げた
+            </p>
+
+            <h1 class="font-serif italic text-3xl sm:text-4xl font-bold text-white leading-snug tracking-wide mb-1">
+                Greenery Spa Wash
+            </h1>
+            <p class="text-xs sm:text-sm font-semibold tracking-widest text-cellvia-gold mb-3 uppercase">
+                グリナリースパウォッシュ
+            </p>
+
+            <!-- Feature Tags -->
+            <div class="flex flex-wrap justify-center gap-1.5 sm:gap-2 text-xs font-medium text-slate-100 mb-3">
+                <span class="px-2.5 py-1 bg-white/10 rounded-md border border-white/20 shadow-2xs">🌿 弱酸性クレンジング</span>
+                <span class="px-2.5 py-1 bg-white/10 rounded-md border border-white/20 shadow-2xs">💧 4種ヒアルロン酸</span>
+                <span class="px-2.5 py-1 bg-white/10 rounded-md border border-white/20 shadow-2xs">🍋 爽やかなシトラスの香り</span>
+            </div>
+
+            <div class="inline-block bg-white/15 text-white font-bold text-xs px-4 py-1.5 rounded-full border border-white/30 tracking-widest">
+                内容量 : 300 ml
+            </div>
+        </section>
+
+        <div class="p-4 sm:p-7 space-y-5">
+
+            <!-- 4 Key Points Overview Grid -->
+            <section class="bg-cellvia-mintbg rounded-xl p-4 sm:p-5 border border-emerald-100">
+                <h2 class="text-xs font-bold text-cellvia-green tracking-widest uppercase mb-3 text-center sm:text-left flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-cellvia-green"></span>
+                    4 KEY POINTS
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    <div class="bg-white p-3 rounded-lg border border-emerald-100/80 text-center shadow-2xs">
+                        <span class="text-[10px] font-bold text-cellvia-green/60 uppercase tracking-widest block mb-0.5">POINT 01</span>
+                        <h3 class="text-xs font-bold text-cellvia-green mb-1">すべての肌タイプ</h3>
+                        <p class="text-[11px] text-cellvia-subtext leading-tight">
+                            マイルド成分のデイリーボディウォッシュ
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-3 rounded-lg border border-emerald-100/80 text-center shadow-2xs">
+                        <span class="text-[10px] font-bold text-cellvia-green/60 uppercase tracking-widest block mb-0.5">POINT 02</span>
+                        <h3 class="text-xs font-bold text-cellvia-green mb-1">肌に近い弱酸性</h3>
+                        <p class="text-[11px] text-cellvia-subtext leading-tight">
+                            やさしく洗い上げる (pH 4.5~5.5)
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-3 rounded-lg border border-emerald-100/80 text-center shadow-2xs">
+                        <span class="text-[10px] font-bold text-cellvia-green/60 uppercase tracking-widest block mb-0.5">POINT 03</span>
+                        <h3 class="text-xs font-bold text-cellvia-green mb-1">しっとり保湿</h3>
+                        <p class="text-[11px] text-cellvia-subtext leading-tight">
+                            潤いを保つ4種複合ヒアルロン酸
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-3 rounded-lg border border-emerald-100/80 text-center shadow-2xs">
+                        <span class="text-[10px] font-bold text-cellvia-green/60 uppercase tracking-widest block mb-0.5">POINT 04</span>
+                        <h3 class="text-xs font-bold text-cellvia-green mb-1">パフュームリフレッシュ</h3>
+                        <p class="text-[11px] text-cellvia-subtext leading-tight">
+                            みずみずしく爽やかなシトラスの香り
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Message Highlight Box -->
+            <section class="text-center py-4 px-4 bg-gradient-to-b from-white to-emerald-50/60 rounded-xl border-y-2 border-dashed border-emerald-200 space-y-2">
+                <div class="w-8 h-8 mx-auto mb-1 flex items-center justify-center rounded-full bg-cellvia-green text-white text-xs shadow-2xs">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <h3 class="text-xs sm:text-sm font-bold text-slate-800">一日を優しく整えるプレミアムスパタイム</h3>
+                <p class="text-xs sm:text-sm text-cellvia-green font-bold leading-relaxed">
+                    豊かな保湿とさっぱりとした洗い上がりで完成する、清潔なボディケア
+                </p>
+            </section>
+
+            <!-- Main Ingredients Section -->
+            <section class="space-y-3">
+                <div class="text-center">
+                    <h2 class="font-serif font-bold text-base sm:text-lg text-cellvia-green inline-block pb-1 border-b-2 border-cellvia-green">
+                        主要成分と特徴
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                    
+                    <!-- Ingredient 1 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-emerald-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1.5 mb-1">
+                                <span class="font-serif font-black text-cellvia-green text-sm">01.</span>
+                                <h3 class="font-bold text-xs sm:text-sm text-cellvia-text">ヒト羊水細胞順化培養液</h3>
+                                <span class="text-[10px] bg-emerald-100 text-cellvia-green font-bold px-2 py-0.5 rounded-full ml-auto">10,000ppm</span>
+                            </div>
+                            <p class="text-xs text-cellvia-subtext leading-relaxed pl-5">
+                                幹細胞の中でも若い羊水幹細胞を低酸素培養して得られた、こだわりのバイオ素材。肌になじみやすい成分で、毎日使用しても負担がなく心地よい使用感を与えます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient 2 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-emerald-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1.5 mb-1">
+                                <span class="font-serif font-black text-cellvia-green text-sm">02.</span>
+                                <h3 class="font-bold text-xs sm:text-sm text-cellvia-text">ヤエヤマアオキ果実エキス</h3>
+                                <span class="text-[10px] bg-emerald-100 text-cellvia-green font-bold px-2 py-0.5 rounded-full ml-auto">ノニエキス</span>
+                            </div>
+                            <p class="text-xs text-cellvia-subtext leading-relaxed pl-5">
+                                豊富なミネラルとビタミンが肌に潤いを与え、キメの整った肌へ導きます。植物由来のファイトケミカルを含み、肌のコンディションを整えます。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient 3 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-emerald-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1.5 mb-1">
+                                <span class="font-serif font-black text-cellvia-green text-sm">03.</span>
+                                <h3 class="font-bold text-xs sm:text-sm text-cellvia-text">マルチ複合ヒアルロン酸</h3>
+                                <span class="text-[10px] bg-emerald-100 text-cellvia-green font-bold px-2 py-0.5 rounded-full ml-auto">4種複合</span>
+                            </div>
+                            <p class="text-[10px] text-emerald-800 font-semibold pl-5 mb-0.5">
+                                (ヒアルロン酸Na、加水分解ヒアルロン酸Na、ヒアルロン酸、加水分解ヒアルロン酸)
+                            </p>
+                            <p class="text-xs text-cellvia-subtext leading-relaxed pl-5">
+                                持続的な水分供給をサポート。乾燥しやすいボディに潤いのヴェールを形成し、しっとりとした肌を維持します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient 4 -->
+                    <div class="bg-white p-3.5 rounded-r-xl accent-border shadow-2xs border-y border-r border-emerald-100 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1.5 mb-1">
+                                <span class="font-serif font-black text-cellvia-green text-sm">04.</span>
+                                <h3 class="font-bold text-xs sm:text-sm text-cellvia-text">クリサンテルムインジクムエキス</h3>
+                                <span class="text-[10px] bg-emerald-100 text-cellvia-green font-bold px-2 py-0.5 rounded-full ml-auto">野菊エキス</span>
+                            </div>
+                            <p class="text-xs text-cellvia-subtext leading-relaxed pl-5">
+                                野菊の花から抽出した植物由来エキス。外部環境によって乾燥や肌荒れを起こしやすい肌を、穏やかに整えすこやかに保ちます。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="text-[10px] text-gray-400 text-right pt-1">
+                    ※上記の内容は、原料の一般的な性質に関する説明です。
+                </p>
+            </section>
+
+            <!-- How To Use Section -->
+            <section class="bg-cellvia-green text-white rounded-xl p-4 sm:p-5 text-center shadow-sm">
+                <div class="inline-block bg-cellvia-gold text-cellvia-darkgreen font-bold text-xs px-3.5 py-1 rounded-full tracking-wider mb-2">
+                    HOW TO USE / 使用方法
+                </div>
+                
+                <p class="text-xs sm:text-sm text-emerald-50 leading-relaxed font-medium max-w-xl mx-auto">
+                    ぬるま湯で体全体を十分に濡らした後、適量を取ってよく泡立ててから全身をやさしく洗い、その後ぬるま湯で十分にすすぎ流してください。
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

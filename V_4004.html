@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>クレンジングバー</title>
+    
+    <!-- Google Fonts: Noto Serif JP (Elegant headings) & Noto Sans JP (Clean body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS & Chart.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdfcfb',
+                            100: '#f5f2eb',
+                            200: '#e6ded1',
+                            300: '#d4c5b0',
+                            400: '#bfa78a',
+                            500: '#ab8b66', // Premium Gold/Beige Accent
+                            600: '#9c7756',
+                            700: '#826048',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f5f4f2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+            height: 180px;
+        }
+        /* Custom minimalist scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d4c5b0; border-radius: 2px; }
+    </style>
+</head>
+<body class="font-sans text-stone-800 leading-snug">
+
+    <!-- Main Container: Minimized padding and margins -->
+    <main class="max-w-3xl mx-auto bg-white min-h-screen shadow-sm overflow-hidden sm:my-4 sm:border sm:border-stone-200">
+        
+        <!-- Hero Section: Compact and elegant -->
+        <section class="relative p-4 sm:p-5 border-b border-stone-100 bg-brand-50">
+            <div class="flex flex-col md:flex-row items-center gap-3">
+                
+                <!-- Text Content -->
+                <div class="md:w-3/5 text-center md:text-left">
+                    <span class="font-serif text-brand-600 text-[9px] tracking-[0.2em] border border-brand-200 px-2 py-0.5 mb-1.5 inline-block bg-white">
+                        MILD CLEANSING & MOISTURE CARE
+                    </span>
+                    
+                    <h1 class="font-serif text-lg sm:text-xl md:text-2xl font-bold text-stone-900 leading-tight mb-1.5">
+                        毎日うるおい肌を保つ秘訣。<br>
+                        <span class="text-brand-600">素肌をやさしく包み込む</span><br class="hidden sm:inline">
+                        クレンジングバー
+                    </h1>
+                    
+                    <p class="text-[10px] sm:text-[11px] text-stone-500 leading-snug mb-2">
+                        もこもこ立ち上がる濃密な生クリーム泡が、毛穴の汚れや古い角質をすっきりオフ。
+                        ヒト幹細胞順化培養液(10,000ppm)と厳選された保湿・整肌成分が、洗顔後のつっぱり感を防ぎます。
+                    </p>
+
+                    <!-- Feature Badges: Text only, tight spacing -->
+                    <div class="flex flex-wrap justify-center md:justify-start gap-x-2.5 gap-y-1 text-[9px] text-stone-400 font-medium tracking-wide">
+                        <span class="flex items-center gap-1"><div class="w-1 h-1 bg-brand-400 rounded-full"></div>すっきり洗浄</span>
+                        <span class="flex items-center gap-1"><div class="w-1 h-1 bg-brand-400 rounded-full"></div>濃密生クリーム泡</span>
+                        <span class="flex items-center gap-1"><div class="w-1 h-1 bg-brand-400 rounded-full"></div>うるおい保持</span>
+                        <span class="flex items-center gap-1"><div class="w-1 h-1 bg-brand-400 rounded-full"></div>全身トータル</span>
+                    </div>
+                </div>
+
+                <!-- Product Card: Sophisticated visual -->
+                <div class="md:w-2/5 w-full flex justify-center mt-2 md:mt-0">
+                    <div class="w-full max-w-[220px] bg-white p-3 border border-stone-100 flex flex-col justify-between text-center relative shadow-sm">
+                        <div class="mb-2">
+                            <h3 class="font-serif text-base font-bold text-stone-800 tracking-wider">CELLVIA</h3>
+                            <p class="text-[8px] text-stone-400 uppercase tracking-[0.2em]">Cleansing Bar</p>
+                        </div>
+                        
+                        <!-- Product Image (실제 상품 이미지로 교체) -->
+                        <div class="relative my-1.5 flex justify-center">
+                            <!-- TODO: 아래 src 속성에 실제 이미지 경로를 넣어주세요 (예: src="images/product.jpg") -->
+                            <img src="img/detail4004_0_v4004.png" 
+                                 alt="CELLVIA マイルドクレンジングバー" 
+                                 class="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-md shadow-sm border border-stone-200"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x400/e6ded1/826048?text=No+Image';">
+                        </div>
+
+                        <div class="mt-2 pt-1.5 border-t border-stone-50 flex justify-between items-end text-left">
+                            <div>
+                                <p class="text-[7px] text-stone-400 mb-0.5">標準重量</p>
+                                <p class="text-[10px] font-bold text-stone-700">85g <span class="text-[8px] font-normal text-stone-400">(水分込100g)</span></p>
+                            </div>
+                            <span class="text-[8px] text-brand-700 border border-brand-200 px-1 py-0.5 bg-brand-50">
+                                オールスキン
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="p-4 sm:p-5 border-b border-stone-100">
+            <div class="text-center mb-2.5">
+                <h2 class="font-serif text-sm sm:text-base font-bold text-stone-900">
+                    セルビア クレンジングバー 6つのこだわり
+                </h2>
+            </div>
+
+            <!-- Tight Grid Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1.5">
+                <div class="p-2.5 bg-stone-50/50 border border-stone-100 transition hover:bg-brand-50">
+                    <div class="flex items-center gap-1.5 mb-1">
+                        <span class="font-serif text-brand-500 text-xs font-bold w-4">01.</span>
+                        <h3 class="font-bold text-stone-800 text-[10px] sm:text-[11px]">高密度のココナッツベース</h3>
+                    </div>
+                    <p class="text-[9px] sm:text-[10px] text-stone-500 pl-5.5 ml-5">
+                        厳選されたココナッツ由来の洗浄成分ベースを採用。肌に負担をかけることなく汚れをやさしく洗い流します。
+                    </p>
+                </div>
+
+                <div class="p-2.5 bg-stone-50/50 border border-stone-100 transition hover:bg-brand-50">
+                    <div class="flex items-center gap-1.5 mb-1">
+                        <span class="font-serif text-brand-500 text-xs font-bold w-4">02.</span>
+                        <h3 class="font-bold text-stone-800 text-[10px] sm:text-[11px]">ふやけにくく最後まで</h3>
+                    </div>
+                    <p class="text-[9px] sm:text-[10px] text-stone-500 pl-5.5 ml-5">
+                        水分に強く溶け崩れしにくい硬度設計。最後まで型崩れせず、衛生的に気持ちよくお使いいただけます。
+                    </p>
+                </div>
+
+                <div class="p-2.5 bg-stone-50/50 border border-stone-100 transition hover:bg-brand-50">
+                    <div class="flex items-center gap-1.5 mb-1">
+                        <span class="font-serif text-brand-500 text-xs font-bold w-4">03.</span>
+                        <h3 class="font-bold text-stone-800 text-[10px] sm:text-[11px]">もちもち濃密な生クリーム泡</h3>
+                    </div>
+                    <p class="text-[9px] sm:text-[10px] text-stone-500 pl-5.5 ml-5">
+                        キメ細かく弾力のある泡が立ち上がり、摩擦による手肌への負担を抑えてやさしく洗顔できます。
+                    </p>
+                </div>
+
+                <div class="p-2.5 bg-stone-50/50 border border-stone-100 transition hover:bg-brand-50">
+                    <div class="flex items-center gap-1.5 mb-1">
+                        <span class="font-serif text-brand-500 text-xs font-bold w-4">04.</span>
+                        <h3 class="font-bold text-stone-800 text-[10px] sm:text-[11px]">つっぱりにくい保湿感</h3>
+                    </div>
+                    <p class="text-[9px] sm:text-[10px] text-stone-500 pl-5.5 ml-5">
+                        洗浄後のお肌に必要なうるおいを残し、つっぱり感のないしっとりとなめらかな肌触りをキープします。
+                    </p>
+                </div>
+
+                <div class="p-2.5 bg-stone-50/50 border border-stone-100 transition hover:bg-brand-50">
+                    <div class="flex items-center gap-1.5 mb-1">
+                        <span class="font-serif text-brand-500 text-xs font-bold w-4">05.</span>
+                        <h3 class="font-bold text-stone-800 text-[10px] sm:text-[11px]">古い角質＆毛穴汚れをオフ</h3>
+                    </div>
+                    <p class="text-[9px] sm:text-[10px] text-stone-500 pl-5.5 ml-5">
+                        お肌の古い角質や毛穴につまった余分な皮脂汚れを、濃密泡が吸着してすっきりとクレンジングします。
+                    </p>
+                </div>
+
+                <div class="p-2.5 bg-stone-50/50 border border-stone-100 transition hover:bg-brand-50">
+                    <div class="flex items-center gap-1.5 mb-1">
+                        <span class="font-serif text-brand-500 text-xs font-bold w-4">06.</span>
+                        <h3 class="font-bold text-stone-800 text-[10px] sm:text-[11px]">顔から全身までトータルケア</h3>
+                    </div>
+                    <p class="text-[9px] sm:text-[10px] text-stone-500 pl-5.5 ml-5">
+                        顔のスキンケアはもちろん、背中やデコルテなど乾燥が気になる全身のボディソープとしても最適です。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredient Section -->
+        <section class="p-4 sm:p-5 border-b border-stone-100 text-center bg-white">
+            <h2 class="font-serif text-sm sm:text-base font-bold text-stone-900 mb-0.5">
+                厳選された主要成分
+            </h2>
+            <p class="text-[9px] text-stone-400 mb-2">
+                各成分をタップして詳細をご確認ください
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-1 max-w-2xl mx-auto">
+                <button onclick="showIngredient(0)" class="px-2 py-1.5 border border-stone-100 text-left transition-colors flex items-center gap-1.5 hover:bg-brand-50 focus:bg-brand-100 focus:border-brand-200 outline-none">
+                    <span class="font-serif text-brand-400 text-[10px] font-bold">01</span>
+                    <span class="text-[9px] sm:text-[10px] font-bold text-stone-700">ヒト幹細胞順化培養液</span>
+                </button>
+                <button onclick="showIngredient(1)" class="px-2 py-1.5 border border-stone-100 text-left transition-colors flex items-center gap-1.5 hover:bg-brand-50 focus:bg-brand-100 focus:border-brand-200 outline-none">
+                    <span class="font-serif text-brand-400 text-[10px] font-bold">02</span>
+                    <span class="text-[9px] sm:text-[10px] font-bold text-stone-700">β-グルカン</span>
+                </button>
+                <button onclick="showIngredient(2)" class="px-2 py-1.5 border border-stone-100 text-left transition-colors flex items-center gap-1.5 hover:bg-brand-50 focus:bg-brand-100 focus:border-brand-200 outline-none">
+                    <span class="font-serif text-brand-400 text-[10px] font-bold">03</span>
+                    <span class="text-[9px] sm:text-[10px] font-bold text-stone-700">乳酸桿菌発酵液</span>
+                </button>
+                <button onclick="showIngredient(3)" class="px-2 py-1.5 border border-stone-100 text-left transition-colors flex items-center gap-1.5 hover:bg-brand-50 focus:bg-brand-100 focus:border-brand-200 outline-none">
+                    <span class="font-serif text-brand-400 text-[10px] font-bold">04</span>
+                    <span class="text-[9px] sm:text-[10px] font-bold text-stone-700">シア脂(シアバター)</span>
+                </button>
+                <button onclick="showIngredient(4)" class="px-2 py-1.5 border border-stone-100 text-left transition-colors flex items-center gap-1.5 hover:bg-brand-50 focus:bg-brand-100 focus:border-brand-200 outline-none">
+                    <span class="font-serif text-brand-400 text-[10px] font-bold">05</span>
+                    <span class="text-[9px] sm:text-[10px] font-bold text-stone-700">オリーブ果実油</span>
+                </button>
+                <button onclick="showIngredient(5)" class="px-2 py-1.5 border border-stone-100 text-left transition-colors flex items-center gap-1.5 hover:bg-brand-50 focus:bg-brand-100 focus:border-brand-200 outline-none">
+                    <span class="font-serif text-brand-400 text-[10px] font-bold">06</span>
+                    <span class="text-[9px] sm:text-[10px] font-bold text-stone-700">ヒマワリ種子油</span>
+                </button>
+            </div>
+
+            <!-- Detail Box: Minimal padding -->
+            <div class="mt-2 p-2 bg-stone-50 border border-stone-100 text-left max-w-2xl mx-auto h-[60px] flex flex-col justify-center">
+                <h4 id="ingredient-title" class="text-[10px] font-bold text-brand-700 mb-0.5"></h4>
+                <p id="ingredient-desc" class="text-stone-500 text-[9px] leading-tight m-0"></p>
+            </div>
+        </section>
+
+        <!-- Science & Data Section -->
+        <section class="p-4 sm:p-5 border-b border-stone-100 bg-brand-50/40">
+            <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-3">
+                <div class="md:w-1/2 w-full">
+                    <span class="font-serif text-brand-500 text-[8px] tracking-[0.2em] uppercase block mb-0.5">Performance Data</span>
+                    <h2 class="font-serif text-sm font-bold text-stone-900 mb-1">理想のすっきり感とうるおい保持</h2>
+                    <p class="text-[9px] text-stone-500 leading-snug mb-2.5">
+                        水分補給・泡の密度・型崩れ防止・マイルドさ・キメ整頓の5つの指標で洗顔体験をトータルサポート。
+                    </p>
+                    
+                    <!-- Progress Bars: Tightened -->
+                    <div class="space-y-1.5 text-[9px]">
+                        <div class="flex items-center justify-between">
+                            <span class="text-stone-600 font-medium">濃密生クリーム泡の弾力</span>
+                            <div class="w-24 sm:w-32 h-1 bg-stone-200"><div class="w-[96%] h-full bg-brand-400"></div></div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-stone-600 font-medium">洗顔後のしっとり感</span>
+                            <div class="w-24 sm:w-32 h-1 bg-stone-200"><div class="w-[94%] h-full bg-brand-400"></div></div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-stone-600 font-medium">溶け崩れしにくい耐久性</span>
+                            <div class="w-24 sm:w-32 h-1 bg-stone-200"><div class="w-[95%] h-full bg-brand-400"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 w-full p-2 bg-white border border-stone-100 shadow-sm">
+                    <div class="chart-container">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How To Use Section -->
+        <section class="p-4 sm:p-5 bg-white">
+            <div class="text-center mb-2.5">
+                <h2 class="font-serif text-sm sm:text-base font-bold text-stone-900">HOW TO USE</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 text-center mb-2.5">
+                <div class="py-2 px-1 border border-stone-100 bg-stone-50/30">
+                    <span class="font-serif text-brand-600 text-[11px] font-bold block mb-0.5">Step 1. Lather</span>
+                    <p class="text-[9px] text-stone-500 leading-snug">濡らした手やネットで、しっかりともこもこの泡を立てます。</p>
+                </div>
+                <div class="py-2 px-1 border border-stone-100 bg-stone-50/30">
+                    <span class="font-serif text-brand-600 text-[11px] font-bold block mb-0.5">Step 2. Massage</span>
+                    <p class="text-[9px] text-stone-500 leading-snug">顔やボディに、クッション泡でやさしく包み込むようにマッサージ。</p>
+                </div>
+                <div class="py-2 px-1 border border-stone-100 bg-stone-50/30">
+                    <span class="font-serif text-brand-600 text-[11px] font-bold block mb-0.5">Step 3. Rinse</span>
+                    <p class="text-[9px] text-stone-500 leading-snug">泡が残らないよう、ぬるま湯で丁寧にしっかり洗い流します。</p>
+                </div>
+            </div>
+
+            <div class="p-1.5 bg-brand-50 border border-brand-100 text-[9px] text-stone-600 leading-snug text-center">
+                <span class="font-bold text-brand-700">Tip:</span> 毛穴汚れが気になる部分は、泡をのせて数十秒おいてから洗い流す「泡パック洗顔」もおすすめです。
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Data for ingredients
+        const ingredients = [
+            {
+                title: "羊水由来ヒト幹細胞順化培養液 (10,000ppm)",
+                desc: "希少なヒト幹細胞順化培養液を配合。豊富な有用成分を含み、洗顔後も肌のうるおい感を保ち、すこやかな素肌コンディションを整えます。"
+            },
+            {
+                title: "β-グルカン",
+                desc: "角層に水分を補給して潤いの保護膜を形成。洗顔後もしっとりとしたなめらかな肌触りをキープします。"
+            },
+            {
+                title: "乳酸桿菌発酵液",
+                desc: "お肌の水分・油分バランスを整え、乾燥によるキメの乱れを防いで健康的で健やかな肌環境の維持をサポートします。"
+            },
+            {
+                title: "シア脂 (シアバター)",
+                desc: "すぐれた保湿力を持ち、乾燥でガサつきがちな素肌になめらかさと柔らかなツヤを与えます。"
+            },
+            {
+                title: "オリーブ果実油",
+                desc: "植物性オイル特有の豊富なうるおいを与え、洗顔後のつっぱり感や乾燥を防ぎます。"
+            },
+            {
+                title: "ヒマワリ種子油",
+                desc: "お肌にしっとりとした潤いを届け、やさしく洗い上げながら健やかな肌コンディションを育みます。"
+            }
+        ];
+
+        // Function to update ingredient display
+        function showIngredient(index) {
+            document.getElementById('ingredient-title').innerText = ingredients[index].title;
+            document.getElementById('ingredient-desc').innerText = ingredients[index].desc;
+        }
+
+        // Initialize on load
+        window.addEventListener('load', () => {
+            showIngredient(0);
+
+            // Chart.js Configuration
+            const ctx = document.getElementById('barChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['洗浄力', 'うるおい', '泡の密度', '耐久性', 'マイルド感'],
+                    datasets: [{
+                        label: 'CELLVIA',
+                        data: [93, 95, 96, 95, 94],
+                        backgroundColor: 'rgba(171, 139, 102, 0.15)', // Premium Beige overlay
+                        borderColor: 'rgba(171, 139, 102, 0.8)',
+                        borderWidth: 1.5,
+                        pointBackgroundColor: '#ab8b66',
+                        pointRadius: 2,
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 1
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: '#f0f0f0' },
+                            grid: { color: '#f0f0f0' },
+                            pointLabels: { 
+                                color: '#78716c', 
+                                font: { family: "'Noto Sans JP', sans-serif", size: 9, weight: '500' } 
+                            },
+                            ticks: { display: false, stepSize: 20 },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    },
+                    plugins: { legend: { display: false }, tooltip: { enabled: false } }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

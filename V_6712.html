@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr.Oligoダブルコアーセット</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'brand-gold': '#bda272',
+                    'brand-dark': '#1a202c',
+                    'brand-device': '#8b7355',
+                    'brand-gel': '#7da0b1',
+                    'brand-ampoule': '#a37c35',
+                    'brand-diet': '#6b4683', 
+                    'brand-oil': '#d88a91',
+                    'brand-cream': '#d5a498',
+                    'brand-mask': '#9a6b6c',
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans JP"', 'sans-serif'],
+                    serif: ['"Noto Serif JP"', 'serif'],
+                }
+            }
+        }
+    }
+</script>
+<style>
+    .text-glow { text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 4px rgba(255,255,255,1); }
+    .check-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+    .check-list li::before { content: '✓'; position: absolute; left: 0; top: 0; font-weight: bold; color: inherit; }
+</style>
+</head>
+<body class="bg-gray-100 text-gray-800 m-0 p-0 antialiased font-sans">
+
+<!-- 중앙 정렬 컨테이너 -->
+<div class="w-full max-w-[1000px] mx-auto bg-white shadow-2xl overflow-hidden min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-gray-900 to-gray-800 text-white text-center py-12 px-4 border-b-4 border-brand-gold">
+        <h1 class="font-serif text-2xl md:text-3xl font-bold tracking-wider mb-3">ドクターオリゴ(Dr.Oligo) ダブルコアー セット</h1>
+        <p class="text-gray-300 text-sm md:text-base">ヘルスケアからビューティーケアまで、健やかな美しさをトータルサポート</p>
+    </header>
+
+    <!-- 1. Dr. Oligo (이미지 좌측) -->
+    <section class="py-10 px-5 md:px-8 border-b border-gray-200">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+            <div class="flex items-center">
+                <div class="w-2 h-7 bg-brand-device rounded-sm mr-3"></div>
+                <h2 class="font-serif text-xl md:text-2xl font-bold text-brand-dark">ドクターオリゴ 高周波マッサージ器</h2>
+            </div>
+            <span class="inline-block bg-slate-100 text-gray-600 text-xs font-bold py-1.5 px-3 rounded-full border border-gray-300 mt-3 md:mt-0 md:ml-4 self-start md:self-center">
+                メインコントローラー / フェイス・ボディハンドピース / フットプレート 各1ea
+            </span>
+        </div>
+
+        <!-- 이미지 좌측 (md:flex-row) -->
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="w-full md:w-1/3 shrink-0">
+                <div class="w-full aspect-square md:aspect-[4/5] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <img src="img/detail6712_droligo.png" alt="ドクターオリゴ" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <h3 class="text-[1.15rem] font-bold text-brand-dark mb-4 leading-snug">
+                    ヘルスからビューティーまで、高周波ケア！<br>
+                    今は家で手軽にプレミアムホームケア
+                </h3>
+                
+                <ul class="check-list text-brand-device text-sm md:text-base mb-6">
+                    <li class="text-gray-700">高周波ケアで健康と美容を一度に叶えるプレミアム機器</li>
+                    <li class="text-gray-700">フットプレートを使用した手軽な全身ケア</li>
+                    <li class="text-gray-700">ハンドピースを使用したフェイス、ボディの部分ケア</li>
+                    <li class="text-gray-700">振動マッサージ機能搭載で高周波をより緻密に伝達 (ボディ/フットのみ)</li>
+                    <li class="text-gray-700">気分まで考えた心地よい感性温熱デザイン</li>
+                </ul>
+
+                <div class="grid grid-cols-2 gap-3 mt-6">
+                    <!-- 하위 카드들 -->
+                    <div class="relative bg-white border border-gray-200 p-3 rounded-lg text-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-40 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10" style="background-image: url('img/dr_oligo_footplate.png');"></div>
+                        <h5 class="relative z-10 text-brand-device font-bold text-sm mb-1 text-glow">フットプレート</h5>
+                        <p class="relative z-10 text-[11px] text-gray-700 text-glow leading-tight">足を乗せるだけで全身に高周波を伝達し、<br>手軽なヘルスケアをサポート。</p>
+                    </div>
+                    <div class="relative bg-white border border-gray-200 p-3 rounded-lg text-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-40 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10" style="background-image: url('img/dr_oligo_bodyhandpiece.png');"></div>
+                        <h5 class="relative z-10 text-brand-device font-bold text-sm mb-1 text-glow">ボディ ハンドピース</h5>
+                        <p class="relative z-10 text-[11px] text-gray-700 text-glow leading-tight">広い部位に適用。振動機能と赤色LEDで<br>ボディラインケアをサポート。</p>
+                    </div>
+                    <div class="relative bg-white border border-gray-200 p-3 rounded-lg text-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-40 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10" style="background-image: url('img/dr_oligo_facehandpiece.png');"></div>
+                        <h5 class="relative z-10 text-brand-device font-bold text-sm mb-1 text-glow">フェイス ハンドピース</h5>
+                        <p class="relative z-10 text-[11px] text-gray-700 text-glow leading-tight">顔の肌に合わせた繊細な出力。<br>しずく型ヘッドで細部までケア。</p>
+                    </div>
+                    <div class="relative bg-white border border-gray-200 p-3 rounded-lg text-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-40 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-10" style="background-image: url('img/dr_oligo_controler.png');"></div>
+                        <h5 class="relative z-10 text-brand-device font-bold text-sm mb-1 text-glow">コントローラー</h5>
+                        <p class="relative z-10 text-[11px] text-gray-700 text-glow leading-tight">直感的なLEDディスプレイと<br>リモコン連動で簡単操作。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Pure Gel (이미지 우측) -->
+    <section class="py-10 px-5 md:px-8 border-b border-gray-200 bg-slate-50">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+            <div class="flex items-center">
+                <div class="w-2 h-7 bg-brand-gel rounded-sm mr-3"></div>
+                <h2 class="font-serif text-xl md:text-2xl font-bold text-brand-dark">ピュア マルチ ニュートリエント ジェル</h2>
+            </div>
+            <span class="inline-block bg-white text-gray-600 text-xs font-bold py-1.5 px-3 rounded-full border border-gray-300 mt-3 md:mt-0 md:ml-4 self-start md:self-center">
+                300 ml × 10 ea
+            </span>
+        </div>
+
+        <!-- 이미지 우측 (md:flex-row-reverse) -->
+        <div class="flex flex-col md:flex-row-reverse gap-8 items-start">
+            <div class="w-full md:w-1/3 shrink-0">
+                <div class="w-full aspect-square md:aspect-[4/5] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <img src="img/detail6712_v2004.png" alt="ピュア マルチ ニュートリエント ジェル" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <h3 class="text-[1.15rem] font-bold text-brand-dark mb-4 leading-snug">
+                    高周波マッサージの効果をブースト！<br>
+                    水分と栄養を満たす 3 in 1 専用ジェル
+                </h3>
+                
+                <ul class="check-list text-brand-gel text-sm md:text-base mb-6">
+                    <li class="text-gray-700">フェイス・ボディ用ハンドピースの高周波効果を最大化</li>
+                    <li class="text-gray-700">肌との密着力を高め、高周波がしっかり伝わるようサポート</li>
+                    <li class="text-gray-700">べたつかない、さっぱりとした使用感</li>
+                    <li class="text-gray-700">デイリー保湿用として単独でも使用可能</li>
+                </ul>
+
+                <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+                    <h4 class="text-brand-gel font-bold text-sm mb-3 border-b border-gray-100 pb-2">主要成分</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">ヒト幹細胞順化培養液</span>
+                            <span class="text-gray-600">豊かな栄養感を与え、肌のコンディションを整えます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">酵母/コメ発酵濾過物</span>
+                            <span class="text-gray-600">肌に潤いを与え、乾燥してゴワついた肌をなめらかに保ちます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">ヒアルロン酸Na / ベタイン</span>
+                            <span class="text-gray-600">強力な保湿効果で、マッサージ中も肌の水分を長く維持します。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Bio-Cellulose Mask (이미지 좌측) -->
+    <section class="py-10 px-5 md:px-8 bg-[#faf5f6]">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+            <div class="flex items-center">
+                <div class="w-2 h-7 bg-brand-mask rounded-sm mr-3"></div>
+                <h2 class="font-serif text-xl md:text-2xl font-bold text-brand-dark">バイオ セルロース マスク</h2>
+            </div>
+            <span class="inline-block bg-white text-gray-600 text-xs font-bold py-1.5 px-3 rounded-full border border-gray-300 mt-3 md:mt-0 md:ml-4 self-start md:self-center">
+                30 ml × 10 ea × 1 SET
+            </span>
+        </div>
+
+        <!-- 이미지 좌측 (md:flex-row) -->
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="w-full md:w-1/3 shrink-0">
+                <div class="w-full aspect-square md:aspect-[4/5] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <img src="img/detail6712_v3007.png" alt="バイオ セルロース マスク" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <h3 class="text-[1.15rem] font-bold text-brand-dark mb-4 leading-snug">
+                    エッセンス1本分をまるごと！<br>
+                    天然ココナッツ由来の密着シートマスク
+                </h3>
+                
+                <ul class="check-list text-brand-mask text-sm md:text-base mb-6">
+                    <li class="text-gray-700">ナノレベルの微細構造で顔の凹凸にぴったり密着</li>
+                    <li class="text-gray-700">不織布シートより優れた水分保持力で、潤いを逃さない</li>
+                    <li class="text-gray-700">乾燥して疲れた印象の肌にスピーディーに水分と栄養をチャージ</li>
+                </ul>
+
+                <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+                    <h4 class="text-brand-mask font-bold text-sm mb-3 border-b border-gray-100 pb-2">主要成分</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">ヒト幹細胞順化培養液</span>
+                            <span class="text-gray-600">肌に豊かな栄養を与え、ハリのある健やかな状態へ導きます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">シロキクラゲエキス</span>
+                            <span class="text-gray-600">優れた水分保持力で、しっとりとした肌を長時間保ちます。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 4. SLIM SSOK PLUS (이미지 우측) -->
+    <section class="py-10 px-5 md:px-8 border-b border-gray-200">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+            <div class="flex items-center">
+                <div class="w-2 h-7 bg-brand-diet rounded-sm mr-3"></div>
+                <h2 class="font-serif text-xl md:text-2xl font-bold text-brand-dark">スリムソック プラス <span class="text-sm text-gray-500 font-normal">[健康機能食品]</span></h2>
+            </div>
+            <span class="inline-block bg-slate-100 text-gray-600 text-xs font-bold py-1.5 px-3 rounded-full border border-gray-300 mt-3 md:mt-0 md:ml-4 self-start md:self-center">
+                40g × 30包 × 3 SET
+            </span>
+        </div>
+
+        <!-- 이미지 우측 (md:flex-row-reverse) -->
+        <div class="flex flex-col md:flex-row-reverse gap-8 items-start">
+            <div class="w-full md:w-1/3 shrink-0">
+                <div class="w-full aspect-square md:aspect-[4/5] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <img src="img/detail6712_v9103.png" alt="スリムソック プラス" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <h3 class="text-[1.15rem] font-bold text-brand-dark mb-4 leading-snug">
+                    美味しく楽しむダイエットサポート！<br>
+                    健康的な毎日のための爽やかな習慣
+                </h3>
+                
+                <ul class="check-list text-brand-diet text-sm md:text-base mb-6">
+                    <li class="text-gray-700">アップグレードされた成分で健康的なダイエットをサポート</li>
+                    <li class="text-gray-700">食後の血糖値上昇抑制を助ける</li>
+                    <li class="text-gray-700">爽やかなトロピカル味で、いつでもどこでも手軽に摂取可能</li>
+                    <li class="text-gray-700">GMP認証施設で製造された安心の健康機能食品</li>
+                </ul>
+
+                <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm mb-4">
+                    <h4 class="text-brand-diet font-bold text-sm mb-3 border-b border-gray-100 pb-2">機能性原料</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">ガルシニアカンボジア</span>
+                            <span class="text-gray-600">炭水化物が脂肪に合成されるのを抑え、体脂肪減少を助けます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">コレウスフォルスコリ</span>
+                            <span class="text-gray-600">代謝を促進し、体脂肪の減少に役立ちます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">難消化性マルトデキストリン</span>
+                            <span class="text-gray-600">食後の血糖値上昇を抑え、スムーズな排便活動をサポートします。</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500">※ 1日1回1包を食事の前に摂取することをおすすめします。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Confidence Oil (이미지 좌측) -->
+    <section class="py-10 px-5 md:px-8 border-b border-gray-200 bg-[#fdfaf6]">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+            <div class="flex items-center">
+                <div class="w-2 h-7 bg-brand-oil rounded-sm mr-3"></div>
+                <h2 class="font-serif text-xl md:text-2xl font-bold text-brand-dark">コンフィデンス オイル</h2>
+            </div>
+            <span class="inline-block bg-white text-gray-600 text-xs font-bold py-1.5 px-3 rounded-full border border-gray-300 mt-3 md:mt-0 md:ml-4 self-start md:self-center">
+                50 ml × 2 ea
+            </span>
+        </div>
+
+        <!-- 이미지 좌측 (md:flex-row) -->
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="w-full md:w-1/3 shrink-0">
+                <div class="w-full aspect-square md:aspect-[4/5] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <img src="img/detail6712_v4002.png" alt="コンフィデンス オイル" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <h3 class="text-[1.15rem] font-bold text-brand-dark mb-4 leading-snug">
+                    自信のあるラインのための集中管理<br>
+                    フェイス＆ボディ兼用のマルチオイル
+                </h3>
+                
+                <ul class="check-list text-brand-oil text-sm md:text-base mb-6">
+                    <li class="text-gray-700">気になる部位の集中スポットケア（目元、口元、デコルテなど）</li>
+                    <li class="text-gray-700">乾燥しやすい部位（指先、かかと）の保湿と保護</li>
+                    <li class="text-gray-700">べたつかず、すっとなじむなめらかなテクスチャー</li>
+                    <li class="text-gray-700">首すじや脚などのリラクシングマッサージにも最適</li>
+                </ul>
+
+                <div class="bg-white rounded-lg p-5 border border-gray-200 shadow-sm">
+                    <h4 class="text-brand-oil font-bold text-sm mb-3 border-b border-gray-100 pb-2">主要成分</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">ボルフィリン</span>
+                            <span class="text-gray-600">乾燥してゴワついた肌に潤いとツヤを与え、ハリのある状態へ導きます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">各種植物性オイル</span>
+                            <span class="text-gray-600">(オリーブ、ブドウ種子、ヒマワリ種子など) 水分蒸発を防ぎ、肌に豊かな栄養とツヤを与えます。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Barrier Calming Cream (이미지 우측) -->
+    <section class="py-10 px-5 md:px-8 border-b border-gray-200">
+        <div class="flex flex-col md:flex-row md:items-center mb-6">
+            <div class="flex items-center">
+                <div class="w-2 h-7 bg-brand-cream rounded-sm mr-3"></div>
+                <h2 class="font-serif text-xl md:text-2xl font-bold text-brand-dark">バリア カーミング クリーム</h2>
+            </div>
+            <span class="inline-block bg-slate-100 text-gray-600 text-xs font-bold py-1.5 px-3 rounded-full border border-gray-300 mt-3 md:mt-0 md:ml-4 self-start md:self-center">
+                150 ml × 2 ea
+            </span>
+        </div>
+
+        <!-- 이미지 우측 (md:flex-row-reverse) -->
+        <div class="flex flex-col md:flex-row-reverse gap-8 items-start">
+            <div class="w-full md:w-1/3 shrink-0">
+                <div class="w-full aspect-square md:aspect-[4/5] bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <img src="img/detail6712_v4000.png" alt="バリア カーミング クリーム" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <h3 class="text-[1.15rem] font-bold text-brand-dark mb-4 leading-snug">
+                    乾燥してデリケートな肌にさわやかな潤いを<br>
+                    油分・水分バランスを整えるデイリークリーム
+                </h3>
+                
+                <ul class="check-list text-brand-cream text-sm md:text-base mb-6">
+                    <li class="text-gray-700">さっぱりとしながらも長く留まる保湿感</li>
+                    <li class="text-gray-700">外的環境でデリケートになった肌をマイルドにケア</li>
+                    <li class="text-gray-700">家族みんなで使える大容量デイリー仕様</li>
+                </ul>
+
+                <div class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+                    <h4 class="text-brand-cream font-bold text-sm mb-3 border-b border-gray-200 pb-2">主要成分</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">ヒト幹細胞順化培養液</span>
+                            <span class="text-gray-600">肌のコンディションを整え、すこやかな状態を保ちます。</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <span class="font-bold text-gray-900 w-full sm:w-1/3 shrink-0">スベリヒユエキス / ベタイン</span>
+                            <span class="text-gray-600">肌に潤いを与え、なめらかでしっとりとした状態に保つサポートをします。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

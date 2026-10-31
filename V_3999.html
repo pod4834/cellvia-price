@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>プレミアム トラベル キット</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        cellvia: {
+                            navy: '#07162c',
+                            gold: '#D4AF37',
+                            'gold-light': '#F3E5AB',
+                            cream: '#FAFAFA',
+                            text: '#333333',
+                            green: '#2C4C3B',
+                            lightgreen: '#8FB09A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #FAFAFA;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Compacting overall layout */
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-cellvia-text">
+
+    <main class="w-full">
+        <!-- Hero Section -->
+        <section class="relative bg-cellvia-navy text-white py-12 md:py-20 px-4 overflow-hidden w-full">
+            <!-- Background Image overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="img/detail3999_0_v3999.png" alt="Travel Kit Background" class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-t from-cellvia-navy to-transparent"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center relative z-10 fade-in">
+                <p class="text-cellvia-gold tracking-[0.2em] mb-3 text-xs md:text-sm font-bold uppercase">Cellvia Premium Travel Kit</p>
+                <h1 class="font-serif text-3xl md:text-5xl font-bold mb-4 text-shadow leading-tight">
+                    いつでもどこでも、<br class="md:hidden">私らしい美しさを。
+                </h1>
+                <p class="text-sm md:text-base font-light leading-relaxed mb-6 max-w-2xl mx-auto text-gray-200">
+                    旅行先の慣れない環境でも、揺るがないすこやかな肌と髪へ。<br class="hidden md:block">
+                    セルビアのベストセラーを詰め込んだ特別なトラベルキット。
+                </p>
+                
+                <!-- Kit Contents Overview (Compacted Grid) -->
+                <div class="inline-block bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 md:p-6 text-sm text-left mx-auto w-full max-w-3xl">
+                    <p class="font-bold text-cellvia-gold mb-3 text-center border-b border-white/20 pb-2">製品構成</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-gray-200 font-medium">
+                        <li class="truncate"><i class="fa-solid fa-check text-cellvia-gold mr-2"></i>スカルピア シャンプー 50ml</li>
+                        <li class="truncate"><i class="fa-solid fa-check text-cellvia-gold mr-2"></i>スカルピア トリートメント 50ml</li>
+                        <li class="truncate"><i class="fa-solid fa-check text-cellvia-gold mr-2"></i>グリナリースパウォッシュ 50ml</li>
+                        <li class="truncate"><i class="fa-solid fa-check text-cellvia-gold mr-2"></i>ミソロジーアンプル 6ml × 5本</li>
+                        <li class="truncate"><i class="fa-solid fa-check text-cellvia-gold mr-2"></i>バリアカーミングクリーム 50ml</li>
+                        <li class="truncate"><i class="fa-solid fa-check text-cellvia-gold mr-2"></i>エブリクリアフォーム 50ml</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Text -->
+        <section class="py-10 px-4 bg-white text-center border-b border-gray-100">
+            <div class="max-w-3xl mx-auto fade-in flex flex-col items-center">
+                <i class="fa-solid fa-plane-departure text-2xl md:text-3xl text-cellvia-gold mb-3"></i>
+                <h2 class="text-xl md:text-2xl font-bold text-cellvia-navy mb-4">旅先での肌・髪のストレスに。</h2>
+                <p class="text-sm md:text-base text-gray-600 leading-loose m-0">
+                    旅行中は環境の変化で、肌も髪も普段以上にダメージを受けやすい状態です。このトラベルキットは、出張や旅行、ジムでのシャワータイムを極上のスパ体験に変え、すこやかなコンディションを保ちます。
+                </p>
+            </div>
+        </section>
+
+        <!-- Product Lineup Section (Compacted Spacing) -->
+        <section class="py-10 md:py-12 bg-cellvia-cream bg-pattern">
+            <div class="max-w-5xl mx-auto px-4 space-y-12 md:space-y-16">
+
+                <!-- 1. Shampoo -->
+                <div class="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10 fade-in">
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-1.5 bg-cellvia-green/10 text-cellvia-green px-2.5 py-1 rounded-full text-xs font-bold tracking-widest mb-3 w-max">
+                            <i class="fa-solid fa-leaf"></i> SCALP CARE
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-cellvia-navy mb-1">スカルピア<br>グリーンテラピープラス シャンプー</h3>
+                        <p class="text-xs text-gray-500 mb-4">50ml</p>
+                        
+                        <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 mb-4">
+                            <p class="text-sm md:text-base text-gray-700 leading-relaxed m-0">
+                                ホテルのシャンプーで頭皮がヒリヒリしたり、髪が硬くパサついた経験はありませんか？スカルピアシャンプーは、皮脂や汚れを優しくすっきりと洗い上げながら、頭皮環境を清浄に整えます。
+                            </p>
+                        </div>
+                        <ul class="space-y-2 text-xs md:text-sm text-gray-600">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cellvia-gold mt-1 shrink-0"></i> 旅行中の頭皮のベタつきやニオイが気になる方に</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cellvia-gold mt-1 shrink-0"></i> デリケートな頭皮で、合わないシャンプーが多い方に</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 w-full">
+                        <img src="img/detail3999_1_v4022.png" alt="Scalpia Shampoo" class="rounded-2xl shadow-md object-cover w-full max-h-[300px] md:max-h-[400px]">
+                    </div>
+                </div>
+
+                <!-- 2. Treatment -->
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10 fade-in">
+                    <div class="md:w-1/2 w-full hidden md:block">
+                        <img src="img/detail3999_2_v4023.png" alt="Scalpia Treatment" class="rounded-2xl shadow-md object-cover w-full max-h-[300px] md:max-h-[400px]">
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-1.5 bg-cellvia-green/10 text-cellvia-green px-2.5 py-1 rounded-full text-xs font-bold tracking-widest mb-3 w-max">
+                            <i class="fa-solid fa-spa"></i> HAIR CARE
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-cellvia-navy mb-1">スカルピア<br>ディープテラピープラス トリートメント</h3>
+                        <p class="text-xs text-gray-500 mb-4">50ml</p>
+                        
+                        <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 mb-3">
+                            <p class="text-sm md:text-base text-gray-700 leading-relaxed m-0">
+                                強い日差し、乾燥した風、プールの水など、旅行先の環境は髪への負担が大きくなります。乾燥してパサついた髪に豊かな潤いを与え、しっとりとまとまりのある手触りの髪へ導きます。
+                            </p>
+                        </div>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed m-0">
+                            シャンプーとセットで使えるので、ジムでのシャワータイム用としても最適です。
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 w-full md:hidden">
+                        <img src="img/detail3999_2_v4023.png alt="Scalpia Treatment" class="rounded-2xl shadow-md object-cover w-full max-h-[300px]">
+                    </div>
+                </div>
+
+                <!-- 3. Body Wash -->
+                <div class="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10 fade-in">
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-600 px-2.5 py-1 rounded-full text-xs font-bold tracking-widest mb-3 w-max">
+                            <i class="fa-solid fa-droplet"></i> BODY CARE
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-cellvia-navy mb-1">セルビア<br>グリナリースパウォッシュ</h3>
+                        <p class="text-xs text-gray-500 mb-4">50ml</p>
+                        
+                        <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 mb-3">
+                            <p class="text-sm md:text-base text-gray-700 leading-relaxed m-0">
+                                全身をやさしく包み込むマイルドなボディウォッシュ。みずみずしく爽やかなシトラスの香りで、シャワー後も心地よいリフレッシュ感を味わえます。
+                            </p>
+                        </div>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed m-0">
+                            肌の潤いを守りながら洗い上げるため、ご家族皆様でお使いいただきやすいアイテムです。
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 w-full">
+                        <img src="img/detail3999_3_v4016.png" alt="Greenery Spa Wash" class="rounded-2xl shadow-md object-cover w-full max-h-[300px] md:max-h-[400px]">
+                    </div>
+                </div>
+
+                <!-- 4. Ampoule -->
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10 fade-in">
+                    <div class="md:w-1/2 w-full hidden md:block">
+                        <img src="img/detail3999_4_v3000.png" alt="Mythology Creation Ampoule" class="rounded-2xl shadow-md object-cover w-full max-h-[300px] md:max-h-[400px]">
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-1.5 bg-yellow-50 text-yellow-700 px-2.5 py-1 rounded-full text-xs font-bold tracking-widest mb-3 w-max">
+                            <i class="fa-solid fa-star"></i> SIGNATURE SKINCARE
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-cellvia-navy mb-1">ミソロジークリエーションアンプル</h3>
+                        <p class="text-xs text-gray-500 mb-4">6ml × 5本</p>
+                        
+                        <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 mb-3">
+                            <p class="text-sm md:text-base text-gray-700 leading-relaxed m-0">
+                                セルビアの代名詞とも言えるシグネチャーアンプル。「肌のハリ」「キメの整い」「潤いに満ちたツヤ」の3つを同時に求める方に最も愛されているアイテムです。
+                            </p>
+                        </div>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed m-0">
+                            持ち運びに便利な6mlのミニボトルが5本入り。親しいご友人へのシェア用としてもぴったりです。
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 w-full md:hidden">
+                        <img src="img/detail3999_4_v3000.png" alt="Mythology Creation Ampoule" class="rounded-2xl shadow-md object-cover w-full max-h-[300px]">
+                    </div>
+                </div>
+
+                <!-- 5. Calming Cream -->
+                <div class="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-10 fade-in">
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-1.5 bg-pink-50 text-pink-600 px-2.5 py-1 rounded-full text-xs font-bold tracking-widest mb-3 w-max">
+                            <i class="fa-solid fa-shield-heart"></i> BARRIER CARE
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-cellvia-navy mb-1">セルビア<br>バリアカーミングクリーム</h3>
+                        <p class="text-xs text-gray-500 mb-4">50ml</p>
+                        
+                        <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 mb-4">
+                            <p class="text-sm md:text-base text-gray-700 leading-relaxed m-0">
+                                長時間のフライトや環境の変化でデリケートになった肌のバリア機能をサポートし、優しく包み込む鎮静・保湿クリームです。
+                            </p>
+                        </div>
+                        <ul class="space-y-2 text-xs md:text-sm text-gray-600">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cellvia-gold mt-1 shrink-0"></i> レジャー等で日差しをたっぷり浴びた日の夜に</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cellvia-gold mt-1 shrink-0"></i> 洗顔後、乾燥や過敏な状態が気になるときに</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 w-full">
+                        <img src="img/detail3999_5_v4001.png" alt="Barrier Calming Cream" class="rounded-2xl shadow-md object-cover w-full max-h-[300px] md:max-h-[400px]">
+                    </div>
+                </div>
+
+                <!-- 6. Cleansing Foam -->
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10 fade-in">
+                    <div class="md:w-1/2 w-full hidden md:block">
+                        <img src="img/detail3999_6.png" alt="Every Clear Foam" class="rounded-2xl shadow-md object-cover w-full max-h-[300px] md:max-h-[400px]">
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 px-2.5 py-1 rounded-full text-xs font-bold tracking-widest mb-3 w-max">
+                            <i class="fa-solid fa-bubbles"></i> CLEANSING
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-cellvia-navy mb-1">セルビア<br>エブリクリアフォーム</h3>
+                        <p class="text-xs text-gray-500 mb-4">50ml</p>
+                        
+                        <div class="bg-white p-4 md:p-5 rounded-xl shadow-sm border border-gray-100 mb-4">
+                            <p class="text-sm md:text-base text-gray-700 leading-relaxed m-0">
+                                メイク汚れや古い角質をすっきりと落としながらも、洗顔後のつっぱり感を防ぐよう設計されたマイルドなクレンザーです。
+                            </p>
+                        </div>
+                        <ul class="space-y-2 text-xs md:text-sm text-gray-600">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cellvia-gold mt-1 shrink-0"></i> 日焼け止め、ファンデーションをしっかり落としたい方に</li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-cellvia-gold mt-1 shrink-0"></i> マスクの中の蒸れや皮脂汚れをすっきりさせたい方に</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 w-full md:hidden">
+                        <img src="img/detail3999_6.png" alt="Every Clear Foam" class="rounded-2xl shadow-md object-cover w-full max-h-[300px]">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Final CTA Section (Compacted) -->
+        <section class="py-12 md:py-16 px-4 bg-cellvia-navy text-center text-white">
+            <div class="max-w-xl mx-auto fade-in">
+                <i class="fa-solid fa-suitcase-rolling text-3xl md:text-4xl text-cellvia-gold mb-4"></i>
+                <h2 class="text-xl md:text-2xl font-serif font-bold mb-4">Ready for your next journey?</h2>
+                <p class="text-sm md:text-base text-gray-300 leading-relaxed m-0">
+                    トランクにこのポーチを一つ入れるだけ。<br>
+                    世界中のどこにいても、セルビアのプレミアムケアがあなたのすこやかな美しさを守ります。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Intersection Observer for scroll fade-in animations
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

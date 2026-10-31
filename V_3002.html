@@ -1,0 +1,300 @@
+<!-- STREAMING_CHUNK:Head and Setup -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グロッシー ブースティング セラム</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cv-text': '#333333',
+                        'cv-text-light': '#666666',
+                        'cv-gold': '#bda272',
+                        'cv-lightgold': '#e6dac3',
+                        'cv-coral': '#c86b5e',
+                        'cv-beige': '#f4eee6',
+                        'cv-bg': '#fcfbf9',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for specific subtle effects -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-cv-text flex justify-center w-full min-h-screen sm:p-4 md:p-8">
+
+<!-- STREAMING_CHUNK:Main Container -->
+<main class="w-full max-w-4xl bg-white sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+    
+    <!-- STREAMING_CHUNK:Hero Section -->
+    <header class="bg-gradient-to-br from-[#fcfaf8] to-[#f3ebe1] text-center px-6 pt-24 pb-20 relative overflow-hidden">
+        <!-- Background subtle glow -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/50 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+
+        <div class="relative z-10 fade-in-up">
+            <p class="text-cv-gold text-sm md:text-base tracking-[0.15em] mb-8 font-medium">
+                理想のメイクアップのためのファーストステップ
+            </p>
+            
+            <h1 class="font-serif text-3xl md:text-4xl font-black text-cv-text leading-tight tracking-wider mb-4">
+                グロッシー ブースティング セラム
+            </h1>
+            <p class="text-stone-400 font-light text-sm md:text-base tracking-[0.25em] mb-12 uppercase">
+                Glossy Boosting Serum
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm font-semibold">
+                <span class="bg-white text-cv-gold border border-cv-lightgold px-6 py-2.5 rounded-full shadow-[0_4px_10px_rgba(189,162,114,0.08)] w-full sm:w-auto">
+                    洗顔後のファーストセラム
+                </span>
+                <span class="bg-white text-cv-gold border border-cv-lightgold px-6 py-2.5 rounded-full shadow-[0_4px_10px_rgba(189,162,114,0.08)] w-full sm:w-auto">
+                    みずみずしく軽やかなテクスチャー
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- STREAMING_CHUNK:Configuration Banner -->
+    <div class="bg-cv-gold text-white text-center py-4 font-bold tracking-widest text-lg shadow-inner">
+        内容量 : 200 ml
+    </div>
+
+    <!-- STREAMING_CHUNK:Content Area Wrapper -->
+    <div class="px-6 py-16 md:px-12 md:py-24 bg-cv-bg">
+        
+        <!-- STREAMING_CHUNK:Intro Message -->
+        <section class="bg-cv-beige px-8 py-10 rounded-2xl text-center mb-16 fade-in-up shadow-sm">
+            <h3 class="font-serif text-xl md:text-2xl text-cv-coral font-bold mb-4">優れた水分補給と肌の引き締め</h3>
+            <p class="text-stone-700 text-base md:text-lg leading-relaxed">
+                潤いで満たし、明るい印象の肌へ導くメイクアップブースター
+            </p>
+        </section>
+
+        <!-- STREAMING_CHUNK:Features List -->
+        <section class="mb-20 fade-in-up delay-100 max-w-2xl mx-auto">
+            <ul class="space-y-5 text-stone-700 text-base md:text-lg font-medium">
+                <li class="flex items-center gap-4 bg-white p-4 rounded-xl border border-stone-100 shadow-sm">
+                    <div class="bg-cv-beige p-2 rounded-full text-cv-gold shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span>肌を想うマイルドな成分配合</span>
+                </li>
+                <li class="flex items-center gap-4 bg-white p-4 rounded-xl border border-stone-100 shadow-sm">
+                    <div class="bg-cv-beige p-2 rounded-full text-cv-gold shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span>つっぱり感のない、しっとりとした潤い</span>
+                </li>
+                <li class="flex items-center gap-4 bg-white p-4 rounded-xl border border-stone-100 shadow-sm">
+                    <div class="bg-cv-beige p-2 rounded-full text-cv-gold shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span>水分を逃さずキープする優れた保湿力</span>
+                </li>
+                <li class="flex items-center gap-4 bg-white p-4 rounded-xl border border-stone-100 shadow-sm">
+                    <div class="bg-cv-beige p-2 rounded-full text-cv-gold shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span>年齢に応じた潤い・ツヤ・ハリのエイジングケア</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- STREAMING_CHUNK:Highlight Box -->
+        <section class="bg-white border-y border-cv-lightgold/50 py-12 md:py-16 text-center mb-24 fade-in-up delay-200">
+            <div class="space-y-10 font-serif text-lg md:text-xl font-semibold text-cv-text leading-loose">
+                <p>肌に豊かな潤いと栄養を届ける、<br class="hidden sm:block"><span class="text-cv-coral text-xl md:text-2xl">こだわりの美容液</span></p>
+                
+                <div class="w-12 h-px bg-cv-lightgold mx-auto"></div>
+                
+                <p>キメを整え、<span class="text-cv-coral text-xl md:text-2xl">優れた水分保持力</span>で<br class="hidden sm:block">健やかな肌へ</p>
+                
+                <div class="w-12 h-px bg-cv-lightgold mx-auto"></div>
+                
+                <p><span class="text-cv-coral text-xl md:text-2xl">肌を想う成分</span>を配合し、<br class="hidden sm:block">性別や年齢を問わずお使いいただけます</p>
+                
+                <div class="w-12 h-px bg-cv-lightgold mx-auto"></div>
+                
+                <p>
+                    羊水由来のヒト幹細胞順化培養液の<span class="text-cv-gold text-xl md:text-2xl">栄養感</span>と<br>
+                    ヒアルロン酸Naの<span class="text-cv-gold text-xl md:text-2xl">潤い</span>で<br>
+                    肌を角質層から満たし、<span class="text-cv-coral text-xl md:text-2xl relative inline-block">ハリのある肌へ！<span class="absolute -bottom-2 left-0 w-full h-1 bg-cv-coral/20 rounded-full"></span></span>
+                </p>
+            </div>
+        </section>
+
+        <!-- STREAMING_CHUNK:Ingredients Section -->
+        <section class="mb-24">
+            <div class="text-center mb-12 fade-in-up">
+                <h3 class="inline-block font-serif text-2xl md:text-3xl font-bold text-cv-text border-b-2 border-cv-gold pb-3 px-4">
+                    主要成分と特徴
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+                <!-- Ingredients 1-10 -->
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">1.</span>
+                        <span class="leading-snug">ヒト幹細胞順化培養液<br><span class="text-xs text-cv-gold font-normal">（10,000ppm、羊水由来）</span></span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">豊かな栄養を届け、肌のコンディションを整えてハリのある健やかな肌へ導きます。</p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up delay-100">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">2.</span>
+                        <span class="leading-snug">ノニエキス<br><span class="text-xs text-stone-400 font-normal">（ヤエヤマアオキ果実エキス）</span></span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">豊富なミネラルやビタミンを含み、肌に水分を与えてコンディションを整え、クリアで生き生きとした印象へ導きます。</p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">3.</span>
+                        <span class="leading-snug mt-0.5">カキ葉エキス</span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">多種多様なビタミンを含み、肌を明るく生き生きとした印象に保つサポートをします。</p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up delay-100">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">4.</span>
+                        <span class="leading-snug mt-0.5">ラベンダー花エキス</span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">ポリフェノールを含有し、肌のコンディションを整え、心地よい使用感で肌をすこやかに保ちます。</p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">5.</span>
+                        <span class="leading-snug mt-0.5">イタドリ根エキス</span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">肌に潤いを与えてコンディションを整え、健やかな肌管理をサポートします。</p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up delay-100">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">6.</span>
+                        <span class="leading-snug mt-0.5">ナイアシンアミド</span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">ビタミンB3の一種。肌の水分・油分のバランスを整え、乾燥によるくすみをケアして明るい印象の肌へ導きます。</p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">7.</span>
+                        <span class="leading-snug">ヒアルロン酸Na<br><span class="text-xs text-stone-400 font-normal">（ソジウムヒアルロネート）</span></span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">優れた水分保持力で持続的に潤いを与え、乾燥した肌をしっとりと保ちます。</p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up delay-100">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">8.</span>
+                        <span class="leading-snug mt-0.5">アデノシン</span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">肌にハリと弾力を与え、すこやかな状態を保つためのエイジングケア*をサポートします。<span class="text-xs">(*年齢に応じたケア)</span></p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">9.</span>
+                        <span class="leading-snug mt-0.5">アラントイン</span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">乾燥した肌に潤いを与えて柔軟性を高め、なめらかで柔らかな肌に整えます。</p>
+                </div>
+
+                <div class="bg-white border border-cv-lightgold/60 p-6 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:border-cv-gold transition-all duration-300 fade-in-up delay-100">
+                    <h4 class="font-bold text-cv-text text-[1.05rem] mb-3 flex items-start gap-2">
+                        <span class="text-cv-coral font-serif text-xl leading-none">10.</span>
+                        <span class="leading-snug mt-0.5">β-グルカン</span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed">肌に水分バリアを形成し、洗顔後の乾燥した肌につっぱり感のない潤いを与えます。</p>
+                </div>
+            </div>
+            
+            <p class="text-right text-xs text-stone-400 mt-6 pr-4">※上記の内容は、原料の一般的な性質に関する説明です。</p>
+        </section>
+
+        <!-- STREAMING_CHUNK:How to Use Section -->
+        <section class="fade-in-up">
+            <div class="text-center mb-8">
+                <h3 class="inline-block font-serif text-xl md:text-2xl font-bold text-cv-text border-b-2 border-cv-gold pb-2 px-4">
+                    使用方法
+                </h3>
+            </div>
+            
+            <div class="bg-white border-l-4 border-cv-gold rounded-r-xl p-6 md:p-8 shadow-sm">
+                <p class="text-stone-700 text-sm md:text-base leading-relaxed">
+                    洗顔後、適量を手に取り、肌のキメに沿ってやさしくマッサージするように伸ばした後、軽く叩き込んでなじませます。
+                </p>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<!-- Intersection Observer for scroll animations -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    });
+</script>
+
+</body>
+</html>

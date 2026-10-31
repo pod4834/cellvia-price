@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>[D] 176 スカルプ セット</title>
+    
+    <!-- Google Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@600;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        scalpia: {
+                            dark: '#072615',
+                            darklight: '#133e25',
+                            mint: '#a7f3d0',
+                            accent: '#2b6b4c',
+                            gold: '#c5a059',
+                            goldlight: '#e8d5a5',
+                            device: '#1a4a47',
+                            shampoo: '#006064',
+                            shampoolight: '#e0f2f1',
+                            pack: '#831843',
+                            packbg: '#fdf5f8',
+                            treatment: '#0f766e',
+                            treatmentbg: '#eef7f5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e2e8f0;
+            color: #2d3748;
+            -webkit-font-smoothing: antialiased;
+        }
+        .accent-border-dark { border-left: 3.5px solid #2b6b4c; }
+        .accent-border-shampoo { border-left: 3.5px solid #006064; }
+        .accent-border-pack { border-left: 3.5px solid #be185d; }
+        .accent-border-treatment { border-left: 3.5px solid #0f766e; }
+    </style>
+</head>
+<body class="font-sans antialiased text-stone-800">
+
+    <!-- Main Container (Compact, No Site Header/Footer) -->
+    <main class="max-w-4xl mx-auto bg-white min-h-screen shadow-md overflow-hidden my-0 sm:my-2 sm:rounded-2xl">
+        
+        <!-- Package Top Banner -->
+        <section class="bg-gradient-to-r from-stone-900 via-stone-800 to-stone-950 text-white p-4 sm:p-6 text-center border-b-2 border-scalpia-gold">
+            <span class="text-[10px] sm:text-xs font-bold tracking-widest text-scalpia-goldlight uppercase block mb-0.5">
+                SCALPIA PREMIUM CARE
+            </span>
+            <h1 class="font-serif text-xl sm:text-2xl md:text-3xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-scalpia-goldlight to-scalpia-gold mb-1.5">
+                スカルピア プレミアム トータルケア パッケージ
+            </h1>
+            <p class="text-xs sm:text-sm text-stone-300 font-medium max-w-xl mx-auto mb-3">
+                頭皮から毛先まで、健やかな美しさを育む本格ホームスパ・ソリューション
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1.5 text-left text-xs max-w-3xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-xs border border-scalpia-gold/40 p-2 rounded-lg">
+                    <span class="text-scalpia-goldlight font-bold block text-[10px]">PRODUCT 01</span>
+                    <span class="font-bold text-white text-xs block truncate">スカルピア<br>プラスアンプル</span>
+                    <span class="text-[10px] text-stone-300 block">10 SET (STEP 1,2 各7本)</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-xs border border-scalpia-gold/40 p-2 rounded-lg">
+                    <span class="text-scalpia-goldlight font-bold block text-[10px]">PRODUCT 02</span>
+                    <span class="font-bold text-white text-xs block truncate">スカルピア<br>クロマデバイス</span>
+                    <span class="text-[10px] text-stone-300 block">1 ea (美容機器)</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-xs border border-scalpia-gold/40 p-2 rounded-lg">
+                    <span class="text-scalpia-goldlight font-bold block text-[10px]">PRODUCT 03</span>
+                    <span class="font-bold text-white text-xs block truncate">プレミアム<br>ヘアケアシャンプー</span>
+                    <span class="text-[10px] text-stone-300 block">1 ea (500 g)</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-xs border border-scalpia-gold/40 p-2 rounded-lg">
+                    <span class="text-scalpia-goldlight font-bold block text-[10px]">PRODUCT 04</span>
+                    <span class="font-bold text-white text-xs block truncate">リペアプラスヘアパック</span>
+                    <br><span class="text-[10px] text-stone-300 block">1 ea (200 ml)</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-xs border border-scalpia-gold/40 p-2 rounded-lg">
+                    <span class="text-scalpia-goldlight font-bold block text-[10px]">PRODUCT 05</span>
+                    <span class="font-bold text-white text-xs block truncate">ディープセラピー<br>プラストリートメント</span>
+                    <span class="text-[10px] text-stone-300 block">1 ea (300 ml)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PRODUCT 1: Scalpia Plus Ampoule            -->
+        <!-- ========================================== -->
+        <section class="bg-scalpia-dark text-white p-3.5 sm:p-6 border-b border-scalpia-accent/40">
+            <div class="text-center mb-3">
+                <span class="text-[10px] sm:text-xs font-bold text-scalpia-mint tracking-widest uppercase">INTENSIVE SCALP CARE</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-black text-white mt-0.5 mb-1 leading-tight">
+                    スカルピア プラス アンプル
+                </h2>
+                <p class="text-xs sm:text-sm text-stone-300 font-medium max-w-lg mx-auto leading-relaxed">
+                    真のセルフケアの始まり！1日1回、頭皮に与えるヒーリングタイム
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-1.5 mt-2 text-xs">
+                    <span class="px-2.5 py-0.5 bg-white/10 border border-scalpia-mint/30 rounded text-scalpia-mint font-medium">
+                        ✨ 頭皮コンディショニング
+                    </span>
+                    <span class="px-2.5 py-0.5 bg-white/10 border border-scalpia-mint/30 rounded text-scalpia-mint font-medium">
+                        💧 頭皮保湿・水分補給
+                    </span>
+                </div>
+            </div>
+
+            <!-- Steps Visual Badges -->
+            <div class="grid grid-cols-2 gap-2 max-w-sm mx-auto mb-3.5 text-xs text-center">
+                <div class="bg-white/10 backdrop-blur-xs border border-scalpia-mint/30 rounded-lg p-2">
+                    <span class="text-scalpia-goldlight font-bold block text-[10px] uppercase">STEP 1</span>
+                    <span class="text-white font-medium text-xs">頭皮コンディショニング</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-xs border border-scalpia-mint/30 rounded-lg p-2">
+                    <span class="text-scalpia-goldlight font-bold block text-[10px] uppercase">STEP 2</span>
+                    <span class="text-white font-medium text-xs">肌なじみの良い潤いケア</span>
+                </div>
+            </div>
+
+            <!-- Ampoule Key Ingredients Grid -->
+            <div class="bg-stone-900/90 text-stone-800 rounded-xl p-3 sm:p-4 border border-scalpia-accent/40">
+                <h3 class="font-serif text-xs sm:text-sm font-bold text-scalpia-mint text-center mb-2.5 pb-1 border-b border-scalpia-accent/40">
+                    スカルピア プラス アンプル 主要成分
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-xs">
+                    <div class="bg-white p-2.5 rounded-lg accent-border-dark">
+                        <h4 class="font-bold text-scalpia-dark mb-0.5">ヒト幹細胞順化培養液</h4>
+                        <span class="text-[9px] bg-emerald-100 text-scalpia-dark font-bold px-1.5 py-0.2 rounded inline-block mb-1">100,000ppm</span>
+                        <p class="text-[11px] text-stone-600 leading-relaxed">
+                            紫外線や乾燥にさらされた頭皮に豊かな潤いを供給し、健やかな環境へ導きます。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-2.5 rounded-lg accent-border-dark">
+                        <h4 class="font-bold text-scalpia-dark mb-0.5">コメ発酵液 (サケ)</h4>
+                        <span class="text-[9px] bg-emerald-100 text-scalpia-dark font-bold px-1.5 py-0.2 rounded inline-block mb-1">日本酒発酵成分</span>
+                        <p class="text-[11px] text-stone-600 leading-relaxed">
+                            伝統的な発酵成分。デリケートになった頭皮に潤いを与えコンディションを整えます。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-2.5 rounded-lg accent-border-dark">
+                        <h4 class="font-bold text-scalpia-dark mb-0.5">ワサビ葉エキス</h4>
+                        <span class="text-[9px] bg-emerald-100 text-scalpia-dark font-bold px-1.5 py-0.2 rounded inline-block mb-1">爽快・整肌</span>
+                        <p class="text-[11px] text-stone-600 leading-relaxed">
+                            頭皮コンディショニングをサポートし、すっきりとした爽快感を与えます。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-2.5 rounded-lg accent-border-dark">
+                        <h4 class="font-bold text-scalpia-dark mb-0.5">乳酸桿菌/ダイズ発酵エキス</h4>
+                        <span class="text-[9px] bg-emerald-100 text-scalpia-dark font-bold px-1.5 py-0.2 rounded inline-block mb-1">水分油分バランス</span>
+                        <p class="text-[11px] text-stone-600 leading-relaxed">
+                            タンパク質・ビタミンを含み、頭皮と髪の油分・水分バランスをケアします。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-2.5 rounded-lg accent-border-dark">
+                        <h4 class="font-bold text-scalpia-dark mb-0.5">酵母/チガヤ根発酵エキス</h4>
+                        <span class="text-[9px] bg-emerald-100 text-scalpia-dark font-bold px-1.5 py-0.2 rounded inline-block mb-1">持続保湿</span>
+                        <p class="text-[11px] text-stone-600 leading-relaxed">
+                            頭皮に水分を与え、しっとりとした健やかな頭皮環境を長く保ちます。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-2.5 rounded-lg accent-border-dark">
+                        <h4 class="font-bold text-scalpia-dark mb-0.5">加水分解エンドウタンパク</h4>
+                        <span class="text-[9px] bg-emerald-100 text-scalpia-dark font-bold px-1.5 py-0.2 rounded inline-block mb-1">ハリ・コシ</span>
+                        <p class="text-[11px] text-stone-600 leading-relaxed">
+                            髪にツヤを与え、根元からハリ・コシのあるすこやかな毛髪をサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PRODUCT 2: Scalpia Chroma Device           -->
+        <!-- ========================================== -->
+        <section class="bg-stone-50 p-3.5 sm:p-6 border-b border-stone-200">
+            <div class="text-center mb-3">
+                <span class="text-[10px] sm:text-xs font-bold text-scalpia-device tracking-widest uppercase">4in1 SMART SCALP DEVICE</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-black text-scalpia-device mt-0.5 mb-1 leading-tight">
+                    スカルピア クロマ デバイス
+                </h2>
+                <p class="text-xs sm:text-sm text-stone-600 font-medium max-w-lg mx-auto leading-relaxed">
+                    8,000RPM立体振動マッサージでめぐりをサポート。アンプルの角質層への浸透を助けるマルチ機器
+                </p>
+            </div>
+
+            <!-- 3 Modes Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-3.5 text-xs">
+                <div class="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-2xs">
+                    <div class="bg-teal-600 text-white font-bold text-center py-1.5 px-2">一般 MODE</div>
+                    <div class="p-2.5 space-y-1">
+                        <span class="text-[10px] bg-teal-50 text-teal-800 font-bold px-1.5 py-0.5 rounded border border-teal-200 block text-center">
+                            28℃ / ガルバニック / Red LED / 振動
+                        </span>
+                        <p class="text-[11px] text-stone-600 leading-tight">
+                            美容液の肌なじみを高め、マッサージ効果で頭皮にハリと弾力を与えます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-2xs">
+                    <div class="bg-rose-600 text-white font-bold text-center py-1.5 px-2">温熱 MODE</div>
+                    <div class="p-2.5 space-y-1">
+                        <span class="text-[10px] bg-rose-50 text-rose-800 font-bold px-1.5 py-0.5 rounded border border-rose-200 block text-center">
+                            35℃±2℃ / ガルバニック / Red LED / 振動
+                        </span>
+                        <p class="text-[11px] text-stone-600 leading-tight">
+                            温感で毛穴を開きやすくし、汚れを浮かせて頭皮を柔らかく整えます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-2xs">
+                    <div class="bg-sky-600 text-white font-bold text-center py-1.5 px-2">冷却 MODE</div>
+                    <div class="p-2.5 space-y-1">
+                        <span class="text-[10px] bg-sky-50 text-sky-800 font-bold px-1.5 py-0.5 rounded border border-sky-200 block text-center">
+                            20℃±2℃ / ガルバニック / Blue LED / 振動
+                        </span>
+                        <p class="text-[11px] text-stone-600 leading-tight">
+                            冷感で肌を引き締め、デリケートな頭皮をすっきりクールダウンします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Massage Guide Tip Box -->
+            <div class="bg-white rounded-xl p-3 sm:p-4 border border-teal-200/80 text-xs">
+                <h4 class="font-bold text-scalpia-device mb-1 flex items-center gap-1">
+                    <span>💆</span> Head & Neck Massage Guide (ドレナージュ風マッサージ)
+                </h4>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-[11px] text-stone-600">
+                    <div class="bg-stone-50 p-1.5 rounded border border-stone-200">
+                        <strong class="text-scalpia-device block text-[10px]">1. 胸・鎖骨</strong>
+                        胸の中央から首の付け根へ円を描くように。
+                    </div>
+                    <div class="bg-stone-50 p-1.5 rounded border border-stone-200">
+                        <strong class="text-scalpia-device block text-[10px]">2. 首筋</strong>
+                        耳下から首筋を通り, 鎖骨のくぼみへ。
+                    </div>
+                    <div class="bg-stone-50 p-1.5 rounded border border-stone-200">
+                        <strong class="text-scalpia-device block text-[10px]">3. 後頭部〜頭頂</strong>
+                        各ポイントで小さな円を描き心地よく刺激。
+                    </div>
+                    <div class="bg-stone-50 p-1.5 rounded border border-stone-200">
+                        <strong class="text-scalpia-device block text-[10px]">4. 仕上げ</strong>
+                        肩先から首の付け根へ軽く流しめぐりUP。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PRODUCT 3: Premium Hair Care Shampoo       -->
+        <!-- ========================================== -->
+        <section class="bg-scalpia-shampoolight p-3.5 sm:p-6 border-b border-teal-200/80">
+            <div class="text-center mb-3">
+                <span class="text-[10px] sm:text-xs font-bold text-scalpia-shampoo tracking-widest uppercase">DAILY DEEP CLEANSING</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-black text-scalpia-shampoo mt-0.5 mb-1 leading-tight">
+                    プレミアム ヘアケア シャンプー
+                </h2>
+                <p class="text-xs sm:text-sm text-stone-600 font-medium max-w-lg mx-auto leading-relaxed">
+                    皮脂汚れや角質をすっきり洗浄。根元からふんわり豊かな輝きへ (500g)
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-1.5 mt-2 text-xs">
+                    <span class="px-2.5 py-0.5 bg-white border border-teal-300 rounded text-scalpia-shampoo font-medium">
+                        🌿 エイジングケア※1
+                    </span>
+                    <span class="px-2.5 py-0.5 bg-white border border-teal-300 rounded text-scalpia-shampoo font-medium">
+                        ❄️ 清涼感ディープクレンジング
+                    </span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-3 sm:p-4 border border-teal-200">
+                <h3 class="font-serif text-xs sm:text-sm font-bold text-scalpia-shampoo text-center mb-2 pb-1 border-b border-teal-200">
+                    プレミアム シャンプー 主要成分
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-xs">
+                    <div class="p-2 rounded-r-lg accent-border-shampoo bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">ヒト幹細胞順化培養液 (10,000ppm)</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-tight">
+                            乾燥しがちな頭皮に栄養を供給し、健やかな土台づくりをサポート。
+                        </p>
+                    </div>
+
+                    <div class="p-2 rounded-r-lg accent-border-shampoo bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">特許発酵コンプレックス</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-tight">
+                            マスタケ菌糸体/オウゴン根エキス発酵液が頭皮のコンディションを保ちます。
+                        </p>
+                    </div>
+
+                    <div class="p-2 rounded-r-lg accent-border-shampoo bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">デクスパンテノール</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-tight">
+                            高い保湿力で頭皮と髪に潤いを与え、なめらかな指通りへと導きます。
+                        </p>
+                    </div>
+
+                    <div class="p-2 rounded-r-lg accent-border-shampoo bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">l-メントール ＆ ワサビ葉エキス</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-tight">
+                            洗髪後も心地よく続く爽快感と、清潔な頭皮環境をキープ。
+                        </p>
+                    </div>
+
+                    <div class="p-2 rounded-r-lg accent-border-shampoo bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">ツルドクダミ（何首烏）根エキス</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-tight">
+                            頭皮に活力エネルギーを与え、すこやかなコンディションを保ちます。
+                        </p>
+                    </div>
+
+                    <div class="p-2 rounded-r-lg accent-border-shampoo bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">クロダイズ（黒豆）エキス</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-tight">
+                            ポリフェノールを含み、髪と頭皮をすこやかに整えるサポート。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PRODUCT 4: Repair Plus Hair Pack           -->
+        <!-- ========================================== -->
+        <section class="bg-scalpia-packbg p-3.5 sm:p-6 border-b border-pink-200/80">
+            <div class="text-center mb-3">
+                <span class="text-[10px] sm:text-xs font-bold text-scalpia-pack tracking-widest uppercase">SCALP & HAIR PROTEIN PACK</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-black text-scalpia-pack mt-0.5 mb-1 leading-tight">
+                    リペア プラス ヘアパック
+                </h2>
+                <p class="text-xs sm:text-sm text-stone-600 font-medium max-w-lg mx-auto leading-relaxed">
+                    頭皮・毛髪兼用 洗い流す高栄養プロテインケア (200ml)
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-1.5 mt-2 text-xs">
+                    <span class="px-2.5 py-0.5 bg-white border border-pink-300 rounded text-scalpia-pack font-medium">
+                        🌸 タンパク質補給
+                    </span>
+                    <span class="px-2.5 py-0.5 bg-white border border-pink-300 rounded text-scalpia-pack font-medium">
+                        🌺 ラブリーピオニーの香り
+                    </span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-3 sm:p-4 border border-pink-200">
+                <h3 class="font-serif text-xs sm:text-sm font-bold text-scalpia-pack text-center mb-2 pb-1 border-b border-pink-200">
+                    ヘアパック 主要成分と特徴
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    <div class="p-2.5 rounded-r-lg accent-border-pack bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-scalpia-pack text-xs">1. ヒト幹細胞順化培養液 (10,000ppm)</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-relaxed">
+                            頭皮と髪のコンディショニングを助け、すこやかなヘアサイクル維持をサポート。
+                        </p>
+                    </div>
+
+                    <div class="p-2.5 rounded-r-lg accent-border-pack bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-scalpia-pack text-xs">2. 17種のアミノ酸コンプレックス</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-relaxed">
+                            角質層のアミノ酸構成と類似した成分が、ダメージ髪に潤いとまとまりを与えます。
+                        </p>
+                    </div>
+
+                    <div class="p-2.5 rounded-r-lg accent-border-pack bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-scalpia-pack text-xs">3. デクスパンテノール ＆ L-メントール</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-relaxed">
+                            乾燥した髪への水分供給と、爽やかなメントールによる頭皮のリフレッシュ感。
+                        </p>
+                    </div>
+
+                    <div class="p-2.5 rounded-r-lg accent-border-pack bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-scalpia-pack text-xs">4. 加水分解ケラチン/コラーゲン/エラスチン</h4>
+                        <p class="text-[11px] text-stone-600 mt-0.5 leading-relaxed">
+                            毛髪の主要成分であるタンパク質を補給し、ハリ・コシと柔らかさを与えます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- PRODUCT 5: Deep Therapy Plus Treatment     -->
+        <!-- ========================================== -->
+        <section class="bg-scalpia-treatmentbg p-3.5 sm:p-6 border-b border-teal-200/80">
+            <div class="text-center mb-3">
+                <span class="text-[10px] sm:text-xs font-bold text-scalpia-treatment tracking-widest uppercase">NO-WASH LEAVE-IN TREATMENT</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-black text-scalpia-treatment mt-0.5 mb-1 leading-tight">
+                    ディープセラピープラストリートメント
+                </h2>
+                <p class="text-xs sm:text-sm text-stone-600 font-medium max-w-lg mx-auto leading-relaxed">
+                    忙しい朝も洗い流し不要で簡単！パサつく髪に潤いと栄養をコーティング (300ml)
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-1.5 mt-2 text-xs">
+                    <span class="px-2.5 py-0.5 bg-white border border-teal-300 rounded text-scalpia-treatment font-medium">
+                        💨 洗い流さないノーウォッシュ
+                    </span>
+                    <span class="px-2.5 py-0.5 bg-white border border-teal-300 rounded text-scalpia-treatment font-medium">
+                        ✨ 静電気防止・ツヤ効果
+                    </span>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-3 sm:p-4 border border-teal-200">
+                <h3 class="font-serif text-xs sm:text-sm font-bold text-scalpia-treatment text-center mb-2 pb-1 border-b border-teal-200">
+                    トリートメント 主要成分
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+                    <div class="p-2 rounded-lg accent-border-treatment bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">ヒト幹細胞順化培養液</h4>
+                        <span class="text-[9px] text-teal-700 font-bold block">10,000ppm</span>
+                        <p class="text-[10px] text-stone-600 mt-0.5 leading-tight">
+                            パサつく髪に潤いと栄養を補給しなめらかに。
+                        </p>
+                    </div>
+
+                    <div class="p-2 rounded-lg accent-border-treatment bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">ホホバ＆ココナッツ油</h4>
+                        <span class="text-[9px] text-teal-700 font-bold block">天然植物オイル</span>
+                        <p class="text-[10px] text-stone-600 mt-0.5 leading-tight">
+                            保護ベールを形成し、パサつきや静電気を防止。
+                        </p>
+                    </div>
+
+                    <div class="p-2 rounded-lg accent-border-treatment bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">パンテノール＆セラミド</h4>
+                        <span class="text-[9px] text-teal-700 font-bold block">バリア＆保水</span>
+                        <p class="text-[10px] text-stone-600 mt-0.5 leading-tight">
+                            髪の水分蒸発を防ぎ、しっとりしたツヤを長持ち。
+                        </p>
+                    </div>
+
+                    <div class="p-2 rounded-lg accent-border-treatment bg-stone-50 border-y border-r border-stone-200">
+                        <h4 class="font-bold text-stone-800 text-xs">ビール酵母エキス</h4>
+                        <span class="text-[9px] text-teal-700 font-bold block">豊富タンパク質</span>
+                        <p class="text-[10px] text-stone-600 mt-0.5 leading-tight">
+                            アミノ酸が髪の表面を滑らかにしハリを与えます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Disclaimers (Yakki-hou Compliant) -->
+        <section class="bg-stone-900 text-stone-400 p-3.5 sm:p-5 text-left text-[10px] leading-relaxed border-t border-stone-800">
+            <p class="font-bold text-stone-300 mb-1 text-center text-xs">※ご使用上の注意および免責事項※</p>
+            <ul class="space-y-0.5 list-disc list-inside max-w-2xl mx-auto">
+                <li>本ページに記載されている各成分の効能・効果は、原料が持つ一般的な性質に関する説明であり、製品自体の効能を保証するものではありません。</li>
+                <li>本製品群は化粧品および家庭用美容機器であり、医薬品・医薬部外品・医療機器ではありません。疾病の治療や予防を目的としたものではありません。</li>
+                <li>「エイジングケア」とは、年齢に応じた肌や頭皮、髪への潤い・ハリのお手入れを指します。</li>
+                <li>「浸透」とは、角質層までを指します。</li>
+                <li>デバイスによる「めぐり」等の表現は、機器の振動や物理的なマッサージ効果によって得られる一時的な体感や美容効果を指すものです。</li>
+                <li>お肌や頭皮に異常が生じていないかよく注意して使用してください。お肌に合わないときは使用を中止し、皮膚科専門医等にご相談されることをおすすめします。</li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!-- STREAMING_CHUNK:Head and Setup -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミソロジー クリエーション アンプル</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cellvia-dark': '#1a1512',
+                        'cellvia-brown': '#362922',
+                        'cellvia-gold': '#c69c6d',
+                        'cellvia-gold-light': '#e6cead',
+                        'cellvia-bg': '#f9f6f0',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for specific subtle effects -->
+    <style>
+        body {
+            background-color: #e5e5e5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ゴージャスな光沢エフェクト */
+        .gold-shimmer {
+            background: linear-gradient(90deg, #c69c6d 0%, #e6cead 50%, #c69c6d 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+        }
+        
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+    </style>
+</head>
+<body class="font-sans text-stone-800 flex justify-center w-full min-h-screen sm:p-4 md:p-8">
+
+<!-- STREAMING_CHUNK:Main Container -->
+<main class="w-full max-w-4xl bg-white sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+    
+    <!-- STREAMING_CHUNK:Hero Section -->
+    <header class="bg-gradient-to-b from-cellvia-dark to-cellvia-brown text-center px-6 pt-20 pb-16 relative">
+        <!-- 背景の装飾的な円 -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-cellvia-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 fade-in-up">
+            <p class="text-cellvia-gold-light text-sm tracking-[0.2em] mb-4 uppercase font-medium">cellvia</p>
+            <h1 class="font-serif text-4xl md:text-6xl font-black text-cellvia-gold leading-tight mb-6">
+                Mythology Creation<br>
+                <span class="gold-shimmer">Ampoule</span>
+            </h1>
+            
+            <p class="text-stone-300 font-light text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+                「肌本来の美しさに着目し、<br class="sm:hidden">厳選された成分で完成させた濃縮アンプル」
+            </p>
+            
+            <div class="inline-flex flex-col md:flex-row items-center gap-3 border border-white/20 bg-white/5 backdrop-blur-md rounded-lg px-6 py-4">
+                <span class="text-xs text-stone-400 tracking-wider">エイジングケア※1 / 潤い・ツヤ※2</span>
+                <div class="hidden md:block w-px h-6 bg-white/20"></div>
+                <span class="text-white font-bold tracking-widest text-lg">6 ml × 20 ea</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- STREAMING_CHUNK:Points Section -->
+    <section class="bg-gradient-to-b from-cellvia-brown to-cellvia-dark px-6 pb-20 pt-8">
+        <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="bg-black/30 border border-cellvia-gold/20 p-8 rounded-xl text-center backdrop-blur-sm hover:bg-black/40 transition-colors fade-in-up delay-100">
+                <p class="text-cellvia-gold-light text-xs font-bold tracking-widest mb-3">POINT 1</p>
+                <h3 class="text-white font-serif text-xl mb-3">独自の特許成分配合</h3>
+                <p class="text-stone-400 text-sm leading-relaxed">高保湿・豊かな栄養を与える<br>濃縮アンプル</p>
+            </div>
+            
+            <div class="bg-black/30 border border-cellvia-gold/20 p-8 rounded-xl text-center backdrop-blur-sm hover:bg-black/40 transition-colors fade-in-up delay-100">
+                <p class="text-cellvia-gold-light text-xs font-bold tracking-widest mb-3">POINT 2</p>
+                <h3 class="text-white font-serif text-xl mb-3">肌なじみの良い設計</h3>
+                <p class="text-stone-400 text-sm leading-relaxed">角質層までの浸透をしっかりと<br>サポートします</p>
+            </div>
+            
+            <div class="bg-black/30 border border-cellvia-gold/20 p-8 rounded-xl text-center backdrop-blur-sm hover:bg-black/40 transition-colors fade-in-up delay-200">
+                <p class="text-cellvia-gold-light text-xs font-bold tracking-widest mb-3">POINT 3</p>
+                <h3 class="text-white font-serif text-xl mb-3">スキンコンディショニング</h3>
+                <p class="text-stone-400 text-sm leading-relaxed">肌の引き締め、保湿、<br>すこやかさを保つトータルケア</p>
+            </div>
+            
+            <div class="bg-black/30 border border-cellvia-gold/20 p-8 rounded-xl text-center backdrop-blur-sm hover:bg-black/40 transition-colors fade-in-up delay-200">
+                <p class="text-cellvia-gold-light text-xs font-bold tracking-widest mb-3">POINT 4</p>
+                <h3 class="text-white font-serif text-xl mb-3">ツヤ＆ハリ感サポート</h3>
+                <p class="text-stone-400 text-sm leading-relaxed">潤いを与え、明るい印象の<br>ハリのある肌へ導く</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STREAMING_CHUNK:Details/Ingredients Section -->
+    <section class="bg-cellvia-bg px-6 py-20">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="text-center mb-14 fade-in-up">
+                <h2 class="font-serif text-2xl md:text-3xl text-cellvia-dark mb-4 font-bold">まばゆく輝く美しい肌のために</h2>
+                <p class="text-stone-600 text-sm md:text-base">こだわりの水分・栄養補給ケアで、クリアですこやかな肌の始まり</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Ingredient 1 -->
+                <article class="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-stone-100 hover:shadow-lg transition-shadow fade-in-up">
+                    <h4 class="font-serif text-lg text-cellvia-dark font-bold mb-4 border-b-2 border-cellvia-gold-light inline-block pb-1">
+                        ヒト幹細胞順化培養液
+                    </h4>
+                    <p class="text-xs text-cellvia-gold mb-4 font-medium">(200,000ppm、羊水由来)</p>
+                    <p class="text-stone-600 text-sm leading-loose">
+                        成体幹細胞の中で最も若い羊水幹細胞を低酸素培養して得られた複合バイオ素材。豊富な成分を含み、肌のコンディションを整え、すこやかでハリのある肌へ導くサポートをします。
+                    </p>
+                </article>
+
+                <!-- Ingredient 2 -->
+                <article class="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-stone-100 hover:shadow-lg transition-shadow fade-in-up delay-100">
+                    <h4 class="font-serif text-lg text-cellvia-dark font-bold mb-4 border-b-2 border-cellvia-gold-light inline-block pb-1">
+                        特許成分コンプレックス
+                    </h4>
+                    <p class="text-xs text-cellvia-gold mb-4 font-medium">(マスタケ菌糸体/コガネバナ根エキス発酵液)</p>
+                    <p class="text-stone-600 text-sm leading-loose">
+                        コガネバナ根エキスを発酵させて得た成分で、肌のコンディションケアをサポートする特許成分です。外部環境によりデリケートになりがちな肌に潤いを与え、肌本来のすこやかさを保つ助けとなります。
+                    </p>
+                </article>
+
+                <!-- Ingredient 3 -->
+                <article class="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-stone-100 hover:shadow-lg transition-shadow fade-in-up">
+                    <h4 class="font-serif text-lg text-cellvia-dark font-bold mb-4 border-b-2 border-cellvia-gold-light inline-block pb-1 leading-normal">
+                        ペディオコッカス／<br>オタネニンジン根培養エキス発酵液
+                    </h4>
+                    <p class="text-stone-600 text-sm leading-loose mt-4">
+                        サポニン成分をはじめとするオタネニンジン（山参）培養根の多様な成分が、肌に水分と潤いを補給し、コンディションを整え、クリアですこやかな肌へと導くサポートをします。
+                    </p>
+                </article>
+
+                <!-- Ingredient 4 -->
+                <article class="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-stone-100 hover:shadow-lg transition-shadow fade-in-up delay-100">
+                    <h4 class="font-serif text-lg text-cellvia-dark font-bold mb-4 border-b-2 border-cellvia-gold-light inline-block pb-1">
+                        チェジュ（済州）海水
+                    </h4>
+                    <p class="text-stone-600 text-sm leading-loose mt-8">
+                        ミネラルが豊富に含まれたチェジュ島の地下水資源を利用。さっぱりとしながらも優れた水分補給効果で、しっとりとした潤いケアをサポートします。
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STREAMING_CHUNK:Footer and How to Use -->
+    <footer class="bg-stone-900 text-stone-300 px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="mb-12">
+                <h3 class="text-cellvia-gold font-bold text-lg mb-6 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    使用方法 (HOW TO USE)
+                </h3>
+                <div class="bg-stone-800/50 rounded-xl p-6 md:p-8 border border-stone-700">
+                    <p class="text-sm md:text-base leading-relaxed text-stone-300">
+                        アンプルのキャップ（蓋）を矢印の方向に沿って取り外した後、付属の専用三角キャップ（コーン）を取り付けます。<br class="hidden md:block">
+                        そのまま肌に塗布してなじませるか、お手持ちの美容機器（デバイス）等に適量を入れ、肌に噴射してご使用ください。
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center gap-2 bg-stone-800/80 rounded-lg p-4 mb-10 text-sm text-stone-400 border border-stone-700/50 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                皮膚安全性テスト完了 <span class="text-xs opacity-75">（※すべての方に肌トラブルが起きないというわけではありません）</span>
+            </div>
+
+            <div class="border-t border-stone-800 pt-8 text-xs text-stone-500 space-y-2 leading-relaxed">
+                <p>※1 エイジングケア：年齢に応じた潤い・ハリのお手入れのこと。</p>
+                <p>※2 本製品は化粧品です。記載されている内容は成分の一般的な性質に関する説明であり、疾患の治療や予防を目的とするものではありません。</p>
+                <p>※お肌に異常が生じていないかよく注意して使用してください。お肌に合わないときはご使用をおやめください。</p>
+            </div>
+            
+        </div>
+    </footer>
+
+</main>
+
+<!-- Intersection Observer for scroll animations -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    });
+</script>
+
+</body>
+</html>

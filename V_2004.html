@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ピュア マルチ ニュートリエント ジェル</title>
+    
+    <!-- Google Fonts: Noto Sans JP (Gothic), Noto Serif JP (Mincho), Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gel: {
+                            bg: '#F4F9F8',       /* 아주 옅은 민트 배경 */
+                            primary: '#5C9B8B',  /* 메인 민트 그린 (제품 색상 기반) */
+                            secondary: '#A3C9C0',/* 부드러운 서브 민트 */
+                            accent: '#447A6B',   /* 강조용 짙은 민트/청록 */
+                            border: '#D8EAE5',   /* 경계선 색상 */
+                            textDark: '#2D3748', /* 기본 텍스트 (다크 그레이) */
+                            textMute: '#718096', /* 보조 텍스트 */
+                            highlight: '#E58A8A' /* 강조용 부드러운 레드 (텍스트 포인트) */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        engSerif: ['"Cormorant Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #eef2f1; /* 외부 배경색 */
+            -webkit-font-smoothing: antialiased;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        
+        /* 커스텀 리스트 불릿 */
+        .custom-bullet::before {
+            content: "•";
+            color: #5C9B8B;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-start min-h-screen py-4 md:py-8 text-gel-textDark font-sans">
+
+    <!-- [Main Content Container] 헤더/푸터 없음, 여백 최소화 -->
+    <main class="w-full max-w-3xl bg-white shadow-sm overflow-hidden md:rounded-xl border border-gel-border">
+        
+        <section class="bg-gradient-to-b from-gel-bg to-white text-center pt-6 pb-4 px-3 relative fade-in-up border-b border-gel-border">
+            
+            <p class="text-[11px] text-gel-accent font-medium tracking-wide mb-1">
+                高周波マッサージ器の効果をブースティング
+            </p>
+            <h2 class="text-sm md:text-base font-bold text-gel-textDark mb-4 leading-tight">
+                高周波マッサージの効果はアップ！<br>
+                水分と栄養はチャージ！ 3 in 1
+            </h2>
+            
+            <!-- 브랜드 & 제품명 -->
+            <div class="mb-3">
+                <p class="text-[10px] text-gel-textMute tracking-[0.2em] uppercase font-bold font-sans mb-1">Cellvia</p>
+                <h1 class="text-xl md:text-2xl font-bold text-gel-primary tracking-wider mb-1 font-serif">
+                    ピュア マルチ ニュートリエント ジェル
+                </h1>
+                <p class="text-[11px] text-gel-accent tracking-widest uppercase font-engSerif italic">
+                    Pure Multi Nutrient Gel
+                </p>
+            </div>
+
+            <!-- 서브 카피 -->
+            <div class="flex flex-wrap justify-center items-center gap-1.5 text-[10px] md:text-[11px] font-medium text-gel-textDark mb-3">
+                <span>高周波マッサージ専用ジェル</span>
+                <span class="w-[1px] h-2.5 bg-gel-secondary"></span>
+                <span>水分維持</span>
+                <span class="w-[1px] h-2.5 bg-gel-secondary"></span>
+                <span>マイルドな鎮静効果</span>
+            </div>
+
+            <!-- 용량 -->
+            <div class="inline-block bg-gel-primary text-white text-[11px] font-bold tracking-widest font-engSerif px-4 py-0.5 rounded-full shadow-sm">
+                300 ml
+            </div>
+        </section>
+
+        <section class="px-4 py-4 fade-in-up delay-100 bg-white">
+            <ul class="space-y-1.5 text-[11px] md:text-[12px] text-gel-textDark leading-snug max-w-lg mx-auto pl-4">
+                <li class="custom-bullet">フェイス、ボディ用ハンドピースの高周波効果を極大化する専用ジェル</li>
+                <li class="custom-bullet">肌との密着力を高め、高周波がよく伝達されるようサポート</li>
+                <li class="custom-bullet">ベタつかないさっぱりとした使用感</li>
+                <li class="custom-bullet">デイリーで負担なく、乾燥を感じた時に随時使用可能</li>
+                <li class="custom-bullet">豊かな栄養と保湿で、しっとりとした肌のキメを完成</li>
+                <li class="custom-bullet">すべての肌タイプで使用可能</li>
+            </ul>
+        </section>
+
+        <section class="px-3 py-4 fade-in-up delay-200 bg-gel-bg border-y border-gel-border">
+            <div class="text-center space-y-3">
+                <div>
+                    <p class="text-[11px] font-medium text-gel-textDark">乾燥しやすい顔とボディに</p>
+                    <p class="text-[12px] font-bold text-gel-highlight">豊かな栄養としっとりとした水分感を一度に！</p>
+                </div>
+                <div>
+                    <p class="text-[11px] font-medium text-gel-textDark">伝統方式で抽出された酵母/コメ発酵液の</p>
+                    <p class="text-[12px] font-bold text-gel-highlight">豊かな栄養感が肌を澄んで健康に整える</p>
+                </div>
+                <div>
+                    <p class="text-[11px] font-medium text-gel-textDark">ベタインとツボクサエキスの</p>
+                    <p class="text-[12px] font-bold text-gel-highlight">マイルドな鎮静効果</p>
+                </div>
+                <div>
+                    <p class="text-[11px] font-medium text-gel-textDark">ヒアルロン酸Naとグリセリンの</p>
+                    <p class="text-[12px] font-bold text-gel-highlight">保湿効果で肌の水分感を長く維持</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 py-5 fade-in-up delay-300 bg-white">
+            <div class="inline-block bg-gel-primary text-white text-[11px] font-bold px-3 py-1 mb-3 rounded-sm">
+                主要成分と特徴
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
+                <!-- Item 1 -->
+                <div class="flex items-start gap-2">
+                    <div class="w-5 h-5 rounded bg-gel-bg text-gel-primary flex-shrink-0 flex items-center justify-center text-[10px] font-bold border border-gel-secondary">1</div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-gel-textDark mb-0.5 leading-tight">ヒト幹細胞培養液(1,000ppm, 羊水由来)</h3>
+                        <p class="text-[10px] text-gel-textMute leading-snug">成体幹細胞の中で最も若い羊水幹細胞を低酸素培養して得た複合バイオ素材。肌の鎮静、栄養供給に役立つ。</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex items-start gap-2">
+                    <div class="w-5 h-5 rounded bg-gel-bg text-gel-primary flex-shrink-0 flex items-center justify-center text-[10px] font-bold border border-gel-secondary">2</div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-gel-textDark mb-0.5 leading-tight">酵母 / コメ発酵液</h3>
+                        <p class="text-[10px] text-gel-textMute leading-snug">有機農のヨジュ米を使用し、自然親和的で肌にマイルドな植物性原料。伝統的な発酵方式で肌を潤し健康に維持するのに役立つ。</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex items-start gap-2">
+                    <div class="w-5 h-5 rounded bg-gel-bg text-gel-primary flex-shrink-0 flex items-center justify-center text-[10px] font-bold border border-gel-secondary">3</div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-gel-textDark mb-0.5 leading-tight">ヒアルロン酸Na</h3>
+                        <p class="text-[10px] text-gel-textMute leading-snug">自身の重さの最大1,000倍に達する水分吸収力を持つ効果的な保湿成分。持続的な水分供給を助け、乾燥した肌をしっとりと整える。</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex items-start gap-2">
+                    <div class="w-5 h-5 rounded bg-gel-bg text-gel-primary flex-shrink-0 flex items-center justify-center text-[10px] font-bold border border-gel-secondary">4</div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-gel-textDark mb-0.5 leading-tight">ベタイン</h3>
+                        <p class="text-[10px] text-gel-textMute leading-snug">外部環境により乾燥して弱くなりやすい肌に水分を供給し、柔らかな鎮静効果で肌をしっとり健康に整える。</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="flex items-start gap-2 md:col-span-2">
+                    <div class="w-5 h-5 rounded bg-gel-bg text-gel-primary flex-shrink-0 flex items-center justify-center text-[10px] font-bold border border-gel-secondary">5</div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-gel-textDark mb-0.5 leading-tight">ツボクサエキス</h3>
+                        <p class="text-[10px] text-gel-textMute leading-snug">外部環境により疲れた肌に鎮静効果を与え、健康な肌管理に役立つ。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-[9px] text-gel-textMute text-right mt-3">* 上記の内容は原料の説明に限ります。</p>
+        </section>
+
+        <section class="px-4 pb-6 fade-in-up delay-300 bg-white">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                
+                <!-- Daily Use -->
+                <div class="bg-gel-bg rounded-lg border border-gel-border overflow-hidden">
+                    <div class="bg-gel-secondary text-white text-[11px] font-bold py-1.5 px-3 text-center">
+                        デイリーで使用する時
+                    </div>
+                    <div class="p-3 text-[11px] text-gel-textDark leading-relaxed text-center">
+                        適量を取り、肌のキメに沿って優しく<br>マッサージするように塗り広げ吸収させます。
+                    </div>
+                </div>
+
+                <!-- Device Use -->
+                <div class="bg-gel-bg rounded-lg border border-gel-border overflow-hidden">
+                    <div class="bg-gel-primary text-white text-[11px] font-bold py-1.5 px-3 text-center">
+                        高周波機器と一緒に使用する時
+                    </div>
+                    <div class="p-3">
+                        <p class="text-[11px] text-gel-textDark leading-relaxed text-center mb-1.5">
+                            肌とハンドピースの間に空気層ができないように、<br>十分にジェルを塗布してマッサージします。
+                        </p>
+                        <p class="text-[9.5px] text-gel-textMute text-center leading-tight">
+                            ※ジェルが乾いたり不足すると、<br>伝導率が減少し効果も落ちることになります。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

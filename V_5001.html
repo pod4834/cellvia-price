@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>スリムソック ティー</title>
+    
+    <!-- Google Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@600;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    },
+                    colors: {
+                        tea: {
+                            amber: '#f59e0b',
+                            amberdark: '#d97706',
+                            amberlight: '#fef3c7',
+                            brown: '#5d4037',
+                            browndark: '#3e2723',
+                            cream: '#fdfbf7',
+                            green: '#33691e',
+                            greenlight: '#f4f8e8',
+                            greenborder: '#c0ca33',
+                            bg: '#f8f6f0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f4f1ea;
+            color: #292524;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero-pattern {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        .accent-border {
+            border-left: 3.5px solid #d97706;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <main class="max-w-3xl mx-auto bg-white min-h-screen shadow-md overflow-hidden my-0 sm:my-3 sm:rounded-2xl">
+        
+        <section class="hero-pattern p-5 sm:p-7 text-center relative overflow-hidden text-white">
+            <div class="inline-block bg-white/20 backdrop-blur-xs px-3 py-1 rounded-full text-amber-100 font-bold text-xs tracking-wider mb-2 border border-white/30 shadow-2xs">
+                DAILY SLIM & LIGHTNESS CARE
+            </div>
+
+            <p class="text-xs sm:text-sm text-amber-100 font-medium leading-relaxed mb-2">
+                重くなった私の体のための 軽やかさの始まり
+            </p>
+
+            <h1 class="font-serif text-3xl sm:text-4xl font-black leading-tight tracking-wider mb-0.5">
+                SLIM SSOK <span class="font-normal italic">Tea</span>
+            </h1>
+            <p class="text-xs sm:text-sm font-semibold tracking-widest text-amber-200 mb-3 uppercase">
+                スリムソック ティー
+            </p>
+
+            <!-- Specs Badge -->
+            <div class="inline-block bg-tea-browndark/40 border border-white/20 text-amber-100 text-xs px-3.5 py-1 rounded-full font-medium tracking-wide">
+                内容量 : 2.11 g × 30包 <span class="text-[10px] text-amber-200">(63.3 g)</span>
+            </div>
+        </section>
+
+        <div class="p-4 sm:p-6 space-y-4">
+
+            <!-- Intro Box -->
+            <section class="bg-tea-cream p-3.5 sm:p-4 rounded-xl border border-amber-200/80 text-center shadow-2xs">
+                <p class="text-xs sm:text-sm text-tea-brown font-bold leading-relaxed">
+                    スリムソック ティーは、重く疲れた体と日常に、<br class="hidden sm:inline">
+                    温かいお茶一杯で、より軽やかでゆとりのある一日をプレゼントしたいという思いから作られたお茶です。
+                </p>
+            </section>
+
+            <!-- 3 Key Points Overview -->
+            <section class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-2.5">
+                <div class="bg-amber-50/70 p-3 rounded-xl border border-amber-200/80 text-center shadow-2xs">
+                    <span class="inline-block bg-tea-amberdark text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-1">
+                        POINT 01
+                    </span>
+                    <h3 class="text-xs font-bold text-tea-browndark mb-0.5">厳選プレミアム原料8種</h3>
+                    <p class="text-[11px] text-stone-600 leading-snug">
+                        長年の研究の末に辿り着いた<br class="hidden sm:inline">独自の黄金比率配合
+                    </p>
+                </div>
+
+                <div class="bg-amber-50/70 p-3 rounded-xl border border-amber-200/80 text-center shadow-2xs">
+                    <span class="inline-block bg-tea-amberdark text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-1">
+                        POINT 02
+                    </span>
+                    <h3 class="text-xs font-bold text-tea-browndark mb-0.5">安心の5つの無添加</h3>
+                    <p class="text-[11px] text-stone-600 leading-snug">
+                        合成甘味料・防腐剤・着色料・<br class="hidden sm:inline">カフェイン・香料 不使用
+                    </p>
+                </div>
+
+                <div class="bg-amber-50/70 p-3 rounded-xl border border-amber-200/80 text-center shadow-2xs">
+                    <span class="inline-block bg-tea-amberdark text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-1">
+                        POINT 03
+                    </span>
+                    <h3 class="text-xs font-bold text-tea-browndark mb-0.5">生分解性エコバッグ</h3>
+                    <p class="text-[11px] text-stone-600 leading-snug">
+                        トウモロコシ成分由来。<br class="hidden sm:inline">マイクロプラスチックフリー
+                    </p>
+                </div>
+            </section>
+
+            <section class="space-y-2.5">
+                <div class="text-center pt-1">
+                    <h2 class="font-serif font-bold text-base sm:text-lg text-tea-brown inline-block pb-1 border-b-2 border-tea-amber">
+                        厳選された8つのプレミアム和漢・自然原料
+                    </h2>
+                    <p class="text-[11px] text-stone-500 font-medium mt-1">
+                        オーツ麦、玄米、シャクヤク、チンピ、センキュウ、クチナシ、ハトムギ、アマチャヅルで体感する軽やかさ
+                    </p>
+                </div>
+
+                <!-- 8 Ingredients Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+                    <div class="bg-tea-greenlight p-2.5 rounded-lg border border-tea-greenborder/50">
+                        <span class="font-bold text-xs text-tea-green block mb-0.5">01. オーツ麦</span>
+                        <p class="text-[11px] text-stone-600 leading-tight">食物繊維や必須アミノ酸、ビタミンが豊富。</p>
+                    </div>
+
+                    <div class="bg-tea-greenlight p-2.5 rounded-lg border border-tea-greenborder/50">
+                        <span class="font-bold text-xs text-tea-green block mb-0.5">02. 玄米</span>
+                        <p class="text-[11px] text-stone-600 leading-tight">植物性食物繊維でスッキリとした毎日をサポート。</p>
+                    </div>
+
+                    <div class="bg-tea-greenlight p-2.5 rounded-lg border border-tea-greenborder/50">
+                        <span class="font-bold text-xs text-tea-green block mb-0.5">03. シャクヤク</span>
+                        <p class="text-[11px] text-stone-600 leading-tight">古くから健康維持やリズム維持に親しまれてきた成分。</p>
+                    </div>
+
+                    <div class="bg-tea-greenlight p-2.5 rounded-lg border border-tea-greenborder/50">
+                        <span class="font-bold text-xs text-tea-green block mb-0.5">04. チンピ (陳皮)</span>
+                        <p class="text-[11px] text-stone-600 leading-tight">ビタミンCを含み、美容と健康を意識する方に。</p>
+                    </div>
+
+                    <div class="bg-tea-greenlight p-2.5 rounded-lg border border-tea-greenborder/50">
+                        <span class="font-bold text-xs text-tea-green block mb-0.5">05. センキュウ</span>
+                        <p class="text-[11px] text-stone-600 leading-tight">女性特有の悩みに寄り添い、健やかなリズムを整える。</p>
+                    </div>
+
+                    <div class="bg-tea-greenlight p-2.5 rounded-lg border border-tea-greenborder/50">
+                        <span class="font-bold text-xs text-tea-green block mb-0.5">06. クチナシ</span>
+                        <p class="text-[11px] text-stone-600 leading-tight">フラボノイド成分を含み日々のコンディションを補律。</p>
+                    </div>
+
+                    <div class="bg-tea-greenlight p-2.5 rounded-lg border border-tea-greenborder/50">
+                        <span class="font-bold text-xs text-tea-green block mb-0.5">07. ハトムギ</span>
+                        <p class="text-[11px] text-stone-600 leading-tight">昔から美容に愛用され、なめらかな毎日を助ける。</p>
+                    </div>
+
+                    <div class="bg-tea-greenlight p-2.5 rounded-lg border border-tea-greenborder/50">
+                        <span class="font-bold text-xs text-tea-green block mb-0.5">08. アマチャヅル葉</span>
+                        <p class="text-[11px] text-stone-600 leading-tight">サポニンを含み、活動的なエネルギーをサポート。</p>
+                    </div>
+                </div>
+
+                <p class="text-[10px] text-gray-400 text-right pr-1">
+                    ※上記の内容は原料の一般的な性質に関する説明です。
+                </p>
+            </section>
+
+            <section class="bg-amber-50/50 rounded-xl p-3.5 sm:p-4 border border-amber-200/70">
+                <h2 class="text-xs font-bold text-tea-amberdark tracking-widest uppercase mb-2 text-center">
+                    RECOMMENDATION / こんな方におすすめです
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-stone-700 font-medium">
+                    <div class="flex items-center gap-2 bg-white p-2 rounded-lg border border-amber-100 shadow-2xs">
+                        <span class="text-tea-amber font-bold shrink-0">☑</span>
+                        <span>濃い味や塩分の高い食べ物が好きな方</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2 rounded-lg border border-amber-100 shadow-2xs">
+                        <span class="text-tea-amber font-bold shrink-0">☑</span>
+                        <span>長時間立ったまま、または座ったまま仕事をする方</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2 rounded-lg border border-amber-100 shadow-2xs">
+                        <span class="text-tea-amber font-bold shrink-0">☑</span>
+                        <span>コーヒーやジュースを頻繁に飲む方</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2 rounded-lg border border-amber-100 shadow-2xs">
+                        <span class="text-tea-amber font-bold shrink-0">☑</span>
+                        <span>身体が重く、スッキリしないと感じる方</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2 rounded-lg border border-amber-100 shadow-2xs">
+                        <span class="text-tea-amber font-bold shrink-0">☑</span>
+                        <span>朝夕でパンパンになりやすいと感じる方</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white p-2 rounded-lg border border-amber-100 shadow-2xs">
+                        <span class="text-tea-amber font-bold shrink-0">☑</span>
+                        <span>靴下やマスクの跡が長く残りやすい方</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-stone-100 border border-stone-200 rounded-xl p-3.5 sm:p-4 text-center">
+                <div class="inline-block bg-tea-brown text-white font-bold text-xs px-3 py-0.5 rounded-full tracking-wider mb-2">
+                    HOW TO EAT / 美味しい召し上がり方
+                </div>
+                
+                <p class="text-xs text-stone-700 leading-relaxed mb-3">
+                    癖がなく香ばしい味わいで、日常の<strong>お水の代わりに軽く</strong>お召し上がりいただけます。
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                    <div class="bg-white p-2.5 rounded-lg border border-stone-200 flex flex-col items-center justify-center">
+                        <span class="w-5 h-5 bg-tea-amber text-white rounded-full flex items-center justify-center font-bold text-[10px] mb-1">1</span>
+                        <p class="text-stone-700 font-bold">温かいお湯を用意</p>
+                    </div>
+
+                    <div class="bg-white p-2.5 rounded-lg border border-stone-200 flex flex-col items-center justify-center">
+                        <span class="w-5 h-5 bg-tea-amber text-white rounded-full flex items-center justify-center font-bold text-[10px] mb-1">2</span>
+                        <p class="text-stone-700 font-bold">水350ml〜1Lに1包</p>
+                        <span class="text-[10px] text-stone-500">お好みの濃さに調節</span>
+                    </div>
+
+                    <div class="bg-white p-2.5 rounded-lg border border-stone-200 flex flex-col items-center justify-center">
+                        <span class="w-5 h-5 bg-tea-amber text-white rounded-full flex items-center justify-center font-bold text-[10px] mb-1">3</span>
+                        <p class="text-stone-700 font-bold">1分ほど蒸らして完成</p>
+                        <span class="text-[10px] text-stone-500">ホット＆アイス両用</span>
+                    </div>
+                </div>
+
+                <p class="text-[10px] text-stone-500 text-left mt-2.5 pt-2 border-t border-stone-200">
+                    * 冷水でも抽出可能です。アイスで冷やしても美味しいですが、温かくして飲むとより奥深い味わいをお楽しみいただけます。
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

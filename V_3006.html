@@ -1,0 +1,317 @@
+<!-- STREAMING_CHUNK:Head and Setup -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダーマ ディープ ピーリング パッド</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cv-text': '#2c3e50',       /* slate-800 */
+                        'cv-text-light': '#546e7a', /* slate-600 */
+                        'cv-teal-dark': '#2b6156',
+                        'cv-teal': '#3b8c7c',
+                        'cv-teal-light': '#d4ece6',
+                        'cv-bg-mint': '#e8f4f1',
+                        'cv-bg-sub': '#f2f9f8',
+                        'cv-highlight': '#d9534f',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for subtle effects -->
+    <style>
+        body {
+            background-color: #f0f4f8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 波紋アニメーション */
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.2; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+        .ripple-effect {
+            animation: ripple 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-cv-text flex justify-center w-full min-h-screen sm:p-4 md:p-8">
+
+<!-- STREAMING_CHUNK:Main Container -->
+<main class="w-full max-w-4xl bg-white sm:rounded-[2rem] shadow-2xl overflow-hidden flex flex-col relative">
+    
+    <!-- STREAMING_CHUNK:Hero Section -->
+    <header class="bg-gradient-to-br from-cv-teal-light to-[#b2dfd6] text-center px-6 pt-20 pb-16 relative overflow-hidden">
+        <!-- 波紋の背景装飾 -->
+        <div class="absolute -top-10 -left-10 w-64 h-64 border-2 border-white/40 rounded-full ripple-effect pointer-events-none"></div>
+        <div class="absolute -bottom-20 -right-20 w-80 h-80 border-2 border-white/30 rounded-full ripple-effect pointer-events-none" style="animation-delay: -3s;"></div>
+
+        <div class="relative z-10 fade-in-up">
+            <p class="text-cv-teal-dark text-sm md:text-base tracking-[0.05em] mb-6 font-semibold bg-white/30 inline-block px-4 py-1.5 rounded-full backdrop-blur-sm">
+                肌悩みの原因となる古い角質や皮脂を、すっきり拭き取りケア！
+            </p>
+            
+            <h1 class="font-serif text-3xl md:text-4xl font-black text-slate-800 leading-tight tracking-wider mb-3">
+                ダーマ ディープ ピーリング パッド
+            </h1>
+            <p class="text-cv-text-light font-light text-sm md:text-base tracking-[0.2em] mb-10 uppercase">
+                Derma Deep Peeling Pad | Cellvia
+            </p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-3">
+                <span class="bg-white text-cv-teal px-6 py-2 rounded-full text-sm font-bold shadow-md border border-white/50">トーニング</span>
+                <span class="bg-white text-cv-teal px-6 py-2 rounded-full text-sm font-bold shadow-md border border-white/50">ツヤ・ハリ</span>
+                <span class="bg-white text-cv-teal px-6 py-2 rounded-full text-sm font-bold shadow-md border border-white/50">角質ケア</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- STREAMING_CHUNK:Configuration Banner -->
+    <div class="bg-cv-teal text-white text-center py-3 font-bold tracking-widest text-base shadow-inner">
+        内容量 : 60 枚 / 120 ml
+    </div>
+
+    <!-- STREAMING_CHUNK:Content Area Wrapper -->
+    <div class="px-6 py-16 md:px-12 md:py-20 bg-white">
+        
+        <!-- STREAMING_CHUNK:Dual Pad Section -->
+        <section class="flex flex-col sm:flex-row gap-5 mb-16 fade-in-up">
+            <div class="bg-cv-bg-sub border border-[#a3d9cf] p-6 rounded-2xl flex-1 text-center shadow-sm">
+                <h4 class="font-bold text-cv-teal text-lg md:text-xl border-b-2 border-cv-teal pb-2 inline-block mb-4">エンボス面</h4>
+                <p class="text-cv-text text-sm md:text-base leading-relaxed text-left sm:text-center">
+                    肌表面の古い角質や汚れをやさしくオフ。<br class="hidden sm:block">
+                    メイク残りの拭き取りにも適しています。
+                </p>
+            </div>
+            <div class="bg-cv-bg-sub border border-[#a3d9cf] p-6 rounded-2xl flex-1 text-center shadow-sm delay-100 fade-in-up">
+                <h4 class="font-bold text-cv-teal text-lg md:text-xl border-b-2 border-cv-teal pb-2 inline-block mb-4">ソフト面</h4>
+                <p class="text-cv-text text-sm md:text-base leading-relaxed text-left sm:text-center">
+                    肌に潤いを与え、キメを整えます。<br class="hidden sm:block">
+                    気になる部分のスキンパックとしても活用できます。
+                </p>
+            </div>
+        </section>
+
+        <!-- STREAMING_CHUNK:Situations Grid -->
+        <section class="mb-16 fade-in-up delay-100">
+            <h4 class="text-center text-cv-highlight font-bold text-lg md:text-xl mb-6 tracking-wide">
+                ピーリングパッドが必要な瞬間
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <div class="bg-white border-2 border-dashed border-[#a3d9cf] p-4 text-center rounded-xl font-medium text-cv-text text-sm md:text-base">
+                    手軽に角質ケアを取り入れたいとき
+                </div>
+                <div class="bg-white border-2 border-dashed border-[#a3d9cf] p-4 text-center rounded-xl font-medium text-cv-text text-sm md:text-base">
+                    肌のゴワつきやキメの乱れが気になるとき
+                </div>
+                <div class="bg-white border-2 border-dashed border-[#a3d9cf] p-4 text-center rounded-xl font-medium text-cv-text text-sm md:text-base">
+                    メイク残りをしっとりとオフしたいとき
+                </div>
+                <div class="bg-white border-2 border-dashed border-[#a3d9cf] p-4 text-center rounded-xl font-medium text-cv-text text-sm md:text-base">
+                    乾燥して肌の印象が暗く感じるとき
+                </div>
+            </div>
+        </section>
+
+        <!-- STREAMING_CHUNK:Features List -->
+        <section class="mb-16 fade-in-up delay-200 max-w-2xl mx-auto">
+            <ul class="space-y-4 text-cv-text text-base md:text-lg font-medium">
+                <li class="flex items-start gap-3">
+                    <span class="text-cv-teal text-xl font-black leading-none mt-0.5">✓</span>
+                    <span>角質ケアと潤い補給が同時に叶うデュアルパッド</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-cv-teal text-xl font-black leading-none mt-0.5">✓</span>
+                    <span>肌を想う、やわらかくマイルドなピーリング</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-cv-teal text-xl font-black leading-none mt-0.5">✓</span>
+                    <span>スキンケアの土台を整える、クリアな角質ケア</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-cv-teal text-xl font-black leading-none mt-0.5">✓</span>
+                    <span>両面パッドの使い分けで、こだわりの基礎ケア</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- STREAMING_CHUNK:Highlight Message -->
+        <section class="bg-cv-bg-sub border-l-8 border-cv-teal rounded-r-2xl p-8 md:p-10 text-center mb-24 fade-in-up">
+            <div class="space-y-6 font-bold text-base md:text-lg text-cv-text leading-loose">
+                <p>これからは<span class="text-cv-highlight text-xl md:text-2xl">拭き取るだけ</span>の手軽な角質ケア！</p>
+                
+                <p>肌表面の汚れや古い角質を拭き取る<br class="hidden sm:block"><span class="text-cv-teal text-xl md:text-2xl">爽快な使用感</span></p>
+                
+                <p>ワンタッチキャップと内蔵ピンセットで<br class="hidden sm:block"><span class="text-cv-teal text-xl md:text-2xl">便利かつ衛生的に使用可能</span></p>
+                
+                <div class="w-12 h-px bg-[#a3d9cf] mx-auto my-6"></div>
+                
+                <p class="text-sm md:text-base font-medium">
+                    こだわりのマイルドな成分で肌への負担を考慮し、<br class="hidden sm:block">
+                    潤いを与える<span class="text-cv-highlight font-bold border-b-2 border-cv-highlight/30 pb-1 ml-1">スキンケアのファーストステップ</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- STREAMING_CHUNK:Ingredients Section -->
+        <section class="mb-24">
+            <div class="text-center mb-12 fade-in-up">
+                <h3 class="inline-block font-serif text-2xl md:text-3xl font-bold text-cv-text border-b-2 border-cv-teal pb-3 px-4">
+                    主要成分と特徴
+                </h3>
+            </div>
+
+            <!-- 成分を1カラムのカードスタイルで配置 -->
+            <div class="space-y-5">
+                
+                <article class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up">
+                    <h4 class="font-bold text-cv-text text-base md:text-lg mb-2 flex items-baseline gap-3">
+                        <span class="text-cv-teal font-serif text-xl md:text-2xl font-black">1.</span>
+                        <span>ヒト幹細胞順化培養液<span class="text-xs font-normal text-slate-500 ml-1 block sm:inline">（10,000ppm、羊水由来）</span></span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed pl-[2rem] sm:pl-[2.25rem]">
+                        豊かな栄養を含み、肌のコンディションを整えて健やかな肌へと導くサポートをする高機能バイオ素材です。
+                    </p>
+                </article>
+
+                <article class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up delay-100">
+                    <h4 class="font-bold text-cv-text text-base md:text-lg mb-2 flex items-baseline gap-3">
+                        <span class="text-cv-teal font-serif text-xl md:text-2xl font-black">2.</span>
+                        <span>グルコノラクトン<span class="text-xs font-normal text-slate-500 ml-1">(PHA)</span></span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed pl-[2rem] sm:pl-[2.25rem]">
+                        次世代ピーリング成分。肌表面の不要な古い角質や汚れをマイルドにオフし、なめらかな肌へ整えるサポートをします。
+                    </p>
+                </article>
+
+                <article class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up">
+                    <h4 class="font-bold text-cv-text text-base md:text-lg mb-2 flex items-baseline gap-3">
+                        <span class="text-cv-teal font-serif text-xl md:text-2xl font-black">3.</span>
+                        β-グルカン
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed pl-[2rem] sm:pl-[2.25rem]">
+                        肌に潤いを与え、水分ヴェールを形成することで、しっとりとした仕上がりをサポートします。
+                    </p>
+                </article>
+
+                <article class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up delay-100">
+                    <h4 class="font-bold text-cv-text text-base md:text-lg mb-2 flex items-baseline gap-3">
+                        <span class="text-cv-teal font-serif text-xl md:text-2xl font-black">4.</span>
+                        デクスパンテノール
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed pl-[2rem] sm:pl-[2.25rem]">
+                        優れた保水力で肌に潤いを与え、乾燥した肌をすこやかに保つサポートをします。
+                    </p>
+                </article>
+
+                <article class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up">
+                    <h4 class="font-bold text-cv-text text-base md:text-lg mb-2 flex items-baseline gap-3">
+                        <span class="text-cv-teal font-serif text-xl md:text-2xl font-black">5.</span>
+                        アルギニン
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed pl-[2rem] sm:pl-[2.25rem]">
+                        肌のコンディショニングを助け、なめらかでツヤのある肌へ導くサポートをします。
+                    </p>
+                </article>
+
+                <article class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up delay-100">
+                    <h4 class="font-bold text-cv-text text-base md:text-lg mb-2 flex items-baseline gap-3">
+                        <span class="text-cv-teal font-serif text-xl md:text-2xl font-black">6.</span>
+                        <span>ソジウムDNA<span class="text-xs font-normal text-slate-500 ml-1">(PDRN, サケDNA)</span></span>
+                    </h4>
+                    <p class="text-cv-text-light text-sm leading-relaxed pl-[2rem] sm:pl-[2.25rem]">
+                        サケから抽出されたDNA成分。肌なじみが良く、水分と油分のバランスを整え、肌本来の健やかさを保ちハリのある肌へ導くサポートをします。
+                    </p>
+                </article>
+
+                <article class="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up">
+                    <h4 class="font-bold text-cv-text text-base md:text-lg mb-2 flex items-baseline gap-3">
+                        <span class="text-cv-teal font-serif text-xl md:text-2xl font-black">7.</span>
+                        プロバイオティクス コンプレックス
+                    </h4>
+                    <div class="pl-[2rem] sm:pl-[2.25rem]">
+                        <p class="text-cv-text-light text-sm leading-relaxed">
+                            乳酸桿菌培養溶解質、ビフィズス菌培養溶解質、乳酸球菌培養溶解質の複合体。肌に潤いを与え、健やかな肌環境を保つサポートをします。
+                        </p>
+                        <p class="text-xs text-slate-400 mt-2">
+                            *発酵工程を通じて得られた成分であり、生菌ではありません。
+                        </p>
+                    </div>
+                </article>
+            </div>
+            
+            <p class="text-right text-xs text-slate-400 mt-6 pr-2">※上記の内容は、原料の一般的な性質に関する説明です。</p>
+        </section>
+
+        <!-- STREAMING_CHUNK:How to Use Section -->
+        <section class="bg-cv-bg-mint rounded-2xl p-8 md:p-10 fade-in-up shadow-sm">
+            <h4 class="inline-block bg-cv-teal text-white font-bold px-6 py-2 rounded-full text-sm tracking-widest mb-6 shadow-sm">使用方法</h4>
+            <p class="text-cv-text text-base md:text-lg leading-relaxed">
+                洗顔後、<strong>エンボス面</strong>で肌をやさしく拭き取り、古い角質や汚れをオフします。<br class="hidden md:block">
+                その後、裏返して<strong>ソフト面</strong>でもう一度顔全体をやさしく拭き取り、肌のキメを整えます。
+            </p>
+        </section>
+
+    </div>
+</main>
+
+<!-- Intersection Observer for scroll animations -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    });
+</script>
+
+</body>
+</html>

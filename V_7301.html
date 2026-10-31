@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スカルピア クロマ デバイスポーチ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#e0c3cc', /* Text color from the image */
+                            DEFAULT: '#b58b99',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('V_7301.jpg')", /* Using the provided image as background if possible, or simulating the vibe */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles to simulate the background vibe and tight spacing */
+        body {
+            /* Simulating the abstract background from the image */
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #1a1a1a 100%);
+            color: #ffffff;
+            /* Tightening global line-height to minimize spacing as requested */
+            line-height: 1.2;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Abstract background waves simulation if the image doesn't cover everything perfectly */
+        .bg-waves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(79, 209, 197, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(237, 137, 54, 0.05) 0%, transparent 50%);
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        /* Further tightening for specific utility classes */
+        .tight-spacing {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        
+        .section-gap {
+            /* Minimal gap between major sections */
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-text {
+            /* Simulating the iridescent text color */
+            background: linear-gradient(to right, #f6e05e, #f687b3, #4fd1c5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col items-center justify-center relative overflow-x-hidden">
+    
+    <!-- Background Effect -->
+    <div class="bg-waves"></div>
+
+    <!-- Main Container - Designed for SPA / Mobile First -->
+    <main class="w-full max-w-lg mx-auto px-4 py-6 flex flex-col relative z-10">
+
+        <!-- Header Text -->
+        <header class="text-left w-full mb-3">
+            <p class="text-sm md:text-base font-light text-gray-200 tracking-wide">
+                傷やほこりを気にせず<br>
+                手軽にすっぽり。<br>
+                軽量メッシュ素材のポーチ
+            </p>
+        </header>
+
+        <!-- Title Section -->
+        <section class="text-center w-full mb-4">
+            <h2 class="text-lg md:text-xl font-bold text-gray-300 mb-1 tracking-widest">
+                SCALPIA
+            </h2>
+            <h1 class="text-2xl md:text-3xl font-extrabold highlight-text mb-2 tracking-wider">
+                クロマ デバイス ポーチ
+            </h1>
+            <!-- Quote Note -->
+            <p class="text-sm md:text-base font-medium text-white italic relative inline-block">
+                <span class="text-xl md:text-2xl absolute -left-3 md:-left-4 -top-2">“</span>
+                本製品はスカルピア クロマ デバイス<span class="font-bold border-b border-brand-light pb-0.5">専用ポーチ</span>です。
+                <span class="text-xl md:text-2xl absolute -right-3 md:-right-4 -bottom-3">”</span>
+            </p>
+        </section>
+
+        <!-- Product Image -->
+        <section class="w-full flex justify-center items-center my-2 relative">
+            <!-- Simulated Glow behind products -->
+            <div class="absolute inset-0 bg-teal-500/10 rounded-full blur-3xl -z-10"></div>
+            
+            <!-- Single Full Width Image Container -->
+            <div class="w-full md:w-3/4 rounded-2xl shadow-xl relative overflow-hidden flex justify-center items-center aspect-square md:aspect-video bg-black/20 border border-white/10">
+                <img src="img/detail7301_0_v7301.png" alt="スカルピア クロマ デバイス と ポーチ" class="object-cover w-full h-full" onerror="this.src='https://placehold.co/800x600/1a202c/ffffff?text=Scalpia+Device+%26+Pouch'; this.classList.remove('object-cover'); this.classList.add('object-contain', 'p-4');" />
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="w-full grid grid-cols-1 md:grid-cols-2 gap-1.5 mt-4">
+            
+            <!-- Feature 1 -->
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-2 rounded-sm flex items-center shadow-sm">
+                <p class="text-xs text-gray-100 font-medium w-full text-center tracking-wide">
+                    製品の保護とほこり対策
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-2 rounded-sm flex items-center shadow-sm">
+                <p class="text-xs text-gray-100 font-medium w-full text-center tracking-wide">
+                    通気性に優れた軽量メッシュ仕様
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-2 rounded-sm flex items-center shadow-sm">
+                <p class="text-xs text-gray-100 font-medium w-full text-center tracking-wide">
+                    収納時のしっかりとした安定感
+                </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-2 rounded-sm flex items-center shadow-sm">
+                <p class="text-xs text-gray-100 font-medium w-full text-center tracking-wide">
+                    シンプルなブラックにホワイトロゴ
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Footer / English Name -->
+        <footer class="w-full text-center mt-6">
+            <p class="text-[10px] md:text-xs text-gray-400 font-light tracking-widest">
+                Scalpia Chroma Device Pouch
+            </p>
+        </footer>
+
+    </main>
+</body>
+</html>

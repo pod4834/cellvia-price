@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>エクレム スアベ オペラ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: {
+                        pink: '#f9ecee',
+                        light: '#fdfafb',
+                        text: '#4a3b3c',
+                        textMuted: '#7a6a6b',
+                        accent: '#d98c96',
+                        accentDark: '#a85d67',
+                        inactive: '#eadddf'
+                    }
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans JP"', 'sans-serif'],
+                    serif: ['"Noto Serif JP"', 'serif'],
+                }
+            }
+        }
+    }
+</script>
+<style>
+    body {
+        background-color: #f4efef;
+        color: #4a3b3c;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .hero-bg {
+        background: linear-gradient(180deg, #fceaea 0%, #f4d9dd 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-bg::before, .hero-bg::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%);
+        z-index: 0;
+    }
+    .hero-bg::before { width: 50vw; height: 50vw; min-width: 300px; min-height: 300px; top: -10%; left: -10%; }
+    .hero-bg::after { width: 60vw; height: 60vw; min-width: 400px; min-height: 400px; bottom: -15%; right: -15%; opacity: 0.6; }
+
+    .z-content { position: relative; z-index: 10; }
+
+    .profile-box {
+        box-shadow: inset 0 0 20px rgba(255,255,255,0.8);
+    }
+    
+    .gift-card {
+        border-left-width: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+    .gift-nuvola { border-left-color: #3b82f6; }
+    .gift-diamant { border-left-color: #a855f7; }
+    .gift-daisy { border-left-color: #f59e0b; }
+    .gift-blossom { border-left-color: #10b981; }
+    
+    /* Ensure tight layout */
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</head>
+<body class="font-sans antialiased text-brand-text">
+
+<div class="max-w-3xl mx-auto bg-white min-h-screen shadow-lg flex flex-col w-full">
+    
+    <section class="hero-bg px-4 py-12 sm:py-16 text-center w-full">
+        <div class="z-content flex flex-col items-center">
+            <span class="font-serif text-brand-accentDark tracking-[0.25em] italic text-lg sm:text-xl mb-4 sm:mb-6">Eclarme</span>
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-black tracking-wider mb-4 sm:mb-6 text-brand-text leading-tight">
+                SOAVE<br class="sm:hidden" /> OPERA
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl font-medium tracking-wide mb-6 sm:mb-8 leading-relaxed max-w-md mx-auto">
+                ユーカリの清涼感と<br>ムスクの包み込むような温かさが調和した、<br>深く優雅で洗練された香り
+            </p>
+            <span class="text-xs sm:text-sm text-brand-accentDark tracking-[0.15em] font-bold">PERFUME PER</span>
+        </div>
+    </section>
+
+    <div class="bg-brand-accentDark text-white text-center py-3 sm:py-4 text-sm sm:text-base font-bold tracking-[0.15em] w-full">
+        内容量 : 50 ml / 1.69 fl.oz
+    </div>
+
+    <main class="flex-grow px-4 sm:px-8 py-8 sm:py-12 w-full">
+        
+        <section class="text-center mb-10 sm:mb-16">
+            <p class="font-serif text-sm sm:text-base leading-loose sm:leading-loose text-brand-text max-w-xl mx-auto">
+                神話のような香りと輝く魅力を込めたエクレム。<br>
+                神話の中の妖精の瑞々しさと女神の華やかさに似た、<br>
+                神秘的で優雅な香りとして記憶される永遠の追憶。<br>
+                あなたの最も眩しく輝く瞬間を、より特別で美しく記憶できるよう、<br>
+                時が経っても忘れられない愛らしい香りを込めました。
+            </p>
+        </section>
+
+        <section class="bg-brand-light border border-[#f4e3e5] rounded-xl p-6 sm:p-10 mb-10 sm:mb-12 text-center profile-box">
+            <h2 class="font-serif text-xl sm:text-2xl text-brand-accentDark font-bold mb-4 sm:mb-6">スアベ オペラ</h2>
+            <h3 class="text-lg sm:text-xl font-bold text-brand-text mb-4 leading-relaxed">
+                “ユーカリの清涼感とムスクの温かさが調和した、<br class="hidden sm:block"/>深く優雅で洗練された香り”
+            </h3>
+            <p class="text-sm sm:text-base leading-relaxed text-brand-text mb-8 sm:mb-10 max-w-lg mx-auto">
+                シックで堂々とした女性の洗練されたムードを込めた気品ある香り。鼻先をかすめる涼やかなユーカリの爽快感と、幻想的で甘美なムスクの繊細さが調和して美しく混ざり合い、やわらかくロマンチックな香りをプレゼントします。
+            </p>
+            
+            <div class="bg-white inline-block rounded-lg shadow-sm px-6 py-5 sm:px-10 sm:py-6 mx-auto w-full sm:w-auto">
+                <dl class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-8 gap-y-3 sm:gap-y-4 text-left">
+                    <dt class="font-serif font-bold text-brand-accentDark text-base sm:text-lg">Top</dt>
+                    <dd class="text-base sm:text-lg text-brand-text">Eucalyptus, Green</dd>
+                    
+                    <dt class="font-serif font-bold text-brand-accentDark text-base sm:text-lg">Middle</dt>
+                    <dd class="text-base sm:text-lg text-brand-text">Jasmine, Tulipe</dd>
+                    
+                    <dt class="font-serif font-bold text-brand-accentDark text-base sm:text-lg">Base</dt>
+                    <dd class="text-base sm:text-lg text-brand-text">Musk, Sandalwood</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="mb-12 sm:mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 sm:gap-y-6 max-w-2xl mx-auto">
+                
+                <!-- Musk -->
+                <div class="flex items-center w-full">
+                    <span class="w-20 sm:w-24 font-medium text-brand-text text-sm sm:text-base shrink-0">Musk</span>
+                    <div class="flex grow gap-1 h-3 sm:h-4">
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-inactive"></div>
+                    </div>
+                </div>
+                
+                <!-- Citrus -->
+                <div class="flex items-center w-full">
+                    <span class="w-20 sm:w-24 font-medium text-brand-text text-sm sm:text-base shrink-0">Citrus</span>
+                    <div class="flex grow gap-1 h-3 sm:h-4">
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-inactive"></div>
+                    </div>
+                </div>
+
+                <!-- Floral -->
+                <div class="flex items-center w-full">
+                    <span class="w-20 sm:w-24 font-medium text-brand-text text-sm sm:text-base shrink-0">Floral</span>
+                    <div class="flex grow gap-1 h-3 sm:h-4">
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-inactive"></div>
+                    </div>
+                </div>
+
+                <!-- Fruity -->
+                <div class="flex items-center w-full">
+                    <span class="w-20 sm:w-24 font-medium text-brand-text text-sm sm:text-base shrink-0">Fruity</span>
+                    <div class="flex grow gap-1 h-3 sm:h-4">
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-inactive"></div>
+                        <div class="flex-1 rounded-sm bg-brand-inactive"></div>
+                    </div>
+                </div>
+
+                <!-- Woody -->
+                <div class="flex items-center w-full">
+                    <span class="w-20 sm:w-24 font-medium text-brand-text text-sm sm:text-base shrink-0">Woody</span>
+                    <div class="flex grow gap-1 h-3 sm:h-4">
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-inactive"></div>
+                    </div>
+                </div>
+
+                <!-- Fresh -->
+                <div class="flex items-center w-full">
+                    <span class="w-20 sm:w-24 font-medium text-brand-text text-sm sm:text-base shrink-0">Fresh</span>
+                    <div class="flex grow gap-1 h-3 sm:h-4">
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-accent"></div>
+                        <div class="flex-1 rounded-sm bg-brand-inactive"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="bg-[#faf7f8] border-2 border-[#f0e6e7] rounded-xl p-5 sm:p-8">
+            <div class="flex justify-center mb-6 sm:mb-8">
+                <span class="bg-brand-text text-white px-6 py-2 rounded-full font-bold tracking-widest text-sm sm:text-base">
+                    贈呈品 (3 ml × 4 ea)
+                </span>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                
+                <div class="bg-white p-4 sm:p-5 rounded-lg gift-card gift-nuvola flex flex-col justify-center h-full">
+                    <h4 class="font-bold text-brand-text text-sm sm:text-base mb-2">エスティバ ヌボラ</h4>
+                    <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">清潔感のある石鹸の香りとパウダリーなムスクが調和した、やわらかなコットンの香り</p>
+                </div>
+                
+                <div class="bg-white p-4 sm:p-5 rounded-lg gift-card gift-diamant flex flex-col justify-center h-full">
+                    <h4 class="font-bold text-brand-text text-sm sm:text-base mb-2">ディアマン シンフォニア</h4>
+                    <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">洋梨の果汁から感じる新鮮で甘い香りと、スズランのほのかで優しい香りが調和した、女性らしく華やかな香り</p>
+                </div>
+                
+                <div class="bg-white p-4 sm:p-5 rounded-lg gift-card gift-daisy flex flex-col justify-center h-full">
+                    <h4 class="font-bold text-brand-text text-sm sm:text-base mb-2">デイジー ワルツ</h4>
+                    <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">レモンの爽やかさとフリージアのほのかなフローラル香が調和した、ハツラツとした愛らしい香り</p>
+                </div>
+                
+                <div class="bg-white p-4 sm:p-5 rounded-lg gift-card gift-blossom flex flex-col justify-center h-full">
+                    <h4 class="font-bold text-brand-text text-sm sm:text-base mb-2">ブロッサム ガーデン</h4>
+                    <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">花咲く庭園の瑞々しさと自然の爽やかさが調和した、フレッシュでフローラルな香り</p>
+                </div>
+                
+            </div>
+            
+            <p class="text-center text-xs text-slate-400 mt-6 sm:mt-8 px-2">
+                ※専門調香師の試香レポートであり、香りが与える感覚は個人の経験や好みによって異なる場合があります。
+            </p>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

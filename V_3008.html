@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>シーエントックス CO₂ マスク</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --color-bg-dark: #00607a;
+        --color-bg-light: #e0f2f7;
+        --color-text-main: #2d3748;
+        --color-text-light: #4a5568;
+        --color-accent-teal: #0083a3;
+        --color-gold: #d4af37;
+        --color-white: #ffffff;
+        --color-highlight-red: #e53e3e;
+    }
+
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        background-color: #f0f7f9;
+        color: var(--color-text-main);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: 'Noto Serif JP', serif;
+        margin: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: var(--color-white);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
+    .hero {
+        background: linear-gradient(135deg, #0083a3 0%, #004b61 100%);
+        color: var(--color-white);
+        text-align: center;
+        padding: 50px 15px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before, .hero::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+    .hero::before { width: 300px; height: 300px; top: -100px; left: -100px; }
+    .hero::after { width: 400px; height: 400px; bottom: -150px; right: -150px; }
+
+    .hero-catch-top {
+        font-size: 0.95rem;
+        color: #b3e5fc;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: var(--color-white);
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        position: relative;
+        z-index: 2;
+    }
+    .hero-title-en {
+        font-size: 1.1rem;
+        color: #81d4fa;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+        font-weight: 300;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .hero-sub-title {
+        font-size: 1.05rem;
+        color: var(--color-gold);
+        font-weight: bold;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .config-banner {
+        background-color: var(--color-gold);
+        color: #4a3800;
+        text-align: center;
+        padding: 12px;
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .content-padding {
+        padding: 30px 20px;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .info-card {
+        background-color: var(--color-bg-light);
+        padding: 20px;
+        border-radius: 8px;
+        border-top: 3px solid var(--color-accent-teal);
+    }
+    .info-card h4 {
+        color: var(--color-bg-dark);
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .info-card p {
+        font-size: 0.9rem;
+        color: var(--color-text-main);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .features-list {
+        margin-bottom: 30px;
+    }
+    .features-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .features-list li {
+        font-size: 0.95rem;
+        padding-left: 25px;
+        position: relative;
+        color: var(--color-text-main);
+    }
+    .features-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--color-accent-teal);
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .message-box {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 25px 20px;
+        border: 2px dashed var(--color-accent-teal);
+        border-radius: 8px;
+        background-color: #fafdfd;
+    }
+    .message-box p {
+        font-size: 1.05rem;
+        font-weight: bold;
+        color: var(--color-text-main);
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    .message-box p:last-child {
+        margin-bottom: 0;
+    }
+    .text-red { color: var(--color-highlight-red); }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .section-header h3 {
+        display: inline-block;
+        font-size: 1.3rem;
+        color: var(--color-bg-dark);
+        padding-bottom: 5px;
+        border-bottom: 2px solid var(--color-gold);
+    }
+
+    .ingredients-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .ingredient-card {
+        background-color: var(--color-white);
+        border-left: 3px solid var(--color-accent-teal);
+        padding: 15px 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        border-radius: 0 6px 6px 0;
+    }
+    .ingredient-header {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 5px;
+    }
+    .ingredient-num {
+        color: var(--color-highlight-red);
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-right: 8px;
+    }
+    .ingredient-name {
+        font-weight: 700;
+        color: var(--color-text-main);
+        font-size: 0.95rem;
+    }
+    .ingredient-desc {
+        font-size: 0.85rem;
+        color: var(--color-text-light);
+        line-height: 1.5;
+    }
+    .ingredient-note {
+        text-align: right;
+        font-size: 0.75rem;
+        color: #a0aec0;
+        margin-top: 15px;
+    }
+
+    .how-to-use {
+        background-color: var(--color-bg-light);
+        border-radius: 8px;
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+    .how-to-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .how-to-list li {
+        margin-bottom: 15px;
+        padding-left: 35px;
+        position: relative;
+        font-size: 0.9rem;
+        color: var(--color-text-main);
+        line-height: 1.5;
+    }
+    .how-to-list li:last-child {
+        margin-bottom: 0;
+    }
+    .how-to-list li::before {
+        counter-increment: step-counter;
+        content: counter(step-counter);
+        position: absolute;
+        left: 0;
+        top: -2px;
+        width: 22px;
+        height: 22px;
+        background-color: var(--color-accent-teal);
+        color: var(--color-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    .how-to-list {
+        counter-reset: step-counter;
+    }
+
+    @media (max-width: 480px) {
+        .hero-title { font-size: 1.8rem; }
+        .hero-title-en { font-size: 0.95rem; }
+        .hero-sub-title { font-size: 0.95rem; }
+        .hero-catch-top { font-size: 0.85rem; }
+        .content-padding { padding: 25px 15px; }
+        .info-card { padding: 15px; }
+        .message-box p { font-size: 0.95rem; }
+        .section-header h3 { font-size: 1.2rem; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="hero">
+        <div class="hero-sub-title">忙しい現代人のためのカスタムスキンケア</div>
+        <div class="hero-catch-top">エステのようなスペシャルケアを、これからは自宅で！</div>
+        
+        <h1 class="hero-title">シーエントックス<br>シーオーツー マスク</h1>
+        <div class="hero-title-en">CNTOX CO₂ Mask</div>
+        
+        <div style="font-size: 0.85rem; color: #b3e5fc; margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; display: inline-block;">
+            乾燥などの外的ストレスから肌を守るプレミアムケアソリューション
+        </div>
+    </div>
+
+    <div class="config-banner">
+        STEP 1 : 25 g × 5 ea &nbsp;&nbsp;|&nbsp;&nbsp; STEP 2 : 18 g × 5 ea
+    </div>
+
+    <div class="content-padding">
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h4>プロフェッショナルなソリューション</h4>
+                <p>毛穴の汚れをすっきりと落とし、肌のコンディションを整えることにフォーカスしたオールインワンスキンケアです。</p>
+            </div>
+            <div class="info-card">
+                <h4>潤いコンディショニング</h4>
+                <p>トウキンセンカ花エキスなどの美容成分が肌の潤いを保ち、すこやかで生き生きとした印象の肌へ導くサポートをします。</p>
+            </div>
+            <div class="info-card">
+                <h4>CNTOX Mask の仕組み</h4>
+                <p>専用ゲルとシートが結合する瞬間に発生する炭酸バブルが、肌表面や毛穴の汚れをすっきりと落とし、潤いを与えてクリアな肌に整えます。</p>
+            </div>
+            <div class="info-card">
+                <h4>STEP 1, 2で構成された本格ケア</h4>
+                <p>STEP 1のゲルとSTEP 2のマスクシートで構成され、エステでケアを受けるような心地よさを自宅で手軽に体験できる製品です。</p>
+            </div>
+        </div>
+
+        <div class="features-list">
+            <ul>
+                <li>毛穴の汚れをすっきりオフ</li>
+                <li>デリケートな肌のコンディショニング</li>
+                <li>炭酸バブルがもたらすオールインワンスキンケア</li>
+                <li>すこやかな肌のベース作り</li>
+            </ul>
+        </div>
+
+        <div class="message-box">
+            <p>忙しい現代人のための<br><span class="text-red">オールインワンスキンケア！</span></p>
+            <p>瞬間的に発生する<span class="text-red">炭酸バブル</span>が<br>肌表面の汚れを落とし、<br>美容成分が潤いを与え、<br>すこやかで<span class="text-red">ハリのある肌</span>へ導きます。</p>
+            <p>トウキンセンカ花エキス、ローズマリー葉エキスなど<br>各種植物性抽出物による<br><span class="text-red">肌のコンディショニング効果</span></p>
+        </div>
+
+        <div class="section-header">
+            <h3>主要成分と特徴</h3>
+        </div>
+
+        <div class="ingredients-grid">
+            <div class="ingredient-card">
+                <div class="ingredient-header">
+                    <span class="ingredient-num">1.</span>
+                    <span class="ingredient-name">ローズマリー葉エキス</span>
+                </div>
+                <div class="ingredient-desc">乾燥などの外的環境によりデリケートになった肌をすこやかに保ちます。水分の蒸発を防ぎ、生き生きとしたしっとり肌を維持するサポートをします。</div>
+            </div>
+
+            <div class="ingredient-card">
+                <div class="ingredient-header">
+                    <span class="ingredient-num">2.</span>
+                    <span class="ingredient-name">チャ葉エキス（緑茶エキス）</span>
+                </div>
+                <div class="ingredient-desc">肌を引き締め、コンディションを整えるのに優れており、デリケートな肌をクリアで健やかに保つサポートをします。また、肌の水分蒸発を防ぎ潤いを保ちます。</div>
+            </div>
+
+            <div class="ingredient-card">
+                <div class="ingredient-header">
+                    <span class="ingredient-num">3.</span>
+                    <span class="ingredient-name">ベニバナ花エキス</span>
+                </div>
+                <div class="ingredient-desc">肌のターンオーバーをサポートし、柔軟性を与えます。カルタミン成分を含有しており、肌のコンディショニングを助けます。</div>
+            </div>
+
+            <div class="ingredient-card">
+                <div class="ingredient-header">
+                    <span class="ingredient-num">4.</span>
+                    <span class="ingredient-name">シャクヤク花エキス</span>
+                </div>
+                <div class="ingredient-desc">肌をクリアで清潔に保つサポートをし、肌のコンディショニングを付与して生き生きとした肌管理を助けます。</div>
+            </div>
+
+            <div class="ingredient-card">
+                <div class="ingredient-header">
+                    <span class="ingredient-num">5.</span>
+                    <span class="ingredient-name">モモ花エキス</span>
+                </div>
+                <div class="ingredient-desc">肌に栄養を供給し、活力を与えてなめらかに整えるサポートをします。</div>
+            </div>
+
+            <div class="ingredient-card">
+                <div class="ingredient-header">
+                    <span class="ingredient-num">6.</span>
+                    <span class="ingredient-name">ハマナス花エキス</span>
+                </div>
+                <div class="ingredient-desc">デリケートになった肌をすこやかに保つサポートをし、水分を供給して活力のあるしっとりとした肌を維持するのを助けます。</div>
+            </div>
+        </div>
+        
+        <div class="ingredient-note">
+            * 上記の内容は、原料の一般的な性質に関する説明です。
+        </div>
+
+        <div class="section-header" style="margin-top: 40px;">
+            <h3>使用方法</h3>
+        </div>
+        
+        <div class="how-to-use">
+            <ul class="how-to-list">
+                <li>洗顔後、顔の水分を拭き取ります。ゲルパウチ（STEP 1）を開封し、スパチュラを使用して顔全体から顎の部分まで均一に塗り広げます。</li>
+                <li>ゲルを塗布した顔に、マスクシート（STEP 2）のコーティングされた面が外側（上）を向くようにして、顔全体に隙間なく密着させます。</li>
+                <li>5〜10分程度おいた後、シートを取り外します。スパチュラを使用して肌に残ったゲルを取り除いた後、すぐにぬるま湯で綺麗に洗い流します。</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

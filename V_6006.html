@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>アルムダウン エクレムキット</title>
+    
+    <!-- Google Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        playfair: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        eclarme: {
+                            gold: '#c2a67e',
+                            golddark: '#9e825a',
+                            goldlight: '#f4eee9',
+                            dark: '#3b3534',
+                            subtext: '#6e6361',
+                            bg: '#fdfbfb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f5f2ed;
+            color: #3b3534;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero-pattern {
+            background: linear-gradient(135deg, #fdfbfb 0%, #f4eee9 100%);
+        }
+        .perfume-card-nuvola { background: linear-gradient(180deg, #ffffff 0%, #f0f6fc 100%); border-top: 3.5px solid #7da5d1; }
+        .perfume-card-opera { background: linear-gradient(180deg, #ffffff 0%, #fff5f5 100%); border-top: 3.5px solid #d98c96; }
+        .perfume-card-garden { background: linear-gradient(180deg, #ffffff 0%, #f4fbf7 100%); border-top: 3.5px solid #66cdaa; }
+        .perfume-card-sinfonia { background: linear-gradient(180deg, #ffffff 0%, #fbf8fc 100%); border-top: 3.5px solid #b388c9; }
+        .perfume-card-waltz { background: linear-gradient(180deg, #ffffff 0%, #fefdf7 100%); border-top: 3.5px solid #f4d03f; }
+    </style>
+</head>
+<body class="font-sans antialiased text-stone-800">
+
+    <!-- Main Container without Header or Footer -->
+    <main class="max-w-4xl mx-auto bg-white min-h-screen shadow-md overflow-hidden my-0 sm:my-3 sm:rounded-2xl">
+        
+        <!-- Hero Section -->
+        <section class="hero-pattern p-5 sm:p-8 text-center relative overflow-hidden border-b border-eclarme-gold/30">
+            <span class="font-playfair text-xl sm:text-2xl text-eclarme-golddark tracking-widest block mb-1">
+                Eclarme
+            </span>
+            <h1 class="font-serif text-2xl sm:text-4xl font-black text-eclarme-dark tracking-wide mb-2 leading-snug">
+                パフューム コレクション
+            </h1>
+            <p class="font-serif text-xs sm:text-sm text-eclarme-subtext max-w-xl mx-auto leading-relaxed mb-4">
+                神話のような香りと輝く魅力を込めたエクレム。<br>
+                あなたの最も眩しく輝く瞬間を、より特別で美しく記憶できるよう、<br class="hidden sm:inline">
+                時が経っても忘れられない愛らしい香りを込めました。
+            </p>
+
+            <div class="inline-block bg-eclarme-dark text-white font-bold text-xs px-4 py-1.5 rounded-full tracking-widest shadow-2xs">
+                全5種 フルコレクション セット (各 50 ml)
+            </div>
+        </section>
+
+        <div class="p-4 sm:p-7 space-y-5">
+
+            <!-- Intro Message Box -->
+            <section class="text-center py-4 px-4 bg-eclarme-goldlight/50 rounded-xl border border-eclarme-gold/30 space-y-1.5">
+                <p class="font-serif text-xs sm:text-sm text-eclarme-dark font-medium leading-relaxed">
+                    神話の中の妖精の瑞々しさと女神の華やかさに似た、神秘的で優雅な香り。<br>
+                    <span class="font-bold text-eclarme-golddark">Eclarme</span> が提案する5つの香りのシンフォニーが、あなたの毎日に特別なムードを添えます。
+                </p>
+            </section>
+
+            <!-- 5 Perfumes Detailed Grid -->
+            <section class="space-y-4">
+                
+                <!-- 01. Estiva Nuvola -->
+                <div class="perfume-card-nuvola p-4 sm:p-5 rounded-xl shadow-2xs border-x border-b border-slate-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2 pb-2 border-b border-slate-200/60">
+                        <div>
+                            <span class="text-[10px] font-bold text-sky-700 uppercase tracking-widest block">COTTON & MUSK</span>
+                            <h2 class="font-playfair text-xl sm:text-2xl font-bold text-slate-800">
+                                Estiva Nuvola <span class="font-sans text-xs font-normal text-slate-500">エスティバ ヌボラ (50ml)</span>
+                            </h2>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 text-[11px] font-bold rounded-full w-max">
+                            清潔感のある石鹸とコットンの香り
+                        </span>
+                    </div>
+
+                    <p class="text-xs sm:text-sm font-bold text-slate-800 mb-1.5">
+                        “清潔感のある石鹸の香りとパウダリーなムスクが調和した、やわらかなコットンの香り”
+                    </p>
+                    <p class="text-xs text-stone-600 leading-relaxed mb-3">
+                        雨上がりの澄んだ空の清涼感と、ふんわりとした繊維の温もりを込めた優しい香り。さわやかで澄んだオゾニックノートの個性と、繊細で心地よいコットン香、そして深みのあるムスクの温かい包容力が調和し、誰にでもよく似合う安らぎをプレゼントします。
+                    </p>
+
+                    <div class="bg-white/80 p-2.5 rounded-lg border border-slate-200/60 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div>
+                            <span class="font-bold text-sky-700 block text-[10px] uppercase tracking-wider">TOP</span>
+                            <span class="font-playfair text-slate-800 text-xs">Pink Pepper</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-sky-700 block text-[10px] uppercase tracking-wider">MIDDLE</span>
+                            <span class="font-playfair text-slate-800 text-xs">Rose, Violet</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-sky-700 block text-[10px] uppercase tracking-wider">BASE</span>
+                            <span class="font-playfair text-slate-800 text-xs">Vanilla, Musk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02. Soave Opera -->
+                <div class="perfume-card-opera p-4 sm:p-5 rounded-xl shadow-2xs border-x border-b border-rose-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2 pb-2 border-b border-rose-200/60">
+                        <div>
+                            <span class="text-[10px] font-bold text-rose-700 uppercase tracking-widest block">EUCALYPTUS & MUSK</span>
+                            <h2 class="font-playfair text-xl sm:text-2xl font-bold text-stone-800">
+                                Soave Opera <span class="font-sans text-xs font-normal text-stone-500">スアベ オペラ (50ml)</span>
+                            </h2>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-rose-100 text-rose-800 text-[11px] font-bold rounded-full w-max">
+                            深く優雅で洗練された香り
+                        </span>
+                    </div>
+
+                    <p class="text-xs sm:text-sm font-bold text-stone-800 mb-1.5">
+                        “ユーカリの清涼感とムスクの温かさが調和した、深く優雅で洗練された香り”
+                    </p>
+                    <p class="text-xs text-stone-600 leading-relaxed mb-3">
+                        シックで堂々とした女性の洗練されたムードを込めた気品ある香り。鼻先をかすめる涼やかなユーカリの爽快感と、幻想的で甘美なムスクの繊細さが調和して美しく混ざり合い、やわらかくロマンチックな香りをプレゼントします。
+                    </p>
+
+                    <div class="bg-white/80 p-2.5 rounded-lg border border-rose-200/60 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div>
+                            <span class="font-bold text-rose-700 block text-[10px] uppercase tracking-wider">TOP</span>
+                            <span class="font-playfair text-stone-800 text-xs">Eucalyptus, Green</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-rose-700 block text-[10px] uppercase tracking-wider">MIDDLE</span>
+                            <span class="font-playfair text-stone-800 text-xs">Jasmine, Tulipe</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-rose-700 block text-[10px] uppercase tracking-wider">BASE</span>
+                            <span class="font-playfair text-stone-800 text-xs">Musk, Sandalwood</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03. Blossom Garden -->
+                <div class="perfume-card-garden p-4 sm:p-5 rounded-xl shadow-2xs border-x border-b border-emerald-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2 pb-2 border-b border-emerald-200/60">
+                        <div>
+                            <span class="text-[10px] font-bold text-emerald-800 uppercase tracking-widest block">FRESH GREEN FLORAL</span>
+                            <h2 class="font-playfair text-xl sm:text-2xl font-bold text-stone-800">
+                                Blossom Garden <span class="font-sans text-xs font-normal text-stone-500">ブロッサム ガーデン (50ml)</span>
+                            </h2>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 text-[11px] font-bold rounded-full w-max">
+                            みずみずしく清涼なフローラルの香り
+                        </span>
+                    </div>
+
+                    <p class="text-xs sm:text-sm font-bold text-stone-800 mb-1.5">
+                        “花咲く庭園の瑞々しさと自然の爽やかさが調和した、フレッシュでフローラルな香り”
+                    </p>
+                    <p class="text-xs text-stone-600 leading-relaxed mb-3">
+                        一面緑に染まった秘密の庭園で出会う、フレッシュなムードを込めた涼やかな香り。豊かで奥深く広がるウッドベースの上に、軽やかで瑞々しいグリーンフローラルが溢れる、清涼な夏の日の追憶を呼び起こします。
+                    </p>
+
+                    <div class="bg-white/80 p-2.5 rounded-lg border border-emerald-200/60 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div>
+                            <span class="font-bold text-emerald-800 block text-[10px] uppercase tracking-wider">TOP</span>
+                            <span class="font-playfair text-stone-800 text-xs">Rose, Green</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-emerald-800 block text-[10px] uppercase tracking-wider">MIDDLE</span>
+                            <span class="font-playfair text-stone-800 text-xs">Magnolia, Iris</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-emerald-800 block text-[10px] uppercase tracking-wider">BASE</span>
+                            <span class="font-playfair text-stone-800 text-xs">Musk, Cedarwood</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04. Diamant Sinfonia -->
+                <div class="perfume-card-sinfonia p-4 sm:p-5 rounded-xl shadow-2xs border-x border-b border-purple-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2 pb-2 border-b border-purple-200/60">
+                        <div>
+                            <span class="text-[10px] font-bold text-purple-800 uppercase tracking-widest block">SWEET PEAR & MUGUET</span>
+                            <h2 class="font-playfair text-xl sm:text-2xl font-bold text-stone-800">
+                                Diamant Sinfonia <span class="font-sans text-xs font-normal text-stone-500">ディアマン シンフォニア (50ml)</span>
+                            </h2>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-purple-100 text-purple-800 text-[11px] font-bold rounded-full w-max">
+                            女性らしく華やかなロマンチックな香り
+                        </span>
+                    </div>
+
+                    <p class="text-xs sm:text-sm font-bold text-stone-800 mb-1.5">
+                        “洋梨の果汁から感じる新鮮で甘い香りと、スズランのほのかで優しい香りが調和した女性らしく華やかな香り”
+                    </p>
+                    <p class="text-xs text-stone-600 leading-relaxed mb-3">
+                        誰もが恋に落ちるようなロマンチックなムードを込めた甘美な香りで、華やかでハツラツと近づいてくる甘さと、自然でほのかな余韻を残す優雅さが調和して混ざり合い、愛らしくロマンチックな初恋の香りを連想させます。
+                    </p>
+
+                    <div class="bg-white/80 p-2.5 rounded-lg border border-purple-200/60 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div>
+                            <span class="font-bold text-purple-800 block text-[10px] uppercase tracking-wider">TOP</span>
+                            <span class="font-playfair text-stone-800 text-xs">Bergamot, Pear</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-purple-800 block text-[10px] uppercase tracking-wider">MIDDLE</span>
+                            <span class="font-playfair text-stone-800 text-xs">Pineapple, Muguet</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-purple-800 block text-[10px] uppercase tracking-wider">BASE</span>
+                            <span class="font-playfair text-stone-800 text-xs">Musk, Peach</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 05. Daisy Waltz -->
+                <div class="perfume-card-waltz p-4 sm:p-5 rounded-xl shadow-2xs border-x border-b border-amber-100">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2 pb-2 border-b border-amber-200/60">
+                        <div>
+                            <span class="text-[10px] font-bold text-amber-800 uppercase tracking-widest block">FRESH LEMON & FREESIA</span>
+                            <h2 class="font-playfair text-xl sm:text-2xl font-bold text-stone-800">
+                                Daisy Waltz <span class="font-sans text-xs font-normal text-stone-500">デイジー ワルツ (50ml)</span>
+                            </h2>
+                        </div>
+                        <span class="px-2.5 py-0.5 bg-amber-100 text-amber-900 text-[11px] font-bold rounded-full w-max">
+                            ハツラツとした愛らしいレモンの香り
+                        </span>
+                    </div>
+
+                    <p class="text-xs sm:text-sm font-bold text-stone-800 mb-1.5">
+                        “レモンの爽やかさとフリージアのほのかなフローラル香が調和した、ハツラツとした愛らしい香り”
+                    </p>
+                    <p class="text-xs text-stone-600 leading-relaxed mb-3">
+                        甘い果実をかじった少女の指先から咲き誇る花の瑞々しさを込めた、愛らしい香り。夏の日の清涼感を思い起こさせるレモンの爽やかさと、ほのかなフリージアの香りを込め、愛らしく可愛らしい少女を連想させます。
+                    </p>
+
+                    <div class="bg-white/80 p-2.5 rounded-lg border border-amber-200/60 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div>
+                            <span class="font-bold text-amber-800 block text-[10px] uppercase tracking-wider">TOP</span>
+                            <span class="font-playfair text-stone-800 text-xs">Lemon, Passion Fruit</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-amber-800 block text-[10px] uppercase tracking-wider">MIDDLE</span>
+                            <span class="font-playfair text-stone-800 text-xs">Jasmine, Freesia</span>
+                        </div>
+                        <div>
+                            <span class="font-bold text-amber-800 block text-[10px] uppercase tracking-wider">BASE</span>
+                            <span class="font-playfair text-stone-800 text-xs">Musk, Amber</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="bg-stone-50 rounded-xl p-3 text-center border border-stone-200 text-[10px] text-stone-500 leading-relaxed">
+                ※ 専門調香師の試香レポートであり、香りが与える感覚は個人の経験や好みによって異なる場合があります。
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>
