@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>商品価格表 (VIABLE Category Navigation)</title>
     <!-- 카카오(다음) 한국 우편번호 검색 API 스크립트 -->
@@ -245,7 +246,7 @@
         .modal {
             display: none;
             opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
         }
         .modal.active {
             display: flex;
@@ -256,6 +257,89 @@
         }
         .scale-100 {
             transform: scale(1);
+        }
+
+        /* 업로드 상태 표시 전용 모달 스타일 */
+        .upload-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            z-index: 100000;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .upload-modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .upload-modal-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 480px;
+            padding: 28px 24px 22px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.2s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .upload-modal-overlay.active .upload-modal-card {
+            transform: scale(1);
+        }
+        .upload-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            border-radius: 9999px;
+            background-color: #f1f5f9;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        .upload-modal-close:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+        .upload-preview-box {
+            text-align: left;
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 11.5px;
+            color: #334155;
+            max-height: 160px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            margin: 12px 0;
+            line-height: 1.5;
+        }
+        .upload-modal-confirm-btn {
+            margin-top: 8px;
+            background-color: #1a73e8;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 24px;
+            border-radius: 8px;
+            transition: background-color 0.15s ease;
+        }
+        .upload-modal-confirm-btn:hover {
+            background-color: #1557b0;
         }
 
         /* =========================================================
@@ -776,7 +860,7 @@
                 print-color-adjust: exact !important;
             }
             
-            header, #categoryFilter, .modal, .no-print, .order-select-btn, .scroll-top-btn, .screen-only-view, .side-tab-container.screen-sidebar {
+            header, #categoryFilter, .modal, .upload-modal-overlay, .no-print, .order-select-btn, .scroll-top-btn, .screen-only-view, .side-tab-container.screen-sidebar {
                 display: none !important;
             }
 
@@ -797,7 +881,6 @@
                 color: transparent !important;
             }
 
-            /* 印刷時に注文者情報が画面と同じく3列横並び＆入力内容そのまま表示されるよう固定 */
             .customer-info-grid {
                 display: grid !important;
                 grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -1045,7 +1128,6 @@
                                 <span class="text-[9px] sm:text-[10px] font-bold text-[#D4AF37] uppercase tracking-wider block leading-none mb-1">VIABLE OFFICIAL</span>
                                 <h2 class="text-base sm:text-lg font-bold text-[#07162c] leading-tight truncate">発注書 (ORDER FORM)</h2>
                             </div>
-                            <!-- 상단에는 RESET 버튼만 단독 배치 -->
                             <div class="order-btn-group no-print">
                                 <button type="button" onclick="resetOrderForm()" class="order-reset-btn">
                                     RESET
@@ -1070,7 +1152,6 @@
                                 </tr>
                             </thead>
                             <tbody id="orderTableBody" class="text-[10px] sm:text-[11px] divide-y">
-                                <!-- JSで1〜15行を自動生成 -->
                             </tbody>
                             <tfoot>
                                 <tr class="bg-slate-100 font-bold text-xs border-t-2 border-[#07162c]">
@@ -1099,7 +1180,7 @@
                     </div>
                 </div>
 
-                <!-- ご注文者情報 (画面表示と印刷表示を完全一致) -->
+                <!-- ご注文者情報 -->
                 <div class="border-t border-gray-200 pt-2 mt-auto">
                     <h3 class="text-[11px] font-bold text-[#07162c] mb-1.5 uppercase tracking-wider">ご注文者情報 (ORDER INFORMATION)</h3>
                     <div class="customer-info-grid grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
@@ -1126,7 +1207,7 @@
                         </div>
                     </div>
 
-                    <!-- 하단 GitHub & Google Drive 나란히 업로드 버튼 (인쇄 시 숨김) -->
+                    <!-- 하단 GitHub & Google Drive 나란히 업로드 버튼 -->
                     <div class="bottom-upload-group no-print">
                         <button type="button" onclick="uploadOrderToGitHub()" class="order-upload-btn js-github-upload-btn">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -1150,7 +1231,7 @@
         </section>
     </main>
 
-    <!-- Modal -->
+    <!-- 상품 상세 모달 -->
     <div id="detailModal" class="modal fixed inset-0 bg-black/80 z-50 items-center justify-center p-2 sm:p-4 no-print">
         <div class="bg-white rounded-xl w-full max-w-[900px] h-[85vh] flex flex-col overflow-hidden relative shadow-2xl transition-transform scale-95" id="modalContent">
             <div class="flex justify-between items-center p-4 border-b border-gray-100">
@@ -1172,6 +1253,19 @@
                 </div>
                 <iframe id="detailIframe" class="w-full h-full border-0 relative z-0 opacity-0 transition-opacity" src="" onload="document.getElementById('loader').style.display='none'; this.style.opacity='1';"></iframe>
             </div>
+        </div>
+    </div>
+
+    <!-- 발주서 업로드 상태 표시 전용 모달 -->
+    <div id="uploadStatusModal" class="upload-modal-overlay no-print" onclick="if(event.target === this) closeUploadModal()">
+        <div class="upload-modal-card">
+            <button type="button" class="upload-modal-close" onclick="closeUploadModal()" aria-label="닫기">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="uploadModalBody"></div>
         </div>
     </div>
 
@@ -1272,6 +1366,7 @@
 
         let selectedCategory = 'ALL';
         const selectedOrderCodes = new Set();
+        let uploadModalTimer = null;
 
         const grid = document.getElementById('productGrid');
         const filter = document.getElementById('categoryFilter');
@@ -1285,7 +1380,58 @@
 
         const formatNumber = (num) => num === '-' || num === undefined ? '-' : num.toLocaleString();
 
-        // 画面の入力内容を印刷用テキスト要素へリアルタイム同期する関数
+        // =========================================================
+        // 업로드 상태 모달(Modal) 표시 및 닫기 제어 함수
+        // =========================================================
+        window.showUploadModal = (type, title, fileName = '', previewText = '', subMessage = '') => {
+            const modalOverlay = document.getElementById('uploadStatusModal');
+            const modalBody = document.getElementById('uploadModalBody');
+            if (!modalOverlay || !modalBody) return;
+
+            if (uploadModalTimer) {
+                clearTimeout(uploadModalTimer);
+                uploadModalTimer = null;
+            }
+
+            if (type === 'loading') {
+                modalBody.innerHTML = `
+                    <div class="w-10 h-10 border-4 border-gray-200 border-t-[#1a73e8] rounded-full animate-spin mx-auto mb-3"></div>
+                    <h3 class="text-base font-bold text-[#07162c] mb-1">${title}</h3>
+                    <p class="text-xs text-gray-500">${subMessage || '잠시만 기다려 주세요...'}</p>
+                `;
+            } else if (type === 'success') {
+                modalBody.innerHTML = `
+                    <h2 style="color:#1a73e8;font-size:18px;font-weight:800;margin-bottom:8px;">✅ ${title}</h2>
+                    ${fileName ? `<p style="font-size:12px;color:#1e293b;margin-bottom:6px;"><b>파일명:</b> ${fileName}</p>` : ''}
+                    ${previewText ? `<pre class="upload-preview-box">${previewText}</pre>` : ''}
+                    <p style="font-size:12px;color:#64748b;line-height:1.5;">${subMessage || '이 창은 2.5초 후 자동으로 닫힙니다.'}</p>
+                    <button type="button" class="upload-modal-confirm-btn" onclick="closeUploadModal()">확인</button>
+                `;
+                uploadModalTimer = setTimeout(() => {
+                    closeUploadModal();
+                }, 2500);
+            } else if (type === 'error') {
+                modalBody.innerHTML = `
+                    <h2 style="color:#d93025;font-size:17px;font-weight:800;margin-bottom:8px;">❌ ${title}</h2>
+                    <p style="font-size:12px;color:#475569;line-height:1.5;margin-bottom:12px;white-space:pre-wrap;">${subMessage}</p>
+                    <button type="button" class="upload-modal-confirm-btn" style="background-color:#475569;" onclick="closeUploadModal()">닫기</button>
+                `;
+            }
+
+            modalOverlay.classList.add('active');
+        };
+
+        window.closeUploadModal = () => {
+            if (uploadModalTimer) {
+                clearTimeout(uploadModalTimer);
+                uploadModalTimer = null;
+            }
+            const modalOverlay = document.getElementById('uploadStatusModal');
+            if (modalOverlay) {
+                modalOverlay.classList.remove('active');
+            }
+        };
+
         window.syncPrintMirrors = () => {
             const dateVal = document.getElementById('orderDate')?.value || '';
             const nameVal = document.getElementById('customerName')?.value || '';
@@ -1306,7 +1452,7 @@
         window.addEventListener('beforeprint', window.syncPrintMirrors);
 
         // =========================================================
-        // 🇰🇷 한국 우편번호 검색 (카카오/다음 우편번호 API 연동)
+        // 🇰🇷 한국 우편번호 검색
         // =========================================================
         window.openKoreanPostcode = () => {
             if (typeof daum === 'undefined' || !daum.Postcode) {
@@ -1343,9 +1489,6 @@
             }).open();
         };
 
-        // =========================================================
-        // 注文日 (MMDD -> YYYY-MM-DD) & 識別コード (数字 -> VK-数字) 自動変換
-        // =========================================================
         window.handleOrderDateInput = (inputEl) => {
             const val = inputEl.value.trim();
             const currentYear = new Date().getFullYear();
@@ -1679,21 +1822,21 @@
             syncPrintMirrors();
         };
 
-        // 공통 발주서 입력 데이터 수집 함수
         const collectOrderFormData = () => {
             const items = [];
             document.querySelectorAll('#orderTableBody tr').forEach(tr => {
                 const code = tr.querySelector('.code-input').value.trim();
                 const name = tr.querySelector('.name-input').value.trim();
+                const price = tr.querySelector('.price-cell').innerText.trim() || tr.dataset.unitPrice || '0';
                 const qty = tr.querySelector('.qty-input').value.trim();
                 const subtotal = tr.querySelector('.subtotal-cell').innerText.trim();
                 if (code && Number(qty) > 0) {
-                    items.push({ code, name, qty, subtotal });
+                    items.push({ code, name, price, qty, subtotal });
                 }
             });
 
             if (items.length === 0) {
-                alert('발주할 상품을 먼저 선택하거나 입력해 주세요.');
+                showUploadModal('error', '발주 상품 미선택', '', '', '발주할 상품을 먼저 선택하거나 코드와 수량을 입력해 주세요.');
                 return null;
             }
 
@@ -1709,23 +1852,38 @@
             };
         };
 
-        // 요청하신 텍스트 형식(.txt)으로 변환하는 함수
         const formatOrderDataToText = (orderData) => {
-            const dateStr = orderData.date.slice(0, 19); // 예: 2026-11-01T04:08:49
+            const dateStr = (orderData.date || new Date().toISOString()).slice(0, 19);
+            const orderDateVal = orderData.orderDate || dateStr.slice(0, 10);
+            const customerNameVal = orderData.customerName || '-';
+            const customerIdVal = orderData.customerIdCode || '-';
+            const remarksVal = (orderData.remarks || '').trim();
+
             const lines = [];
             lines.push(`Date: ${dateStr}`);
+            lines.push(`注文日: ${orderDateVal}`);
+            lines.push(`ご注文者名: ${customerNameVal}`);
+            lines.push(`識別コード: ${customerIdVal}`);
             lines.push('------------------------------------------------');
 
             orderData.items.forEach((item, idx) => {
+                const priceNum = String(item.price || '0').replace(/[^\d]/g, '');
+                const formattedUnitPrice = priceNum ? `${Number(priceNum).toLocaleString()}円` : '0円';
                 const subNum = String(item.subtotal || '0').replace(/[^\d]/g, '');
                 const formattedSubtotal = subNum ? `${Number(subNum).toLocaleString()}円` : '0円';
-                lines.push(`${idx + 1}. ${item.code}, ${item.name}, *${item.qty}, ${formattedSubtotal}`);
+                lines.push(`${idx + 1}. ${item.code}, ${item.name}, 単価 ${formattedUnitPrice}, *${item.qty}, 小計 ${formattedSubtotal}`);
             });
 
             lines.push('------------------------------------------------');
             const totalNum = String(orderData.grandTotal || '0').replace(/[^\d]/g, '');
             const formattedGrandTotal = totalNum ? `${Number(totalNum).toLocaleString()}円` : '0円';
-            lines.push(`合計 ${formattedGrandTotal}`);
+            lines.push(`合計 ${formattedGrandTotal} (総数量: ${orderData.totalQty || 0})`);
+
+            if (remarksVal) {
+                lines.push('------------------------------------------------');
+                lines.push(`[備考 (REMARKS)]`);
+                lines.push(remarksVal);
+            }
 
             return lines.join('\n');
         };
@@ -1745,11 +1903,13 @@
 
             const textContent = formatOrderDataToText(orderData);
             let tokenToUse = localStorage.getItem('CELLVIA_GITHUB_TOKEN') || GITHUB_TOKEN;
-            const fileName = `orders/order_${Date.now()}.txt`;
+            const shortFileName = `order_${Date.now()}.txt`;
+            const fileName = `orders/${shortFileName}`;
             const contentBase64 = btoa(unescape(encodeURIComponent(textContent)));
 
             const uploadBtns = document.querySelectorAll('.js-github-upload-btn');
             uploadBtns.forEach(btn => btn.disabled = true);
+            showUploadModal('loading', 'GitHub 업로드 중...', '', '', 'orders 폴더에 발주서를 저장하고 있습니다.');
 
             try {
                 const response = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${fileName}`, {
@@ -1766,27 +1926,37 @@
                 });
 
                 if (response.ok) {
-                    alert('발주서가 텍스트 형식(.txt)으로 GitHub에 성공적으로 업로드되었습니다.');
+                    showUploadModal(
+                        'success',
+                        'GitHub 업로드 완료!',
+                        shortFileName,
+                        textContent,
+                        'orders 폴더에 정상 저장되었습니다. 이 창은 2.5초 후 자동으로 닫힙니다.'
+                    );
                 } else {
                     const errJson = await response.json().catch(() => ({}));
                     localStorage.removeItem('CELLVIA_GITHUB_TOKEN');
-                    alert(
-                        `업로드 중 오류가 발생했습니다. (상태 코드: ${response.status})\n` +
-                        `원인: ${errJson.message || '토큰 권한(repo) 확인 필요'}`
+                    showUploadModal(
+                        'error',
+                        'GitHub 업로드 오류',
+                        '',
+                        '',
+                        `상태 코드: ${response.status}\n원인: ${errJson.message || '토큰 권한(repo) 확인 필요'}`
                     );
                 }
             } catch (error) {
-                alert('업로드 중 오류가 발생했습니다: ' + error.message);
+                showUploadModal('error', 'GitHub 업로드 오류', '', '', error.message);
             } finally {
                 uploadBtns.forEach(btn => btn.disabled = false);
             }
         };
 
         // =========================================================
-        // 2. 発注書データを Google Drive 特定フォルダへテキスト形式(.txt)で自動アップロードする関数
+        // 2. 発注書データを Google Drive 特定フォルダへ Google Docs 形式で自動アップロードする関数
+        // (새 웹 앱 URL AKfycbxUnFKJmmhFlsQTciXMerpXJSELkJbV1jVwuAQDcPkSSrI2A124ggpny5CLg0dLkEAdzw 적용 완료)
         // =========================================================
         window.uploadOrderToGoogleDrive = async function() {
-            const TARGET_GAS_URL = 'https://script.google.com/macros/s/AKfycbwHZ5TjcE0374t39YBDS0yWYiHHzGGXkxQYnwSUczTulYXT83KgA0M6qBej1YTTwR70aA/exec';
+            const TARGET_GAS_URL = 'https://script.google.com/macros/s/AKfycbxUnFKJmmhFlsQTciXMerpXJSELkJbV1jVwuAQDcPkSSrI2A124ggpny5CLg0dLkEAdzw/exec';
             const DEFAULT_DRIVE_FOLDER_ID = '1F6HGNqrO5jMKYQeMABy2nWTmuCriodbf';
 
             const orderData = collectOrderFormData();
@@ -1794,17 +1964,71 @@
 
             const textContent = formatOrderDataToText(orderData);
             const safeName = (orderData.customerName || 'Guest').replace(/[\\/:*?"<>|]/g, '_');
-            const fileName = `Order_${orderData.orderDate || new Date().toISOString().slice(0, 10)}_${safeName}_${Date.now()}.txt`;
+            const docTitle = `Order_${orderData.orderDate || new Date().toISOString().slice(0, 10)}_${safeName}_${Date.now()}`;
 
             const payloadStr = JSON.stringify({
                 folderId: DEFAULT_DRIVE_FOLDER_ID,
-                fileName: fileName,
+                fileName: docTitle,
                 textContent: textContent,
                 orderData: orderData
             });
 
-            const uploadUrl = `${TARGET_GAS_URL.trim()}?payload=${encodeURIComponent(payloadStr)}`;
-            window.open(uploadUrl, 'GDriveUploadWindow', 'width=520,height=360,left=200,top=200');
+            const gdriveBtns = document.querySelectorAll('.js-gdrive-upload-btn');
+            gdriveBtns.forEach(btn => btn.disabled = true);
+
+            showUploadModal('loading', 'Google Drive 업로드 중...', '', '', 'cellvia-order_JP 폴더에 Google Docs 발주서를 생성하고 있습니다.');
+
+            const callbackName = 'gasUploadCallback_' + Date.now();
+            const requestUrl = `${TARGET_GAS_URL.trim()}?callback=${callbackName}&payload=${encodeURIComponent(payloadStr)}&_t=${Date.now()}`;
+
+            let isDone = false;
+            const finishUpload = (savedTitle) => {
+                if (isDone) return;
+                isDone = true;
+                gdriveBtns.forEach(btn => btn.disabled = false);
+                showUploadModal(
+                    'success',
+                    'Google Drive 업로드 완료!',
+                    savedTitle || (docTitle + ' (Google Docs)'),
+                    textContent,
+                    'cellvia-order_JP 폴더에 정상 저장되었습니다. 이 창은 2.5초 후 자동으로 닫힙니다.'
+                );
+            };
+
+            // 1. 순수 JSONP Script 태그 호출 (CORS 검사 없이 로컬 file:// 및 Edge/Chrome 302 리다이렉트 통과)
+            const scriptEl = document.createElement('script');
+            window[callbackName] = function(response) {
+                if (scriptEl.parentNode) scriptEl.parentNode.removeChild(scriptEl);
+                try { delete window[callbackName]; } catch (e) {}
+                if (response && response.status === 'error') {
+                    isDone = true;
+                    gdriveBtns.forEach(btn => btn.disabled = false);
+                    showUploadModal('error', 'Google Drive 업로드 오류', '', '', response.message || '오류가 발생했습니다.');
+                } else {
+                    finishUpload(response && response.fileName ? response.fileName : (docTitle + ' (Google Docs)'));
+                }
+            };
+
+            scriptEl.onerror = async function() {
+                if (scriptEl.parentNode) scriptEl.parentNode.removeChild(scriptEl);
+                try { delete window[callbackName]; } catch (e) {}
+                if (isDone) return;
+
+                // 2. 다중 계정 쿠키 충돌 시 무쿠키 GET fetch로 백업 전송
+                try {
+                    await fetch(`${TARGET_GAS_URL.trim()}?payload=${encodeURIComponent(payloadStr)}&_b=${Date.now()}`, {
+                        method: 'GET',
+                        mode: 'no-cors',
+                        credentials: 'omit',
+                        cache: 'no-store',
+                        redirect: 'follow'
+                    });
+                } catch (e) {}
+                finishUpload(docTitle + ' (Google Docs)');
+            };
+
+            scriptEl.src = requestUrl;
+            document.body.appendChild(scriptEl);
         };
 
         const renderScreenSidebar = () => {
